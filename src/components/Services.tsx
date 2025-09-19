@@ -33,11 +33,11 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-akina-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Core Services</h2>
-          <p className="text-xl text-gray-700">
+          <h2 className="text-4xl font-bold text-akina-purple mb-6">Our Core Services</h2>
+          <p className="text-xl text-akina-brown">
             Providing immediate safety, legal protection, and comprehensive support for vulnerable individuals
           </p>
         </div>
@@ -50,19 +50,19 @@ const Services: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                   <div>
                     <div className="flex items-center space-x-4 mb-6">
-                      <div className="bg-blue-800 p-3 rounded-lg">
-                        <Icon className="h-8 w-8 text-white" />
+                      <div className="bg-akina-purple p-3 rounded-lg">
+                        <Icon className="h-8 w-8 text-akina-white" />
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                      <h3 className="text-2xl font-bold text-akina-purple">{service.title}</h3>
                     </div>
-                    <p className="text-gray-700 mb-6 leading-relaxed">
+                    <p className="text-akina-brown mb-6 leading-relaxed">
                       {service.description}
                     </p>
                     <ul className="space-y-3">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start space-x-3">
-                          <Shield className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700">{feature}</span>
+                          <Shield className="h-5 w-5 text-akina-brown mt-0.5 flex-shrink-0" />
+                          <span className="text-akina-brown">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -79,8 +79,8 @@ const Services: React.FC = () => {
                     {service.stats.length > 0 && (
                       <div className="mt-6 space-y-3">
                         {service.stats.map((stat, statIndex) => (
-                          <div key={statIndex} className="bg-white p-4 rounded-lg shadow">
-                            <p className="text-gray-800 font-medium">{stat}</p>
+                          <div key={statIndex} className="bg-akina-white p-4 rounded-lg shadow">
+                            <p className="text-akina-brown font-medium">{stat}</p>
                           </div>
                         ))}
                       </div>
