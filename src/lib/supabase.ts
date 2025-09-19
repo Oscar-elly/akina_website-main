@@ -48,3 +48,19 @@ export interface ProgramParticipant {
   status: 'active' | 'completed' | 'pending';
   enrolled_at: string;
 }
+
+// Authentication helper functions
+export const auth = {
+  signIn: async (email: string, password: string) => {
+    return await supabase.auth.signInWithPassword({ email, password });
+  },
+  signOut: async () => {
+    return await supabase.auth.signOut();
+  },
+  getUser: async () => {
+    return await supabase.auth.getUser();
+  },
+  onAuthStateChange: (callback: (event: string, session: any) => void) => {
+    return supabase.auth.onAuthStateChange(callback);
+  },
+};
