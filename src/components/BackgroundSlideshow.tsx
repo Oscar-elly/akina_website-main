@@ -1,0 +1,82 @@
+import React, { useState, useEffect } from 'react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const BackgroundSlideshow: React.FC = () => {
+  const slides = [
+    {
+      image: '/src/assets/background_image1.png',
+      text: 'A future free from abuse, discrimination, and poverty.',
+    },
+    {
+      image: '/src/assets/background_image2.png',
+      text: 'Providing education, therapy, and legal support.',
+    },
+    {
+      image: '/src/assets/background_image3.png',
+      text: 'Economic empowerment and leadership initiatives.',
+    },
+    {
+      image: '/src/assets/background_image4.png',
+      text: 'Promoting and protecting fundamental rights.',
+    },
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000); // Change slide every 5 seconds
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  return (
+    <div className="relative w-full h-screen bg-cover bg-center transition-all duration-1000" style={{ backgroundImage: `url(${slides[currentSlide].image})` }}>
+      <div className="absolute inset-0 bg-black/40"></div> {/* Faded overlay for text readability */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-akina-white px-4">
+        <div className="max-w-4xl">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            {slides[currentSlide].text}
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-akina-orange/80 leading-relaxed">
+            LOVE - PROTECT - EMPOWER
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link
+              to="/donate"
+              className="bg-akina-orange hover:bg-akina-brown text-akina-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+            >
+              <span>Support Our Mission</span>
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+            <button
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+              className="border-2 border-akina-white text-akina-white hover:bg-akina-white hover:text-akina-purple px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* Navigation Dots */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+              index === currentSlide ? 'bg-akina-orange' : 'bg-akina-white/50'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default BackgroundSlideshow;

@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Facebook, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import VolunteerModal from './VolunteerModal';
+import PartnershipModal from './PartnershipModal';
 
 const Contact: React.FC = () => {
+  const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
+  const [isPartnershipModalOpen, setIsPartnershipModalOpen] = useState(false);
+
   return (
     <section id="contact" className="py-20 bg-akina-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,7 +88,10 @@ const Contact: React.FC = () => {
               <div className="bg-gradient-to-r from-akina-purple to-akina-purple rounded-lg p-6 text-akina-white">
                 <h4 className="text-xl font-bold mb-3">Volunteer</h4>
                 <p className="mb-4">Join our team of dedicated volunteers and make a direct impact in our community programs.</p>
-                <button className="bg-akina-white text-akina-purple px-6 py-3 rounded-full font-semibold hover:bg-akina-white/80 transition-colors duration-200">
+                <button
+                  onClick={() => setIsVolunteerModalOpen(true)}
+                  className="bg-akina-white text-akina-purple px-6 py-3 rounded-full font-semibold hover:bg-akina-white/80 transition-colors duration-200"
+                >
                   Get Involved
                 </button>
               </div>
@@ -91,13 +99,26 @@ const Contact: React.FC = () => {
               <div className="bg-gradient-to-r from-akina-orange to-akina-orange rounded-lg p-6 text-akina-white">
                 <h4 className="text-xl font-bold mb-3">Partner With Us</h4>
                 <p className="mb-4">Organizations and institutions can partner with us to expand our reach and impact.</p>
-                <button className="bg-akina-white text-akina-orange px-6 py-3 rounded-full font-semibold hover:bg-akina-white/80 transition-colors duration-200">
+                <button
+                  onClick={() => setIsPartnershipModalOpen(true)}
+                  className="bg-akina-white text-akina-orange px-6 py-3 rounded-full font-semibold hover:bg-akina-white/80 transition-colors duration-200"
+                >
                   Learn More
                 </button>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Modals */}
+        <VolunteerModal
+          isOpen={isVolunteerModalOpen}
+          onClose={() => setIsVolunteerModalOpen(false)}
+        />
+        <PartnershipModal
+          isOpen={isPartnershipModalOpen}
+          onClose={() => setIsPartnershipModalOpen(false)}
+        />
       </div>
     </section>
   );

@@ -85,7 +85,10 @@ const Impact: React.FC = () => {
           <p className="text-xl text-akina-orange mb-8">
             Over a decade of dedicated service to vulnerable communities in Western Kenya
           </p>
-          <button className="bg-akina-orange hover:bg-akina-brown text-akina-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200">
+          <button
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-akina-orange hover:bg-akina-brown text-akina-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
+          >
             Join Our Mission
           </button>
         </div>
