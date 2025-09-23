@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Facebook, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Contact: React.FC = () => {
   return (
@@ -71,9 +72,12 @@ const Contact: React.FC = () => {
               <div className="bg-gradient-to-r from-akina-brown to-akina-brown rounded-lg p-6 text-akina-white">
                 <h4 className="text-xl font-bold mb-3">Make a Donation</h4>
                 <p className="mb-4">Your contribution directly impacts the lives of vulnerable children and women in our community.</p>
-                <button className="bg-akina-white text-akina-brown px-6 py-3 rounded-full font-semibold hover:bg-akina-white/80 transition-colors duration-200">
+                <Link
+                  to="/donate"
+                  className="bg-akina-white text-akina-brown px-6 py-3 rounded-full font-semibold hover:bg-akina-white/80 transition-colors duration-200"
+                >
                   Donate Now
-                </button>
+                </Link>
               </div>
 
               <div className="bg-gradient-to-r from-akina-purple to-akina-purple rounded-lg p-6 text-akina-white">

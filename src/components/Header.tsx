@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/akina-logo.png';
 
 const Header: React.FC = () => {
@@ -36,9 +37,12 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          <button className="hidden md:block bg-akina-brown text-akina-white px-6 py-2 rounded-full hover:bg-akina-orange transition-colors duration-200 font-medium">
+          <Link
+            to="/donate"
+            className="hidden md:block bg-akina-brown text-akina-white px-6 py-2 rounded-full hover:bg-akina-orange transition-colors duration-200 font-medium"
+          >
             Donate Now
-          </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -63,9 +67,13 @@ const Header: React.FC = () => {
                   {link.label}
                 </a>
               ))}
-              <button className="bg-akina-brown text-akina-white px-6 py-2 rounded-full hover:bg-akina-orange transition-colors duration-200 font-medium w-fit mt-4">
+              <Link
+                to="/donate"
+                className="bg-akina-brown text-akina-white px-6 py-2 rounded-full hover:bg-akina-orange transition-colors duration-200 font-medium w-fit mt-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Donate Now
-              </button>
+              </Link>
             </nav>
           </div>
         )}

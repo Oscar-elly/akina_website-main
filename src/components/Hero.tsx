@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
             <span className="text-akina-orange"> Changing Destinies</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-akina-orange/80 leading-relaxed">
-            Supporting orphans, vulnerable children, and women affected by violence, HIV/AIDS, and neglect in Western Kenya
+            LOVE - PROTECT - EMPOWER
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button className="bg-akina-orange hover:bg-akina-brown text-akina-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2">

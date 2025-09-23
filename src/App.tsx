@@ -9,6 +9,7 @@ import Programs from './components/Programs';
 import Impact from './components/Impact';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Donation from './components/Donation';
 import AdminLogin from './components/AdminLogin';
 import AdminDashboard from './components/AdminDashboard';
 
@@ -36,6 +37,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<MainSite />} />
+          <Route path="/donate" element={<Donation />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="*" element={<Navigate to="/" replace />} />
