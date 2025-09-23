@@ -1,5 +1,6 @@
 import React from 'react';
 import { Home, Scale, Shield } from 'lucide-react';
+import backgroundImage2 from '../assets/background_image2.png';
 
 const Services: React.FC = () => {
   const services = [
@@ -69,10 +70,7 @@ const Services: React.FC = () => {
                   </div>
                   <div>
                     <img
-                      src={index === 0 
-                        ? "https://images.pexels.com/photos/8422087/pexels-photo-8422087.jpeg?auto=compress&cs=tinysrgb&w=800"
-                        : "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800"
-                      }
+                      src={index === 0 ? backgroundImage2 : "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800"}
                       alt={service.title}
                       className="rounded-lg shadow-lg w-full"
                     />

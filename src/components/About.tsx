@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Users, Heart } from 'lucide-react';
+import backgroundImage1 from '../assets/background_image1.png';
 
 const About: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <img
-              src="https://images.pexels.com/photos/8488817/pexels-photo-8488817.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src={backgroundImage1}
               alt="Children in Kenya"
               className="rounded-lg shadow-xl"
             />

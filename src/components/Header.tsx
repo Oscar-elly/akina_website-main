@@ -16,13 +16,13 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-akina-white/95 backdrop-blur-sm z-50 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 bg-akina-white/80 backdrop-blur-md z-50 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <img src={logo} alt="Akina Ties Logo" className="h-10 w-auto" />
             <span className="text-xl font-bold text-akina-purple">Akina Ties</span>
-          </div>
+          </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
