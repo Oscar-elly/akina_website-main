@@ -1,8 +1,8 @@
-import { supabase } from './supabase';
+import { adminHelpers } from './api';
 
 /**
  * Create a new admin user programmatically.
- * This function creates a user in Supabase Auth and inserts a record in the admins table.
+ * This function creates a user via backend API.
  * 
  * @param email - Admin user's email
  * @param password - Admin user's password
@@ -10,37 +10,11 @@ import { supabase } from './supabase';
  * @returns The created user or error
  */
 export async function createAdminUser(email: string, password: string, role: string = 'admin') {
-  // Create user in Supabase Auth
-  const { data, error: signUpError } = await supabase.auth.admin.createUser({
-    email,
-    password,
-    email_confirm: true,
-  });
-
-  if (signUpError) {
-    return { error: signUpError };
+  try {
+    const data = await adminHelpers.createAdmin(email, password, role);
+    return { user: data.user };
+  } catch (error: any) {
+    return { error };
   }
-
-  const user = data.user;
-
-  if (!user) {
-    return { error: new Error('User creation failed') };
-  }
-
-  // Insert into admins table
-  const { error: insertError } = await supabase
-    .from('admins')
-    .insert({
-      user_id: user.id,
-      email: user.email,
-      role,
-      created_at: new Date().toISOString(),
-    });
-
-  if (insertError) {
-    return { error: insertError };
-  }
-
-  return { user };
 }
 

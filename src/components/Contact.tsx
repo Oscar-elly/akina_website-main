@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Facebook, ExternalLink } from 'lucide-react';
+import { Mail, MapPin, Facebook, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import VolunteerModal from './VolunteerModal';
 import PartnershipModal from './PartnershipModal';
@@ -22,13 +22,6 @@ const Contact: React.FC = () => {
           <div>
             <h3 className="text-2xl font-bold text-akina-purple mb-8">Contact Information</h3>
             <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <Phone className="h-6 w-6 text-akina-purple mt-1" />
-                <div>
-                  <h4 className="font-semibold text-akina-purple">Phone</h4>
-                  <p className="text-akina-brown">0724118379</p>
-                </div>
-              </div>
               <div className="flex items-start space-x-4">
                 <Mail className="h-6 w-6 text-akina-purple mt-1" />
                 <div>
@@ -60,14 +53,6 @@ const Contact: React.FC = () => {
                   </a>
                 </div>
               </div>
-            </div>
-
-            <div className="mt-12 p-6 bg-akina-brown/10 rounded-lg">
-              <h4 className="font-semibold text-akina-purple mb-2">Contact Person</h4>
-              <p className="text-akina-brown">
-                <strong>Lilian Marwa</strong><br />
-                President, Akina Ties Inc.
-              </p>
             </div>
           </div>
 

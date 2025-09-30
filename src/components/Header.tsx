@@ -7,25 +7,29 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '#about', label: 'About' },
-    { href: '#mission', label: 'Mission' },
-    { href: '#services', label: 'Services' },
-    { href: '#programs', label: 'Programs' },
-    { href: '#impact', label: 'Impact' },
-    { href: '#contact', label: 'Contact' }
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About Us' },
+    { href: '/what-we-do', label: 'What We Do' },
+    { href: '/how-to-help', label: 'How to Help' },
+    { href: '/our-stories', label: 'Our Stories' },
+    { href: '/sponsorship', label: 'Sponsorship' },
+    { href: '/contact', label: 'Contact Us' }
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-akina-white/80 backdrop-blur-md z-50 shadow-sm">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="Akina Ties Logo" className="h-10 w-auto" />
-            <span className="text-xl font-bold text-akina-purple">Akina Ties</span>
+    <header className="fixed top-0 left-0 right-0 bg-akina-white/50 backdrop-blur-lg z-50 shadow-sm">
+      <div className="px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 max-w-screen-xl mx-auto">
+          <Link to="/" className="flex items-center space-x-4 flex-shrink-0">
+            <img src={logo} alt="Akina Ties Logo" className="h-20 w-auto" />
+            <div className="flex flex-col justify-center">
+              <span className="text-xl font-bold text-akina-purple leading-tight">Akina Ties</span>
+              <span className="text-base font-medium text-akina-purple -mt-1 leading-tight">Australia Inc</span>
+            </div>
           </Link>
-          
+
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex flex-1 justify-center space-x-8 whitespace-nowrap">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -39,7 +43,7 @@ const Header: React.FC = () => {
 
           <Link
             to="/donate"
-            className="hidden md:block bg-akina-brown text-akina-white px-6 py-2 rounded-full hover:bg-akina-orange transition-colors duration-200 font-medium"
+            className="hidden md:block bg-akina-brown text-akina-white px-6 py-2 rounded-full hover:bg-akina-orange transition-colors duration-200 font-medium flex-shrink-0"
           >
             Donate Now
           </Link>

@@ -1,31 +1,40 @@
 import React from 'react';
-import { ArrowRight, Shield, Users, Heart } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import BackgroundSlideshow from './BackgroundSlideshow';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative text-akina-white pt-20">
-      <BackgroundSlideshow />
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="text-center">
-              <Shield className="h-12 w-12 text-akina-orange mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Crisis Accommodation</h3>
-              <p className="text-akina-orange/80">Safe haven for women and children fleeing violence</p>
-            </div>
-            <div className="text-center">
-              <Users className="h-12 w-12 text-akina-orange mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Community Programs</h3>
-              <p className="text-akina-orange/80">Education and empowerment initiatives</p>
-            </div>
-            <div className="text-center">
-              <Heart className="h-12 w-12 text-akina-orange mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Legal Support</h3>
-              <p className="text-akina-orange/80">Justice and protection for the vulnerable</p>
-            </div>
-          </div>
+    <section className="relative text-white pt-20 bg-cover bg-center" style={{ backgroundImage: "url('/src/assets/background_image1.png')" }}>
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-40 text-center bg-black bg-opacity-50 rounded-lg">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
+          We’re on a mission to change the brains of traumatised children.
+        </h1>
+        <h2 className="text-xl md:text-2xl font-semibold mb-12">
+          WE NEED YOUR HELP.
+        </h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          <a
+            href="/sponsorship"
+            className="bg-blue-400 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
+          >
+            Sponsor a Child
+          </a>
+          <a
+            href="/donate"
+            className="bg-purple-400 hover:bg-purple-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
+          >
+            Make a Donation
+          </a>
+          <a
+            href="/our-stories"
+            className="bg-green-400 hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
+          >
+            Our Stories
+          </a>
+          <a
+            href="/rafiki-mtaani"
+            className="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
+          >
+            Rafiki Mtaani
+          </a>
         </div>
       </div>
     </section>

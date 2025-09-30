@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { supabase } from '../lib/supabase';
+import { auth } from '../lib/api';
 import { useNavigate } from 'react-router-dom';
 
 const AdminLogin = () => {
@@ -12,14 +12,12 @@ const AdminLogin = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
-    const { error: loginError } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-    if (loginError) {
-      setError(loginError.message);
-    } else {
+    try {
+      const data = await auth.login(email, password);
+      localStorage.setItem('token', data.access_token);
       navigate('/admin/dashboard');
+    } catch (error: any) {
+      setError(error.response?.data?.detail || 'Login failed');
     }
   };
 

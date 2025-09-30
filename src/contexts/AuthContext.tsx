@@ -1,6 +1,9 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { User } from '@supabase/supabase-js';
-import { auth } from '../lib/supabase';
+import { auth } from '../lib/api';
+
+interface User {
+  email: string;
+}
 
 interface AuthContextType {
   user: User | null;
@@ -30,31 +33,28 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   useEffect(() => {
     // Get initial session
     const getInitialSession = async () => {
-      const { data: { user } } = await auth.getUser();
-      setUser(user);
+      const userData = await auth.getUser();
+      setUser(userData);
       setLoading(false);
     };
 
     getInitialSession();
-
-    // Listen for auth changes
-    const { data: { subscription } } = auth.onAuthStateChange(
-      (_event, session) => {
-        setUser(session?.user ?? null);
-        setLoading(false);
-      }
-    );
-
-    return () => subscription.unsubscribe();
   }, []);
 
   const signIn = async (email: string, password: string) => {
-    const { error } = await auth.signIn(email, password);
-    return { error };
+    try {
+      const data = await auth.login(email, password);
+      localStorage.setItem('token', data.access_token);
+      setUser({ email });
+      return { error: null };
+    } catch (error: any) {
+      return { error: error.response?.data?.detail || 'Login failed' };
+    }
   };
 
   const signOut = async () => {
-    await auth.signOut();
+    await auth.logout();
+    setUser(null);
   };
 
   const value = {

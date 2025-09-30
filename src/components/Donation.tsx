@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, CreditCard, Building2, Mail } from 'lucide-react';
+import { ArrowLeft, CreditCard, Building2, Mail, ChevronDown, ChevronUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Donation: React.FC = () => {
@@ -9,6 +9,31 @@ const Donation: React.FC = () => {
     amount: '',
     message: ''
   });
+
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: 'How can I make a donation?',
+      answer: 'You can make a donation through our Donate page using PayPal or bank transfer options.'
+    },
+    {
+      question: 'How do I become a volunteer?',
+      answer: 'Visit our Contact page and fill out the volunteer application form to get involved.'
+    },
+    {
+      question: 'What areas do you serve?',
+      answer: 'We serve Kisii, Nyamira, and Migori counties in Western Kenya.'
+    },
+    {
+      question: 'How can I sponsor a child or program?',
+      answer: 'Please contact us at enquiry@akinaties.org to learn more about sponsorship opportunities.'
+    },
+    {
+      question: 'Where can I find news and updates?',
+      answer: 'Check our News page regularly for the latest information and success stories.'
+    }
+  ];
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -158,6 +183,33 @@ const Donation: React.FC = () => {
                 Send Request
               </button>
             </form>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="mt-16 bg-akina-white rounded-lg p-8 shadow-md">
+            <h2 className="text-3xl font-bold text-akina-purple mb-6">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div key={index} className="border border-akina-brown/20 rounded-lg">
+                  <button
+                    onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
+                    className="w-full text-left px-6 py-4 flex items-center justify-between hover:bg-akina-brown/5 transition-colors duration-200"
+                  >
+                    <span className="text-lg font-semibold text-akina-purple">{faq.question}</span>
+                    {openFAQ === index ? (
+                      <ChevronUp className="h-5 w-5 text-akina-purple" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5 text-akina-purple" />
+                    )}
+                  </button>
+                  {openFAQ === index && (
+                    <div className="px-6 pb-4">
+                      <p className="text-akina-brown">{faq.answer}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

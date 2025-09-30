@@ -57,12 +57,11 @@ const Footer: React.FC = () => {
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-2 text-akina-white">
-              <p>Kisii, Western Kenya</p>
-              <p>Phone: 0724118379</p>
-              <p>enquiry@akinaties.org</p>
-              <p>akinaties@gmail.com</p>
-            </div>
+              <div className="space-y-2 text-akina-white">
+                <p>Kisii, Western Kenya</p>
+                <p>enquiry@akinaties.org</p>
+                <p>akinaties@gmail.com</p>
+              </div>
           </div>
         </div>
 

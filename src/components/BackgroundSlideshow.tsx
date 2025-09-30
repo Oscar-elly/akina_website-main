@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
+ 
 import { Link } from 'react-router-dom';
 
 const BackgroundSlideshow: React.FC = () => {
@@ -40,26 +40,31 @@ const BackgroundSlideshow: React.FC = () => {
       <div className="absolute inset-0 bg-black/40"></div> {/* Faded overlay for text readability */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-akina-white px-4">
         <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
             {slides[currentSlide].text}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-akina-orange/80 leading-relaxed">
+          <p className="text-lg md:text-xl mb-8 text-akina-orange/80 leading-relaxed">
             LOVE - PROTECT - EMPOWER
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <Link
+              to="/sponsorship"
+              className="bg-blue-400 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
+            >
+              Sponsor a Child
+            </Link>
             <Link
               to="/donate"
-              className="bg-akina-orange hover:bg-akina-brown text-akina-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+              className="bg-purple-400 hover:bg-purple-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
             >
-              <span>Support Our Mission</span>
-              <ArrowRight className="h-5 w-5" />
+              Make a Donation
             </Link>
-            <button
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              className="border-2 border-akina-white text-akina-white hover:bg-akina-white hover:text-akina-purple px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200"
+            <Link
+              to="/our-stories"
+              className="bg-green-400 hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
             >
-              Learn More
-            </button>
+              Discover
+            </Link>
           </div>
         </div>
       </div>
