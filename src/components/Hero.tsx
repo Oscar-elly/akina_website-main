@@ -29,12 +29,7 @@ const Hero: React.FC = () => {
           >
             Our Stories
           </a>
-          <a
-            href="/rafiki-mtaani"
-            className="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
-          >
-            Rafiki Mtaani
-          </a>
+ 
         </div>
       </div>
     </section>

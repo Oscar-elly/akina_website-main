@@ -49,19 +49,19 @@ const BackgroundSlideshow: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Link
               to="/sponsorship"
-              className="bg-blue-400 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
+              className="bg-akina-purple hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
             >
               Sponsor a Child
             </Link>
             <Link
               to="/donate"
-              className="bg-purple-400 hover:bg-purple-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
+              className="bg-akina-orange hover:bg-purple-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
             >
               Make a Donation
             </Link>
             <Link
               to="/our-stories"
-              className="bg-green-400 hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
+              className="bg-akina-brown hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
             >
               Discover
             </Link>

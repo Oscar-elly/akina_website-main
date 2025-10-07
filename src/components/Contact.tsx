@@ -3,6 +3,7 @@ import { Mail, MapPin, Facebook, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import VolunteerModal from './VolunteerModal';
 import PartnershipModal from './PartnershipModal';
+import backgroundImage1 from '../assets/background_image1.png';
 
 const Contact: React.FC = () => {
   const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
@@ -53,6 +54,13 @@ const Contact: React.FC = () => {
                   </a>
                 </div>
               </div>
+            </div>
+            <div className="mt-10">
+              <img
+                src={backgroundImage1}
+                alt="Children in Kenya"
+                className="rounded-lg shadow-xl mx-auto"
+              />
             </div>
           </div>
 

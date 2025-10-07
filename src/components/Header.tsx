@@ -8,16 +8,23 @@ const Header: React.FC = () => {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
+    {
+      label: 'About Us',
+      submenu: [
+        { href: '/about#our-journey', label: 'Our Journey' },
+        { href: '/about#akina-warriors', label: 'Akina Warriors' },
+        { href: '/about#our-future-goals', label: 'Our Future Goals' }
+      ]
+    },
     { href: '/what-we-do', label: 'What We Do' },
     { href: '/how-to-help', label: 'How to Help' },
     { href: '/our-stories', label: 'Our Stories' },
     { href: '/sponsorship', label: 'Sponsorship' },
-    { href: '/contact', label: 'Contact Us' }
+    { href: '/#contact', label: 'Contact Us' }
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-akina-white/50 backdrop-blur-lg z-50 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 bg-akina-white/60 backdrop-blur-lg z-50 shadow-sm">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 max-w-screen-xl mx-auto">
           <Link to="/" className="flex items-center space-x-4 flex-shrink-0">
@@ -30,15 +37,34 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex flex-1 justify-center space-x-8 whitespace-nowrap">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.submenu ? (
+                <div key={link.label} className="relative group">
+                  <button className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium">
+                    {link.label}
+                  </button>
+                  <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50">
+                    {link.submenu.map((sublink) => (
+                      <a
+                        key={sublink.href}
+                        href={sublink.href}
+                        className="block px-4 py-2 text-akina-brown hover:bg-akina-purple hover:text-white transition-colors duration-200"
+                      >
+                        {sublink.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium"
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </nav>
 
           <Link
@@ -73,7 +99,7 @@ const Header: React.FC = () => {
               ))}
               <Link
                 to="/donate"
-                className="bg-akina-brown text-akina-white px-6 py-2 rounded-full hover:bg-akina-orange transition-colors duration-200 font-medium w-fit mt-4"
+                className="bg-akina-purple text-akina-white px-6 py-2 rounded-full hover:bg-akina-orange transition-colors duration-200 font-medium w-fit mt-4"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Donate Now

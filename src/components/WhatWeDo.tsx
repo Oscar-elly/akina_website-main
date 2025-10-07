@@ -3,17 +3,166 @@ import React from 'react';
 const WhatWeDo: React.FC = () => {
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <h1 className="text-4xl font-bold mb-8">What We Do</h1>
-      <p className="mb-6">
-        We provide crisis accommodation, community education programs, and support services aimed at improving the lives of orphans, vulnerable children, women, and youth affected by violence, HIV/AIDS, and neglect in Western Kenya.
-      </p>
-      <ul className="list-disc list-inside space-y-4 text-lg">
-        <li>Crisis accommodation for women and children fleeing violence</li>
-        <li>Community empowerment and education initiatives</li>
-        <li>Legal support and advocacy for vulnerable populations</li>
-        <li>Health and wellness programs</li>
-        <li>Economic empowerment and skills training</li>
-      </ul>
+      <h1 className="text-4xl font-bold mb-12 text-center">Heart4Change Empowerment Programs</h1>
+      
+      <p className="mb-8 text-center text-lg max-w-4xl mx-auto leading-relaxed text-gray-700">
+        Heart4Change Programs are programs under Akina Teas which are specially designed programs aimed at empowering the local community. In particular, they focus on education and empowerment in the face of sexual and gender-based violence. The programs address self-worth, decision-making, and economic empowerment which aims to equip participants with the skills to make them and their communities self-reliant.
+      </p> 
+
+      {/* The Akina Ties Haven */}
+      <div className="mb-16 max-w-4xl mx-auto text-gray-800">
+        <h2 className="text-3xl font-semibold mb-4">The Akina Ties Haven</h2>
+        <p className="mb-6 leading-relaxed">
+          We provide a safe and highly secure place where women and children can live completely free from violence and start the road to recovery. We offer rehabilitative and reintegration services. We are situated in Kisii in the western area of Kenya.
+        </p>
+        <p className="mb-6 leading-relaxed">
+          With a donation of $50 the Haven running costs which includes School Fees, Food, Clothing, Medical Bills, wages and utilities will be catered for.
+        </p>
+        <div className="flex justify-center mb-6">
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+            alt="The Akina Ties Haven"
+            className="rounded-lg shadow-lg max-w-full h-auto"
+          />
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-3xl font-bold mb-8 text-center">Heart4Change Programs</h2>
+        <div className="flex flex-col space-y-10">
+          {/* Program Card 1 */}
+          <div className="bg-purple-900 text-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+            <div className="md:w-1/3 h-48 md:h-auto bg-gray-300 flex items-center justify-center text-gray-500 font-semibold">
+              Image Placeholder
+            </div>
+            <div className="p-6 flex flex-col flex-grow md:w-2/3">
+              <h2 className="text-xl font-semibold mb-3">Girls Camp</h2>
+              <p className="mb-4 text-sm leading-relaxed">
+                (Alternative Right of Passage) Program. Akina Teens run Girls Camps in the past 5 years reaching over 2000 girls between the ages of 8-15 years. Girls risk homelessness, exclusion. This program is held every school holiday and is aimed at ending Female Genital Mutilation (FGM) in Kisii, Nyamira, and Migori Counties where it is a costly for early marriages, early pregnancy and dropping out of school.
+                This program costs about 9000 per an annual basis. Support us by donating.
+              </p>
+              <button className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 rounded transition duration-300 w-32">
+                Donate
+              </button>
+            </div>
+          </div>
+
+          {/* Program Card 2 */}
+          <div className="bg-yellow-200 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+            <div className="md:w-1/3 h-48 md:h-auto bg-gray-300 flex items-center justify-center text-gray-500 font-semibold">
+              Image Placeholder
+            </div>
+            <div className="p-6 flex flex-col flex-grow md:w-2/3">
+              <h2 className="text-lg font-semibold mb-3">Feed a Granny Program</h2>
+              <p className="mb-4 text-sm leading-relaxed text-gray-700">
+                We have since 2012 been involved in reaching out to abandoned grannies in their homesteads, giving them food, transport each month, taking them to the hospital, client’s skill homes, and building better homes for those who do not have them. So far, I have 500 grannies in our program and provided more than 3,000 meals to these families and 1,000 pairs of appropriately sized shoes given per year. Some of these grannies are abandoned by their own mothers and relatives because they testify and neglect their properties but they will stay longer with us. Help us support this program by donating.
+              </p>
+              <button className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 rounded transition duration-300 w-32">
+                Donate
+              </button>
+            </div>
+          </div>
+
+          {/* Program Card 3 */}
+          <div className="bg-orange-200 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+            <div className="md:w-1/3 h-48 md:h-auto bg-gray-300 flex items-center justify-center text-gray-500 font-semibold">
+              Image Placeholder
+            </div>
+            <div className="p-6 flex flex-col flex-grow md:w-2/3">
+              <h2 className="text-lg font-semibold mb-3">Teen Mom Program</h2>
+              <p className="mb-4 text-sm leading-relaxed text-gray-700">
+                We offer support for pregnant and parenting teens to learn how to be the person and the parent they want to be.
+                We help them finish their high school and also get to college, using our general donation help donating.
+              </p>
+              <button className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 rounded transition duration-300 w-32">
+                Donate
+              </button>
+            </div>
+          </div>
+
+          {/* Program Card 4 */}
+          <div className="bg-orange-200 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+            <div className="md:w-1/3 h-48 md:h-auto bg-gray-300 flex items-center justify-center text-gray-500 font-semibold">
+              Image Placeholder
+            </div>
+            <div className="p-6 flex flex-col flex-grow md:w-2/3">
+              <h2 className="text-lg font-semibold mb-3">No Sex & Pads</h2>
+              <p className="mb-4 text-sm leading-relaxed text-gray-700">
+                Providing sanitary towels, panties, painkillers for girls, and a boxer and vest for boys, we servicing the girls and boys on Menstrual Health and Hygiene - these have seen 10,000 boys and girls benefit across Kisii and Nyamira counties since 2014. This costs 8500 per year on an individual.
+              </p>
+              <button className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 rounded transition duration-300 w-32">
+                Donate
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* New Programs Section */}
+      <div className="mt-20 flex flex-col space-y-10">
+        {/* Integration Program */}
+        <div className="bg-purple-200 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+          <div className="md:w-1/3 h-48 md:h-auto flex items-center justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+              alt="Integration program"
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="p-6 flex flex-col flex-grow md:w-2/3">
+            <h2 className="text-lg font-semibold mb-3">Integration program</h2>
+            <p className="mb-4 text-sm leading-relaxed text-gray-700">
+              We offer emotional support and integration services into safe communities and homes. We maintain contact with the children to ensure that they are safe, they are provided for and continue going to school.
+            </p>
+          </div>
+        </div>
+
+        {/* Legal representation */}
+        <div className="bg-beige-200 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row bg-gray-100">
+          <div className="md:w-1/3 h-48 md:h-auto flex items-center justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=400&q=80"
+              alt="Legal representation"
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="p-6 flex flex-col flex-grow md:w-2/3">
+            <h2 className="text-lg font-semibold mb-3">Legal representation</h2>
+            <p className="mb-4 text-sm leading-relaxed text-gray-700">
+              We offer legal aid support to the sexually abused minors and women who come to us for shelter and protection. So far we have successfully got justice for 80% of girls in our care. Even though we are supposed to seek for pro bono services, they are not easy to find and if even we do find them they are not totally free. A substantial amount is needed to have our clients represented in court by lawyers.
+            </p>
+            <p className="mb-4 text-sm leading-relaxed text-gray-700">
+              Some of these girls are abandoned by their own mothers and relatives because they testified against their perpetrator they will stay longer with us with a donation of $30 you will help us support this program.
+            </p>
+            <button className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 rounded transition duration-300 w-32">
+              Donate
+            </button>
+          </div>
+        </div>
+
+        {/* Boundaries Program */}
+        <div className="bg-orange-400 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+          <div className="md:w-1/3 h-48 md:h-auto flex items-center justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+              alt="Boundaries Program"
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="p-6 flex flex-col flex-grow md:w-2/3 text-white">
+            <h2 className="text-lg font-semibold mb-3">Boundaries Program</h2>
+            <p className="mb-4 text-sm leading-relaxed">
+              Boundaries are the limits or the line we set with others to show what we find acceptable and unacceptable. Our boundaries reflect our values and priorities. Many women avoid boundaries because they think it will keep them from getting closer to others or it will mean they have to give up being generous ones taker they like to be.
+            </p>
+            <p className="mb-4 text-sm leading-relaxed">
+              In our boundaries session which we conduct each year we train women how to preserve their values and priorities, conserve their energy and time and avoid burn out and enhance their well being with $50 Aud, you will make a huge impact of improving the lives of many of our single moms and widows. You can also donate your time and prayers and together, we will partner to make a lasting change in their lives.
+            </p>
+            <button className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 rounded transition duration-300 w-32">
+              Donate
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

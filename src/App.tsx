@@ -37,11 +37,11 @@ function MainSite() {
   return (
     <Layout>
       <BackgroundSlideshow />
+      <About />
       <Mission />
       <Services />
       <Programs />
-      <Impact />
-      <Sponsorship />
+      <Impact /> 
       <Contact />
     </Layout>
   );

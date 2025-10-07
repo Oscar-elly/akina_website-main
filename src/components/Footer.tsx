@@ -66,13 +66,13 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-akina-brown mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-akina-white text-sm">
               © 2025 Akina Ties Inc. All rights reserved.
             </p>
-            <p className="text-akina-white text-sm mt-4 md:mt-0">
+            <div className="bg-akina-orange text-akina-brown px-4 py-2 rounded font-semibold">
               Transforming Lives, Changing Destinies.
-            </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, CreditCard, Building2, Mail, ChevronDown, ChevronUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { CreditCard, Building2, Mail, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Donation: React.FC = () => {
   const [emailForm, setEmailForm] = useState({
@@ -50,19 +49,81 @@ const Donation: React.FC = () => {
     });
   };
 
+  const prefillAmount = (amount: string) => {
+    setEmailForm(prev => ({
+      ...prev,
+      amount: amount
+    }));
+  };
+
   return (
     <div className="min-h-screen bg-akina-white pt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-4xl mx-auto">
-          <Link
-            to="/"
-            className="inline-flex items-center text-akina-purple hover:text-akina-brown transition-colors duration-200 mb-8"
-          >
-            <ArrowLeft className="h-5 w-5 mr-2" />
-            Back to Home
-          </Link>
+          {/* Removed Back to Home button */}
 
           <h1 className="text-4xl font-bold text-akina-purple mb-6">Make a Donation</h1>
+
+          {/* New Donation Options Section */}
+          <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="border rounded-lg p-6 shadow-md">
+              <img
+                src="/src/assets/akina-angels.png"
+                alt="Akina Ties Angels"
+                className="mx-auto mb-4 w-24 h-24 object-contain"
+              />
+              <h3 className="text-xl font-semibold mb-2">Akina Ties Angels</h3>
+              <p className="mb-4 text-sm text-gray-700">
+                To sponsor Akina Ties Haven, by funding day to day essentials
+              </p>
+              <button
+                type="button"
+                onClick={() => prefillAmount('$20')}
+                className="bg-purple-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-800 transition-colors duration-200"
+              >
+                $20 a month
+              </button>
+            </div>
+
+            <div className="border rounded-lg p-6 shadow-md">
+              <img
+                src="/src/assets/general-donation.png"
+                alt="General Donation"
+                className="mx-auto mb-4 w-24 h-24 object-contain"
+              />
+              <h3 className="text-xl font-semibold mb-2">General Donation!</h3>
+              <p className="mb-4 text-sm text-gray-700">
+                To donate to the Akina Ties project or cause which needs your support most at the time of donation.
+              </p>
+              <button
+                type="button"
+                onClick={() => prefillAmount('')}
+                className="bg-purple-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-800 transition-colors duration-200"
+              >
+                Donate
+              </button>
+            </div>
+
+            <div className="border rounded-lg p-6 shadow-md">
+              <img
+                src="/src/assets/feel-good-fiver.png"
+                alt="Feel Good Fiver"
+                className="mx-auto mb-4 w-24 h-24 object-contain"
+              />
+              <h3 className="text-xl font-semibold mb-2">Feel Good Fiver!</h3>
+              <p className="mb-4 text-sm text-gray-700">
+                To supply fun developmental toys and activities swimming to the Akina Ties Haven children
+              </p>
+              <button
+                type="button"
+                onClick={() => prefillAmount('$5')}
+                className="bg-purple-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-800 transition-colors duration-200"
+              >
+                $5 Donation
+              </button>
+            </div>
+          </div>
+
           <p className="text-xl text-akina-brown mb-12">
             Your generosity helps us continue our mission to support vulnerable children and women in our community.
           </p>
