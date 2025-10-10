@@ -13,24 +13,36 @@ const Donation: React.FC = () => {
 
   const faqs = [
     {
-      question: 'How can I make a donation?',
-      answer: 'You can make a donation through our Donate page using PayPal or bank transfer options.'
+      question: "How can I make a donation?",
+      answer: "Donations can be made online through our secure payment system, via PayPal, or by bank transfer. Visit our Donations page for details."
     },
     {
-      question: 'How do I become a volunteer?',
-      answer: 'Visit our Contact page and fill out the volunteer application form to get involved.'
+      question: "Can I make a one-time or recurring donation?",
+      answer: "Yes, you can choose to make a one-time donation or set up a recurring monthly contribution."
     },
     {
-      question: 'What areas do you serve?',
-      answer: 'We serve Kisii, Nyamira, and Migori counties in Western Kenya.'
+      question: "Where does my donation go?",
+      answer: "Your donation supports our programs, including food, shelter, education, healthcare, and community outreach for children and women in need."
     },
     {
-      question: 'How can I sponsor a child or program?',
-      answer: 'Please contact us at enquiry@akinaties.org to learn more about sponsorship opportunities.'
+      question: "Is my donation tax-deductible?",
+      answer: "Yes, all donations are tax-deductible. You will receive a receipt for your contribution."
     },
     {
-      question: 'Where can I find news and updates?',
-      answer: 'Check our News page regularly for the latest information and success stories.'
+      question: "Can I donate items instead of money?",
+      answer: "We accept donations of items such as clothing, school supplies, and non-perishable food. Please contact us to arrange a drop-off."
+    },
+    {
+      question: "How do I get a receipt for my donation?",
+      answer: "Receipts are automatically emailed to you after your donation is processed. Contact us if you need a duplicate."
+    },
+    {
+      question: "Can I dedicate my donation to someone?",
+      answer: "Yes, you can dedicate your donation in honor or memory of someone. Please indicate this when making your donation."
+    },
+    {
+      question: "Who can I contact for more information?",
+      answer: "For any inquiries about donations, email us at info@akina.org or use the contact form on our website."
     }
   ];
 
@@ -246,7 +258,7 @@ const Donation: React.FC = () => {
             </form>
           </div>
 
-          {/* FAQ Section */}
+          {/* FAQ Section */} 
           <div className="mt-16 bg-akina-white rounded-lg p-8 shadow-md">
             <h2 className="text-3xl font-bold text-akina-purple mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4">

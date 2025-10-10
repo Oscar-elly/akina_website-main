@@ -1,11 +1,24 @@
 import React, { useState } from 'react';
-import { Heart, Users, BookOpen, Mail, CreditCard, CheckCircle, X, User, Phone, MapPin, DollarSign } from 'lucide-react';
+import { Heart, Users, BookOpen, Mail, CreditCard, CheckCircle, X, User, Phone, MapPin, DollarSign, ChevronDown, ChevronUp } from 'lucide-react';
+
+interface SponsorshipFormData {
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  city: string;
+  state: string;
+  zipCode: string;
+  amount: string;
+  message: string;
+}
 
 const Sponsorship: React.FC = () => {
   const [showForm, setShowForm] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [formData, setFormData] = useState({
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [formData, setFormData] = useState<SponsorshipFormData>({
     name: '',
     email: '',
     phone: '',
@@ -16,6 +29,41 @@ const Sponsorship: React.FC = () => {
     amount: '50',
     message: ''
   });
+
+  const sponsorshipFaqs = [
+    {
+      question: "How do I sponsor a child?",
+      answer: "You can sponsor a child by filling out our sponsorship application form on the website. Once submitted, our team will contact you with details and next steps."
+    },
+    {
+      question: "What does my sponsorship provide?",
+      answer: "Your sponsorship provides food, shelter, clothing, healthcare, education, and emotional support for a child in need."
+    },
+    {
+      question: "Can I communicate with my sponsored child?",
+      answer: "Yes! Sponsors receive regular updates and can send letters or gifts to their sponsored child through our program."
+    },
+    {
+      question: "How long does sponsorship last?",
+      answer: "Sponsorship is typically ongoing, but you may choose to end your sponsorship at any time by notifying us."
+    },
+    {
+      question: "Can I visit my sponsored child?",
+      answer: "Visits are possible and encouraged, but must be arranged in advance with our team to ensure the safety and privacy of all children."
+    },
+    {
+      question: "Is my sponsorship tax-deductible?",
+      answer: "Yes, all sponsorship contributions are tax-deductible. You will receive an annual statement for your records."
+    },
+    {
+      question: "How do I change my payment method?",
+      answer: "Contact our support team to update your payment information or switch to a different payment method."
+    },
+    {
+      question: "What happens if I miss a payment?",
+      answer: "If you miss a payment, our team will reach out to you to resolve the issue. The child's support will not be interrupted immediately."
+    }
+  ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -29,7 +77,7 @@ const Sponsorship: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/participants`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/participants/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -239,6 +287,40 @@ const Sponsorship: React.FC = () => {
                 <p className="text-white font-semibold">Together Stronger</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="mt-16 bg-akina-white rounded-lg p-8 shadow-md">
+          <h2 className="text-3xl font-bold text-akina-purple mb-6 text-center">Frequently Asked Questions</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            {sponsorshipFaqs.map((faq, idx) => {
+              const isOpen = idx === openFAQ;
+              return (
+                <div key={idx} className="mb-6 border border-akina-purple rounded-lg overflow-hidden">
+                  <button
+                    onClick={() => setOpenFAQ(isOpen ? null : idx)}
+                    className="w-full flex justify-between items-center px-4 py-3 text-left font-bold text-akina-purple text-lg bg-akina-white hover:bg-akina-purple hover:text-white transition-colors duration-300"
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-answer-${idx}`}
+                    id={`faq-question-${idx}`}
+                  >
+                    {faq.question}
+                    {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  </button>
+                  {isOpen && (
+                    <div
+                      id={`faq-answer-${idx}`}
+                      role="region"
+                      aria-labelledby={`faq-question-${idx}`}
+                      className="px-4 py-3 text-akina-brown bg-akina-white"
+                    >
+                      {faq.answer}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
