@@ -130,7 +130,7 @@ const Sponsorship: React.FC = () => {
             <Heart className="w-5 h-5 text-red-500" />
             <span className="text-sm font-medium text-gray-700">Make a Difference Today</span>
           </div>
-          <h1 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-blue-600 via-teal-600 to-green-600 bg-clip-text text-transparent mb-6 leading-tight">
+          <h1 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-akina-purple via-akina-orange to-akina-brown bg-clip-text text-transparent mb-6 leading-tight">
             Sponsor a Child
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-light">
@@ -158,7 +158,7 @@ const Sponsorship: React.FC = () => {
           </div>
           <button
             onClick={() => setShowForm(true)}
-            className="bg-gradient-to-r from-blue-600 to-teal-600 text-white px-12 py-5 rounded-2xl text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 transform hover:from-blue-700 hover:to-teal-700"
+            className="bg-gradient-to-r from-akina-purple to-akina-orange text-white px-12 py-5 rounded-2xl text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 transform"
           >
             Start Sponsoring Today
           </button>
@@ -167,27 +167,27 @@ const Sponsorship: React.FC = () => {
         {/* Impact Cards */} 
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
-              <Users className="w-8 h-8 text-white" />
-            </div>
+          <div className="w-16 h-16 bg-gradient-to-r from-akina-purple to-akina-orange rounded-2xl flex items-center justify-center mb-6">
+            <Users className="w-8 h-8 text-white" />
+          </div>
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Safe Haven</h3>
             <p className="text-gray-600 leading-relaxed">
               Children find safety and stability in our care facilities, transitioning to loving families while maintaining connections to their roots.
             </p>
           </div>
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
-              <BookOpen className="w-8 h-8 text-white" />
-            </div>
+          <div className="w-16 h-16 bg-gradient-to-r from-akina-orange to-akina-brown rounded-2xl flex items-center justify-center mb-6">
+            <BookOpen className="w-8 h-8 text-white" />
+          </div>
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Quality Education</h3>
             <p className="text-gray-600 leading-relaxed">
               Every child receives education, either in mainstream schools or through our qualified teachers at the haven.
             </p>
           </div>
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6">
-              <Heart className="w-8 h-8 text-white" />
-            </div>
+          <div className="w-16 h-16 bg-gradient-to-r from-akina-brown to-akina-purple rounded-2xl flex items-center justify-center mb-6">
+            <Heart className="w-8 h-8 text-white" />
+          </div>
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Comprehensive Care</h3>
             <p className="text-gray-600 leading-relaxed">
               $50 monthly sponsorship covers food, shelter, clothing, healthcare, and emotional support for children and women.
@@ -200,23 +200,23 @@ const Sponsorship: React.FC = () => {
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Your Sponsorship Journey</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Mail className="w-10 h-10 text-white" />
-              </div>
+          <div className="w-20 h-20 bg-gradient-to-r from-akina-purple to-akina-orange rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <Mail className="w-10 h-10 text-white" />
+          </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Welcome Package</h3>
               <p className="text-gray-600">Receive detailed information, photos, and a welcome letter about your sponsored child.</p>
             </div>
             <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Users className="w-10 h-10 text-white" />
-              </div>
+          <div className="w-20 h-20 bg-gradient-to-r from-akina-orange to-akina-brown rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <Users className="w-10 h-10 text-white" />
+          </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Recognition Wall</h3>
               <p className="text-gray-600">Your name proudly displayed on our acknowledgment wall honoring our supporters.</p>
             </div>
             <div className="text-center group md:col-span-2 lg:col-span-1">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <CheckCircle className="w-10 h-10 text-white" />
-              </div>
+          <div className="w-20 h-20 bg-gradient-to-r from-akina-brown to-akina-purple rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <CheckCircle className="w-10 h-10 text-white" />
+          </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Ongoing Support</h3>
               <p className="text-gray-600">Regular updates and our commitment to answer all your questions about the program.</p>
             </div>
@@ -224,7 +224,7 @@ const Sponsorship: React.FC = () => {
         </div>
 
         {/* How to Get Started */}
-        <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-3xl p-12 text-white shadow-2xl mb-20">
+        <div className="bg-gradient-to-r from-akina-purple to-akina-orange rounded-3xl p-12 text-white shadow-2xl mb-20">
           <h2 className="text-4xl font-bold text-center mb-12">How to Sponsor in 3 Easy Steps</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -252,7 +252,7 @@ const Sponsorship: React.FC = () => {
           <div className="text-center mt-12">
             <button
               onClick={() => setShowForm(true)}
-              className="bg-white text-blue-600 px-12 py-4 rounded-2xl text-xl font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              className="bg-white text-akina-purple px-12 py-4 rounded-2xl text-xl font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               Begin Your Sponsorship
             </button>
@@ -328,7 +328,7 @@ const Sponsorship: React.FC = () => {
       {showForm && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
           <div className="bg-white rounded-3xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto transform transition-all animate-in zoom-in duration-300">
-            <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-teal-600 text-white p-8 rounded-t-3xl flex justify-between items-center">
+            <div className="sticky top-0 bg-gradient-to-r from-akina-purple to-akina-orange text-white p-8 rounded-t-3xl flex justify-between items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-2">Start Your Sponsorship Journey</h2>
                 <p className="text-blue-100">Fill out the form below to begin making a difference</p>
@@ -516,7 +516,7 @@ const Sponsorship: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-teal-600 text-white px-6 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex-1 bg-gradient-to-r from-akina-purple to-akina-orange text-white px-6 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center justify-center gap-2">
