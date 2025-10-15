@@ -1,7 +1,5 @@
-- [x] Import Link from react-router-dom in HowToHelp.tsx
-- [x] Wrap "Donate Now" button with Link to="/donate"
-- [x] Wrap "Start Sponsoring" button with Link to="/sponsorship"
-- [x] Change "Volunteer Now" button to Link to="/contact", remove onClick
-- [x] Change "Partner With Us" button to Link to="/contact", remove onClick
-- [x] Wrap "Get Involved" button with Link to="/contact"
-- [x] Remove unused modal state and imports if applicable
+- [ ] Update Our Journey section: Remove content container (border, shadow, p-6, bg-white), center the title with a thematic icon (e.g., History), and style paragraphs simply like Who We Are section.
+- [x] Update Akina Warriors section: Transformed to a modern grid layout with card-based design, "Read Profile" buttons for expandable bios, and introductory paragraph, matching the style from rafikimwema.com/about/team/.
+- [ ] Update Our Future Goals section: Remove content container, center the title with a thematic icon (e.g., Target), and add thematic icons to the h4 subsections (e.g., Droplets for Water, Home for accommodation, etc.).
+- [ ] Ensure overall styling is modern and simple, enhancing titles and subtitles without copying Who We Are exactly.
+- [ ] Test the updated About page for visual consistency.

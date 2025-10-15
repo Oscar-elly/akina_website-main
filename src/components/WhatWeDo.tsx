@@ -1,5 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import girlieCampImg from '../assets/girlie camp.avif';
+import feedAGrannyImg from '../assets/feed a granny.avif';
+import teenMomImg from '../assets/teen mom.png';
+import noSex4PadsImg from '../assets/No Sex 4 pads.avif';
+import integrationImg from '../assets/intergration.avif';
+import legalRepImg from '../assets/legal representaton.avif';
+import generalDonation from '../assets/general-donation.png';
 
 const WhatWeDo: React.FC = () => {
   return (
@@ -11,13 +18,13 @@ const WhatWeDo: React.FC = () => {
         <div className="flex flex-col space-y-10">
           {/* Program Card 1 */}
           <div className="bg-purple-900 text-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
-            <div className="md:w-1/3 h-48 md:h-auto bg-gray-300 flex items-center justify-center text-gray-500 font-semibold">
-              Image Placeholder
+            <div className="md:w-1/3 h-48 md:h-auto">
+              <img src={girlieCampImg} alt="Girlie Camp" className="object-cover w-full h-full" />
             </div>
             <div className="p-6 flex flex-col flex-grow md:w-2/3">
-              <h2 className="text-xl font-semibold mb-3">Girls Camp</h2>
+              <h2 className="text-xl font-semibold mb-3">Girlie Camp</h2>
               <p className="mb-4 text-sm leading-relaxed">
-                (Alternative Right of Passage) Program. Akina Teens run Girls Camps in the past 5 years reaching over 2000 girls between the ages of 8-15 years. Girls risk homelessness, exclusion. This program is held every school holiday and is aimed at ending Female Genital Mutilation (FGM) in Kisii, Nyamira, and Migori Counties where it is a costly for early marriages, early pregnancy and dropping out of school.
+                (Alternative Right of Passage) Program. Akina Teens run Girlies Camps in the past 5 years reaching over 2000 girls between the ages of 8-15 years. Girls risk homelessness, exclusion. This program is held every school holiday and is aimed at ending Female Genital Mutilation (FGM) in Kisii, Nyamira, and Migori Counties where it is a costly for early marriages, early pregnancy and dropping out of school.
                 This program costs about 9000 per an annual basis. Support us by donating.
               </p>
               <Link to="/donate">
@@ -30,8 +37,8 @@ const WhatWeDo: React.FC = () => {
 
           {/* Program Card 2 */}
           <div className="bg-yellow-200 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
-            <div className="md:w-1/3 h-48 md:h-auto bg-gray-300 flex items-center justify-center text-gray-500 font-semibold">
-              Image Placeholder
+            <div className="md:w-1/3 h-48 md:h-auto">
+              <img src={feedAGrannyImg} alt="Feed a Granny Program" className="object-cover w-full h-full" />
             </div>
             <div className="p-6 flex flex-col flex-grow md:w-2/3">
               <h2 className="text-lg font-semibold mb-3">Feed a Granny Program</h2>
@@ -48,8 +55,8 @@ const WhatWeDo: React.FC = () => {
 
           {/* Program Card 3 */}
           <div className="bg-orange-200 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
-            <div className="md:w-1/3 h-48 md:h-auto bg-gray-300 flex items-center justify-center text-gray-500 font-semibold">
-              Image Placeholder
+            <div className="md:w-1/3 h-48 md:h-auto">
+              <img src={teenMomImg} alt="Teen Mom Program" className="object-cover w-full h-full" />
             </div>
             <div className="p-6 flex flex-col flex-grow md:w-2/3">
               <h2 className="text-lg font-semibold mb-3">Teen Mom Program</h2>
@@ -67,11 +74,11 @@ const WhatWeDo: React.FC = () => {
 
           {/* Program Card 4 */}
           <div className="bg-orange-200 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
-            <div className="md:w-1/3 h-48 md:h-auto bg-gray-300 flex items-center justify-center text-gray-500 font-semibold">
-              Image Placeholder
+            <div className="md:w-1/3 h-48 md:h-auto">
+              <img src={noSex4PadsImg} alt="No Sex 4 Pads" className="object-cover w-full h-full" />
             </div>
             <div className="p-6 flex flex-col flex-grow md:w-2/3">
-              <h2 className="text-lg font-semibold mb-3">No Sex & Pads</h2>
+              <h2 className="text-lg font-semibold mb-3">No Sex 4 Pads</h2>
               <p className="mb-4 text-sm leading-relaxed text-gray-700">
                 Providing sanitary towels, panties, painkillers for girls, and a boxer and vest for boys, we servicing the girls and boys on Menstrual Health and Hygiene - these have seen 10,000 boys and girls benefit across Kisii and Nyamira counties since 2014. This costs 8500 per year on an individual.
               </p>
@@ -96,7 +103,7 @@ const WhatWeDo: React.FC = () => {
           <div className="bg-purple-200 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
             <div className="md:w-1/3 h-48 md:h-auto flex items-center justify-center">
               <img
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                src={integrationImg}
                 alt="Integration program"
                 className="object-cover w-full h-full"
               />
@@ -113,7 +120,7 @@ const WhatWeDo: React.FC = () => {
           <div className="bg-beige-200 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row bg-gray-100">
             <div className="md:w-1/3 h-48 md:h-auto flex items-center justify-center">
               <img
-                src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=400&q=80"
+                src={legalRepImg}
                 alt="Legal representation"
                 className="object-cover w-full h-full"
               />
@@ -138,7 +145,7 @@ const WhatWeDo: React.FC = () => {
           <div className="bg-orange-400 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
             <div className="md:w-1/3 h-48 md:h-auto flex items-center justify-center">
               <img
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                src={generalDonation}
                 alt="Boundaries Program"
                 className="object-cover w-full h-full"
               />

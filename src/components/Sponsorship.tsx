@@ -292,35 +292,28 @@ const Sponsorship: React.FC = () => {
 
         {/* FAQ Section */}
         <div className="mt-16 bg-akina-white rounded-lg p-8 shadow-md">
-          <h2 className="text-3xl font-bold text-akina-purple mb-6 text-center">Frequently Asked Questions</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            {sponsorshipFaqs.map((faq, idx) => {
-              const isOpen = idx === openFAQ;
-              return (
-                <div key={idx} className="mb-6 border border-akina-purple rounded-lg overflow-hidden">
-                  <button
-                    onClick={() => setOpenFAQ(isOpen ? null : idx)}
-                    className="w-full flex justify-between items-center px-4 py-3 text-left font-bold text-akina-purple text-lg bg-akina-white hover:bg-akina-purple hover:text-white transition-colors duration-300"
-                    aria-expanded={isOpen}
-                    aria-controls={`faq-answer-${idx}`}
-                    id={`faq-question-${idx}`}
-                  >
-                    {faq.question}
-                    {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
-                  </button>
-                  {isOpen && (
-                    <div
-                      id={`faq-answer-${idx}`}
-                      role="region"
-                      aria-labelledby={`faq-question-${idx}`}
-                      className="px-4 py-3 text-akina-brown bg-akina-white"
-                    >
-                      {faq.answer}
-                    </div>
+          <h2 className="text-3xl font-bold text-akina-purple mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {sponsorshipFaqs.map((faq, index) => (
+              <div key={index} className="border border-akina-brown/20 rounded-lg">
+                <button
+                  onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
+                  className="w-full text-left px-6 py-4 flex items-center justify-between hover:bg-akina-brown/5 transition-colors duration-200"
+                >
+                  <span className="text-lg font-semibold text-akina-purple">{faq.question}</span>
+                  {openFAQ === index ? (
+                    <ChevronUp className="h-5 w-5 text-akina-purple" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5 text-akina-purple" />
                   )}
-                </div>
-              );
-            })}
+                </button>
+                {openFAQ === index && (
+                  <div className="px-6 pb-4">
+                    <p className="text-akina-brown">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
