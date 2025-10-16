@@ -1,5 +1,1 @@
-- [ ] Update Our Journey section: Remove content container (border, shadow, p-6, bg-white), center the title with a thematic icon (e.g., History), and style paragraphs simply like Who We Are section.
-- [x] Update Akina Warriors section: Transformed to a modern grid layout with card-based design, "Read Profile" buttons for expandable bios, and introductory paragraph, matching the style from rafikimwema.com/about/team/.
-- [ ] Update Our Future Goals section: Remove content container, center the title with a thematic icon (e.g., Target), and add thematic icons to the h4 subsections (e.g., Droplets for Water, Home for accommodation, etc.).
-- [ ] Ensure overall styling is modern and simple, enhancing titles and subtitles without copying Who We Are exactly.
-- [ ] Test the updated About page for visual consistency.
+- [x] Fix header links to use React Router Link instead of anchor tags for proper client-side routing in production
