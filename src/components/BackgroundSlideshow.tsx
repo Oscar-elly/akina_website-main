@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from 'react';
- 
 import { Link } from 'react-router-dom';
+import backgroundImage1 from '../assets/background_image1.png';
+import backgroundImage2 from '../assets/background_image2.png';
+import backgroundImage3 from '../assets/background_image3.png';
+import backgroundImage4 from '../assets/background_image4.png';
 
 const BackgroundSlideshow: React.FC = () => {
   const slides = [
     {
-      image: '/src/assets/background_image1.png',
+      image: backgroundImage1,
       text: 'A future free from abuse, discrimination, and poverty.',
     },
     {
-      image: '/src/assets/background_image2.png',
+      image: backgroundImage2,
       text: 'Providing education, therapy, and legal support.',
     },
     {
-      image: '/src/assets/background_image3.png',
+      image: backgroundImage3,
       text: 'Economic empowerment and leadership initiatives.',
     },
     {
-      image: '/src/assets/background_image4.png',
+      image: backgroundImage4,
       text: 'Promoting and protecting fundamental rights.',
     },
   ];

@@ -87,16 +87,32 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-akina-brown">
             <nav className="flex flex-col space-y-3">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) =>
+                link.submenu ? (
+                  <div key={link.label} className="flex flex-col space-y-2">
+                    <span className="text-akina-brown font-medium py-2">{link.label}</span>
+                    {link.submenu.map((sublink) => (
+                      <a
+                        key={sublink.href}
+                        href={sublink.href}
+                        className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium py-1 pl-4"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {sublink.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
               <Link
                 to="/donate"
                 className="bg-akina-purple text-akina-white px-6 py-2 rounded-full hover:bg-akina-orange transition-colors duration-200 font-medium w-fit mt-4"

@@ -1,8 +1,9 @@
 import React from 'react';
+import backgroundImage1 from '../assets/background_image1.png';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative text-white pt-20 bg-cover bg-center" style={{ backgroundImage: "url('/src/assets/background_image1.png')" }}>
+    <section className="relative text-white pt-20 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage1})` }}>
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-40 text-center bg-black bg-opacity-50 rounded-lg">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
           We’re on a mission to change the brains of traumatised children.

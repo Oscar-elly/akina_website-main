@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { CreditCard, Building2, Mail, ChevronDown, ChevronUp } from 'lucide-react';
+import akinaAngels from '../assets/akina-angels.png';
+import generalDonation from '../assets/general-donation.png';
+import feelGoodFiver from '../assets/feel-good-fiver.png';
 
 const Donation: React.FC = () => {
   const [emailForm, setEmailForm] = useState({
@@ -80,7 +83,7 @@ const Donation: React.FC = () => {
           <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="border rounded-lg p-6 shadow-md">
               <img
-                src="/src/assets/akina-angels.png"
+                src={akinaAngels}
                 alt="Akina Ties Angels"
                 className="mx-auto mb-4 w-24 h-24 object-contain"
               />
@@ -99,7 +102,7 @@ const Donation: React.FC = () => {
 
             <div className="border rounded-lg p-6 shadow-md">
               <img
-                src="/src/assets/general-donation.png"
+                src={generalDonation}
                 alt="General Donation"
                 className="mx-auto mb-4 w-24 h-24 object-contain"
               />
@@ -118,7 +121,7 @@ const Donation: React.FC = () => {
 
             <div className="border rounded-lg p-6 shadow-md">
               <img
-                src="/src/assets/feel-good-fiver.png"
+                src={feelGoodFiver}
                 alt="Feel Good Fiver"
                 className="mx-auto mb-4 w-24 h-24 object-contain"
               />
