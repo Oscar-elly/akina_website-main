@@ -57,6 +57,12 @@ const About: React.FC = () => {
                 <Heart className="h-6 w-6 text-blue-800 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-gray-900">Our Impact</h4>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Heart className="h-6 w-6 text-blue-800 mt-1 flex-shrink-0" />
+                <div>
+                  <h4 className="font-semibold text-gray-900">Our Impact</h4>
                   <p className="text-gray-600">Breaking cycles of violence, poverty, and discrimination</p>
                 </div>
               </div>

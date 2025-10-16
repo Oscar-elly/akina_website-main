@@ -3,8 +3,7 @@ import { Mail, MapPin, Facebook, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import VolunteerModal from './VolunteerModal';
 import PartnershipModal from './PartnershipModal';
-import backgroundImage1 from '../assets/background_image1.png';
-
+ 
 const Contact: React.FC = () => {
   const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
   const [isPartnershipModalOpen, setIsPartnershipModalOpen] = useState(false);
@@ -56,11 +55,18 @@ const Contact: React.FC = () => {
               </div>
             </div>
             <div className="mt-10">
-              <img
-                src={backgroundImage1}
-                alt="Children in Kenya"
+              <h4 className="text-2xl font-bold text-akina-purple mb-4">Our Map</h4>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.757!2d34.7667!3d-0.6833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa75c6b6b6b6b%3A0x3d6f8f8f8f8f8f8f!2sKisii%2C%20Kenya!5e0!3m2!1sen!2s!4v1690000000000!5m2!1sen!2s"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
                 className="rounded-lg shadow-xl mx-auto"
-              />
+                title="Our Map"
+              ></iframe>
             </div>
           </div>
 
