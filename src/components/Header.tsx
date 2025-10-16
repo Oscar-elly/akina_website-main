@@ -45,24 +45,24 @@ const Header: React.FC = () => {
                   </button>
                   <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50">
                     {link.submenu.map((sublink) => (
-                      <a
+                      <Link
                         key={sublink.href}
-                        href={sublink.href}
+                        to={sublink.href}
                         className="block px-4 py-2 text-akina-brown hover:bg-akina-purple hover:text-white transition-colors duration-200"
                       >
                         {sublink.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               ) : (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium"
                 >
                   {link.label}
-                </a>
+                </Link>
               )
             )}
           </nav>
@@ -92,25 +92,25 @@ const Header: React.FC = () => {
                   <div key={link.label} className="flex flex-col space-y-2">
                     <span className="text-akina-brown font-medium py-2">{link.label}</span>
                     {link.submenu.map((sublink) => (
-                      <a
+                      <Link
                         key={sublink.href}
-                        href={sublink.href}
+                        to={sublink.href}
                         className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium py-1 pl-4"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {sublink.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 ) : (
-                  <a
+                  <Link
                     key={link.href}
-                    href={link.href}
+                    to={link.href}
                     className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 )
               )}
               <Link
