@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import girlieCampImg from '../assets/girlie camp.avif';
+import girlieCampImg from '../assets/girlie camp.jpg';
 import feedAGrannyImg from '../assets/feed a granny.avif';
 import teenMomImg from '../assets/teen mom.png';
 import noSex4PadsImg from '../assets/No Sex 4 pads.avif';

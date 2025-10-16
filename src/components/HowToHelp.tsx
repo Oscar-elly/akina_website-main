@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Users, BookOpen, Mail, CreditCard, CheckCircle, ChevronDown, ChevronUp, HandHeart, Megaphone, Calendar, DollarSign, ArrowRight } from 'lucide-react';
+import { Heart , CheckCircle, ChevronDown, ChevronUp, HandHeart, Megaphone, Calendar, DollarSign, ArrowRight } from 'lucide-react';
 import generalDonation from '../assets/general-donation.png';
 import backgroundImage1 from '../assets/background_image1.png';
-import backgroundImage2 from '../assets/background_image2.png';
-import backgroundImage3 from '../assets/background_image3.png';
-import backgroundImage4 from '../assets/background_image4.png';
+import volunteering2 from '../assets/volunteering2.jpg';
+import legalrepresentation from '../assets/legal representaton.avif';
+import backgroundImage4 from '../assets/girlie camp2.jpg';
 
 const HowToHelp: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -159,7 +159,7 @@ const HowToHelp: React.FC = () => {
               </Link>
             </div>
             <div className="relative">
-              <img src={backgroundImage2} alt="Volunteering" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
+              <img src={volunteering2} alt="Volunteering" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
             </div>
           </div>
@@ -197,7 +197,7 @@ const HowToHelp: React.FC = () => {
               </Link>
             </div>
             <div className="order-1 md:order-2 relative">
-              <img src={backgroundImage3} alt="Advocacy" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
+              <img src={legalrepresentation} alt="Advocacy" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
             </div>
           </div>

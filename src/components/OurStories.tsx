@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import NewsletterSubscription from './NewsletterSubscription';
+import julie from '../assets/Julie.avif';
+import menstrualHygiene from '../assets/menstrual hiegene.jpg';
+import birthdays from '../assets/birthdays.png';
 
 const newsArticles = [
   {
@@ -23,27 +27,94 @@ const newsArticles = [
 ];
 
 const OurStories: React.FC = () => {
+  const [expandedStory, setExpandedStory] = useState<number | null>(null);
+
+  const stories = [
+    {
+      id: 1,
+      title: "Some of our Special Cases",
+      image: julie,
+      alt: "Julie receiving medical care",
+      brief: "Julie came to us more than a decade ago. Lilian had been approached by her own brother to help a young child who lived on her psychotic mothers back borrowing money on the streets for her medication.",
+      full: "Julie came to us more than a decade ago. Lilian had been approached by her own brother to help a young child who lived on her psychotic mothers back borrowing money on the streets for her medication. As soon as Lilian met the young girl, she was touched with her plight and immediately contacted her then boss the late Lyle Burgoyne, the founder of Kenya Health who immediately sought for help to have this baby taken to Kijabe Hospital for medical attention where Julie's medical Journey started. with the help and support of grandma and pa Kate and Noel Doyle OAM. Julie underwent her first major head construction surgery at Kijabe Hospital. She underwent a hernia surgery then later on a double cleft surgery. This enabled her to start experiencing a normal childhood and attend normal formal education which she was not able to attend before. Her medical Journey still goes on as she is on lifetime consultative medication which costs Akina $2700 a year ($225Aud per month) to purchase. She attends quarter medical review clinic to regulate her medication and also check on her wellness. This cannot be possible without your generous support. Click on the Donate button to continue keeping Julie alive and healthy. Together we change one life at a time."
+    },
+    {
+      id: 2,
+      title: "Empowering Girls Through Menstrual Hygiene",
+      image: menstrualHygiene,
+      alt: "Girls receiving menstrual hygiene support",
+      brief: "In rural Kenya, our menstrual hygiene program provides reusable sanitary towels and changing rooms to girls in remote schools, ensuring they can attend classes without fear or embarrassment.",
+      full: "In the heart of rural Kenya, where access to basic hygiene products is a luxury, our menstrual hygiene program stands as a beacon of dignity and empowerment. We provide reusable sanitary towels and dedicated changing rooms to girls in remote schools, ensuring they can attend classes without fear or embarrassment. This initiative not only addresses immediate health needs but also challenges cultural stigmas surrounding menstruation, fostering an environment where girls can thrive academically and personally. By promoting menstrual hygiene in these underserved communities, we're not just supplying products—we're building confidence, reducing absenteeism, and paving the way for a generation of educated, empowered women who will lead their communities forward."
+    },
+    {
+      id: 3,
+      title: "Celebrating Life's Milestones: Birthdays and Beyond",
+      image: birthdays,
+      alt: "Children celebrating birthdays",
+      brief: "Birthdays are more than just dates on a calendar; they're celebrations of survival, growth, and potential for children in our care facilities.",
+      full: "Birthdays are more than just dates on a calendar; they're celebrations of survival, growth, and potential. In our care facilities, we transform these special days into moments of joy and belonging for children who have faced unimaginable hardships. From simple cakes baked with love to handmade cards and small gifts, we create memories that remind each child of their worth and the community's commitment to their future. These celebrations extend beyond birthdays, encompassing the everyday moments of learning, playing, and smiling that define childhood. By nurturing these experiences, we're helping children rebuild their sense of normalcy and hope, showing them that despite their past traumas, they are cherished and have a bright future ahead."
+    }
+  ];
+
   return (
     <div>
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h1 className="text-4xl font-bold mb-8 text-akina-purple">Our Stories</h1>
-        <p className="mb-6 text-akina-brown">
+        <p className="mb-12 text-akina-brown text-lg">
           Read inspiring stories from the children, women, and communities we serve. Learn how your support is changing lives and creating lasting impact.
         </p>
-        {/* Placeholder for stories content */}
-        <div className="space-y-8 mb-16">
-          <article className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-2 text-akina-purple">Story Title 1</h2>
-            <p className="text-akina-brown">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, faucibus erat at, cursus lorem.
-            </p>
-          </article>
-          <article className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-2 text-akina-purple">Story Title 2</h2>
-            <p className="text-akina-brown">
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-            </p>
-          </article>
+
+        {/* Stories Blog Section */}
+        <div className="space-y-12 mb-16">
+          {stories.map((story) => (
+            <article key={story.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="md:flex">
+                <div className="md:w-1/3">
+                  <img
+                    src={story.image}
+                    alt={story.alt}
+                    className="w-full h-64 md:h-full object-cover"
+                  />
+                </div>
+                <div className="md:w-2/3 p-8">
+                  <h2 className="text-2xl font-bold mb-4 text-akina-purple">{story.title}</h2>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    {story.brief}
+                  </p>
+                  {expandedStory === story.id ? (
+                    <div>
+                      <p className="text-gray-700 mb-4 leading-relaxed">
+                        {story.full}
+                      </p>
+                      <button
+                        onClick={() => setExpandedStory(null)}
+                        className="text-akina-orange hover:text-akina-purple font-medium transition-colors duration-200"
+                      >
+                        Read less
+                      </button>
+                      {story.id === 1 && (
+                        <div className="mt-4">
+                          <Link
+                            to="/donate"
+                            className="inline-block bg-akina-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-akina-purple transition-colors duration-200"
+                          >
+                            Support Julie
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <button
+                      onClick={() => setExpandedStory(story.id)}
+                      className="text-akina-orange hover:text-akina-purple font-medium transition-colors duration-200"
+                    >
+                      Read more →
+                    </button>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
 
         {/* Latest News & Updates */}

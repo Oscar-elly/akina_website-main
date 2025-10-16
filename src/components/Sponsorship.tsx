@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
 import { Heart, Users, BookOpen, Mail, CreditCard, CheckCircle, X, User, Phone, MapPin, DollarSign, ChevronDown, ChevronUp } from 'lucide-react';
+import child1 from '../assets/child1.jpg';
+import child2 from '../assets/child2.jpg';
+import child3 from '../assets/child3.jpg';
+import menstrualHygiene from '../assets/menstrual hiegene.jpg';
+import promotingMenstrualHygiene from '../assets/promoting menstrual hiegene.jpg';
+import birthdays from '../assets/birthdays.png';
+import childrenLearning from '../assets/children learning.avif';
+import childrenPlaying from '../assets/children playing.avif';
 
 interface SponsorshipFormData {
   name: string;
@@ -138,19 +146,19 @@ const Sponsorship: React.FC = () => {
           </p>
           <div className="flex justify-center gap-6 mb-12 flex-wrap">
             <div className="relative group">
-              <img src="/assets/background_image1.png" alt="Child 1" className="w-28 h-28 rounded-full object-cover shadow-xl border-4 border-white group-hover:scale-110 transition-transform duration-300" />
+              <img src={child1} alt="Child 1" className="w-28 h-28 rounded-full object-cover shadow-xl border-4 border-white group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute -bottom-2 -right-2 bg-green-500 rounded-full p-2">
                 <CheckCircle className="w-4 h-4 text-white" />
               </div>
             </div>
             <div className="relative group">
-              <img src="/assets/background_image2.png" alt="Child 2" className="w-28 h-28 rounded-full object-cover shadow-xl border-4 border-white group-hover:scale-110 transition-transform duration-300" />
+              <img src={child2} alt="Child 2" className="w-28 h-28 rounded-full object-cover shadow-xl border-4 border-white group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute -bottom-2 -right-2 bg-green-500 rounded-full p-2">
                 <CheckCircle className="w-4 h-4 text-white" />
               </div>
             </div>
             <div className="relative group">
-              <img src="/assets/background_image3.png" alt="Child 3" className="w-28 h-28 rounded-full object-cover shadow-xl border-4 border-white group-hover:scale-110 transition-transform duration-300" />
+              <img src={child3} alt="Child 3" className="w-28 h-28 rounded-full object-cover shadow-xl border-4 border-white group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute -bottom-2 -right-2 bg-green-500 rounded-full p-2">
                 <CheckCircle className="w-4 h-4 text-white" />
               </div>
@@ -262,29 +270,35 @@ const Sponsorship: React.FC = () => {
         {/* Gallery */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-8">Children in Our Care</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              <img src="/assets/feel-good-fiver.png" alt="Children learning" className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src={menstrualHygiene} alt="Provision of reusable sanitary towels and changing rooms for girls" className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                <p className="text-white font-semibold">Learning & Growing</p>
+                <p className="text-white font-semibold">Menstrual Hygiene</p>
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              <img src="/assets/background_image4.png" alt="Child smiling" className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src={promotingMenstrualHygiene} alt="Menstrual hygiene and education pack" className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                <p className="text-white font-semibold">Finding Hope</p>
+                <p className="text-white font-semibold">Education Pack</p>
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              <img src="/assets/background_image5.png" alt="Group activity" className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src={birthdays} alt="Birthdays" className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                <p className="text-white font-semibold">Building Futures</p>
+                <p className="text-white font-semibold">Birthdays</p>
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              <img src="/assets/general-donation.png" alt="Community support" className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src={childrenLearning} alt="Children smiling" className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                <p className="text-white font-semibold">Together Stronger</p>
+                <p className="text-white font-semibold">Children Smiling</p>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src={childrenPlaying} alt="Children playing" className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <p className="text-white font-semibold">Children Playing</p>
               </div>
             </div>
           </div>

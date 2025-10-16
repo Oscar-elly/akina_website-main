@@ -48,6 +48,7 @@ const Header: React.FC = () => {
                       <Link
                         key={sublink.href}
                         to={sublink.href}
+                        onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
                         className="block px-4 py-2 text-akina-brown hover:bg-akina-purple hover:text-white transition-colors duration-200"
                       >
                         {sublink.label}
@@ -59,6 +60,7 @@ const Header: React.FC = () => {
                 <Link
                   key={link.href}
                   to={link.href}
+                  onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
                   className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium"
                 >
                   {link.label}
@@ -69,7 +71,7 @@ const Header: React.FC = () => {
 
           <Link
             to="/donate"
-            className="hidden md:block bg-akina-brown text-akina-white px-6 py-2 rounded-full hover:bg-akina-orange transition-colors duration-200 font-medium flex-shrink-0"
+            className="hidden md:block bg-akina-purple text-akina-white px-6 py-2 rounded-full hover:bg-akina-orange transition-colors duration-200 font-medium flex-shrink-0"
           >
             Donate Now
           </Link>
@@ -95,8 +97,8 @@ const Header: React.FC = () => {
                       <Link
                         key={sublink.href}
                         to={sublink.href}
+                        onClick={() => { setIsMenuOpen(false); window.scrollTo({top: 0, behavior: 'smooth'}); }}
                         className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium py-1 pl-4"
-                        onClick={() => setIsMenuOpen(false)}
                       >
                         {sublink.label}
                       </Link>
@@ -106,8 +108,8 @@ const Header: React.FC = () => {
                   <Link
                     key={link.href}
                     to={link.href}
+                    onClick={() => { setIsMenuOpen(false); window.scrollTo({top: 0, behavior: 'smooth'}); }}
                     className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium py-2"
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
                   </Link>
