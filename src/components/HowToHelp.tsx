@@ -60,16 +60,12 @@ const HowToHelp: React.FC = () => {
               </div>
               <h2 className="text-4xl font-bold text-gray-800 mb-6">Make a Donation</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Your generosity helps us continue our mission to support vulnerable children and women in our community. Every contribution, no matter the size, makes a real impact.
+                Your generosity helps us continue our mission to support vulnerable children and women in our community. Every contribution, no matter the amount, makes a real impact.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   <span>Support food, shelter, education, and healthcare</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span>Tax-deductible contributions</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500" />

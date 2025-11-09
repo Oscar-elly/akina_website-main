@@ -15,7 +15,7 @@ const Services: React.FC = () => {
         'Long-term care when reintegration is not possible'
       ],
       stats: [
-        '50% children with psychotic parents, neglected children, teenage mothers',
+        '50% children with psychotic parents, neglected children due to their HIV/AIDS status, teenage mothers',
         '50% minors who have been defiled/raped'
       ]
     },
@@ -39,7 +39,7 @@ const Services: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold text-akina-purple mb-6">Our Core Services</h2>
           <p className="text-xl text-akina-brown">
-            Providing immediate safety, legal protection, and comprehensive support for vulnerable individuals
+            Providing immediate safety, legal services, and comprehensive support for vulnerable individuals
           </p>
         </div>
 

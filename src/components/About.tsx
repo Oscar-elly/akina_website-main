@@ -36,7 +36,7 @@ const About: React.FC = () => {
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Focus</h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              Our crisis accommodation and programs are aimed at improving the lives of orphans, vulnerable children, and women and youth affected by violence, HIV/AIDS, and neglect.
+              Our crisis accommodation centre and programs are aimed at improving the lives of orphans, vulnerable children, teens and women affected by gender based violence, HIV/AIDS, and neglect.
             </p>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -50,15 +50,9 @@ const About: React.FC = () => {
                 <Users className="h-6 w-6 text-blue-800 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-gray-900">Who We Serve</h4>
-                  <p className="text-gray-600">Orphans, vulnerable children, women, and youth</p>
+                  <p className="text-gray-600">Orphans, vulnerable children, teens, and women</p>
                 </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Heart className="h-6 w-6 text-blue-800 mt-1 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-900">Our Impact</h4>
-                </div>
-              </div>
+              </div> 
               <div className="flex items-start space-x-3">
                 <Heart className="h-6 w-6 text-blue-800 mt-1 flex-shrink-0" />
                 <div>
@@ -82,13 +76,13 @@ const About: React.FC = () => {
           <History className="h-8 w-8 text-blue-800 mr-3" />
           <h3 className="text-3xl font-bold text-gray-900">Our Journey</h3>
         </div>
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">In 2010 Jenny Deering visited a baby orphanage in Nakuru which was run by her sister Mary Summeracles. This is where she met Lilian.</p>
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">Jenny and Lilian shared a desire to reach out to impoverished and disempowered single women and widows in society. That passion led them to set up an organization called Heart4Change.</p>
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">In 2012 they started organizing conferences and workshops to reach out to these women through a program dubbed Boundaries. It started at the women’s prison in Nakuru and then in local churches, then spread to Kisii and Mombasa. It has helped more than 3,000 women since its inception.</p>
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">A mentorship and leadership “Circle Camp” program for local girls was also started focusing on the Alternative Rite of Passage (ARP) tackling Anti-Female Genital Mutilation, which is a catalyst for child marriage and school drop out amongst girls in the Abagusii and Kuria Communities of Kenya. To date more than 1,500 girls have attended the camps and received fantastic empowerment. Since these camps are held in December hygiene packs and Christmas hampers to take home afterwards.</p>
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">While implementing these programs, they came across many children who were victims of abuse and violence. They decided to help the children by taking them to hospitals, enrolling them in school, and placing them in foster homes. However, Lilian, Mary, and Jenny realized that giving money and goods directly to the children was not effective. Their money and goods did not actually reach the children.</p>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">In 2010 Jenny Dearling visited a baby orphanage in Nakuru which was run by her sister Mary Summerscales. This is where she met Lilian.</p>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">Jenny and Lilian shared a desire to reach out to impoverished and disempowered single women and widows in the society. That passion led them to set up an organization called Heart4Change.</p>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">In 2012 they started organizing conferences and workshops to reach out to these women through a program dubbed 'Boundaries'. It started at the women’s prison in Nakuru and then in local churches, then spread to Kisii and Mombasa. It has helped more than 3,000 women since it's inception.</p>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">A "Mentorship and Leadership Girlie Camp" program was launched to promote the Alternative Rite of Passage (ARP). This initiative directly addresses Anti-Female Genital Mutilation (FGM), which drives child marriage and school dropout rates among girls in the Abagusii and Kuria Communities of Kenya. To date more than 1,500 girls have attended the camps and received fantastic empowerment. Since these camps are held in December, the girls receive hygiene packs and Christmas hampers to take home afterwards.</p>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">While implementing these programs, they came across many children who were victims of abuse and violence. They decided to help the children by taking them to hospitals, enrolling them in school, and placing them in foster homes. However, Lilian, Jenny, and Mary realized that giving money and goods directly to the children was not effective. Their money and goods did not actually reach the children.</p>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">And so Akina Ties (then known as Akina Place) was established in 2014 to provide a safe space for children and women who have suffered various forms of gender based violence. Lilian moved to Kisii and started living with the rescued children.</p>
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">In 2018, an extremely generous gift from Australian philanthropists Kate and Noel Doyle OAM allowed Lilian to stop having to pay rent and move premises every few months. A brand new customised residence was built - and Akina Ties Haven was born. The women and children that Lilian looks after now have a secure home where they can be fully supported through the complex healing, reconciliation and legal processes they face.</p>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">Thanks to an incredibly generous gift in 2018 from Australian philanthropists Kate and Noel Doyle OAM (referred to by Lilian dottily as "Grandma and Pa"), Lilian was able to stop struggling with rent and constant relocation. She used the funds to construct a customized home that now doubles as her residence and a sanctuary for the children she supports, officially establishing Akina Ties Haven.</p>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">To date the Haven has offered shelter and support to over 100 local women and children affected by violence in their communities. Akina Ties continues to support many of these women and children today.</p>
         <p className="text-lg text-gray-700 leading-relaxed">In 2019 Akina Ties Australia Incorporated, which is an Australian not for profit (run purely by volunteers) was formed to help raise the much needed funds to run the haven. All donations made via this website are administered and sent to Kenya by Akina Ties Australia Inc.</p>
       </div>
@@ -106,56 +100,61 @@ const About: React.FC = () => {
               name: "Lilian Marwa",
               title: "Co-Founder & Director of Akina Ties Australia Inc.",
               img: LilianMarwa,
-              bio: "Lilian is the living heart and soul of Akina Ties, who is selflessly dedicated to the Akina Ties children and their community. Lilian is a trained administrator and passionate for social work. Until 2017, she worked as a Personal Assistant to the Kisii County governor’s office. Prior to that, she was employed with the Kenya government department of social services and community development as a social worker and community orphanage in Nairobi. She is currently pursuing a Honours Degree in Theology at the university of Nairobi. While training, a passion to be a better worker saw her move to Kisii where she is living full time and caring for a community that until then had only one health and water department you’d find."
+              bio: `Lilian is the living heart and soul of Akina Ties, who is selflessly dedicated to the Akina Ties children and her community. Lilian is a trained administrator and has a passion for social work. Between 2015 and 2022, she worked as a Personal Assistant and project coordinator to the spouses of Kisii and Nyamira County governors. Prior to that, she was employed with the Directorate of Industrial Training(now NITA) as an industrial attachment officer and later on worked as a social worker  and a community point person at Mission in Action, Nakuru Baby Orphanage. She is currently pursuing a Bachelors Degree in Theology at the University of Eastern Africa Baraton, a passion to be a bible worker since when she was 19 years old is being fulfiled at 43 years old, a testimony that when God has called you He has and will never stop until you yield
+Lilian is mother, counsellor, advocate and dedicated defender of the Akina Ties children and women `
             },
             {
               id: 1,
-              name: "Mary Summeracles",
+              name: "Mary Summescales",
               title: "Co-Founder & Director of Akina Ties Australia Inc.",
               img: Mary,
-              bio: "Mary moved to Kenya in 2010 to establish and run the first baby orphanage in the area. Ten years later Mary was Mum (literally) to 130 children ranging from newborn to sixteen years of age. Living and working in Kenya has given Mary first-hand knowledge and understanding of the poverty, human and social challenges so many families, especially women and children, face daily. While living in Kenya, Mary met Akina Ties’ founder and great friendship which continues today. Mary and Lilian worked together both in the orphanage and on community projects. A promise they made to a dying mother is now being fulfilled by Akina Ties that continues to care and bring hope and love to the children. For personal reasons Mary returned to Australia after ten years in Kenya and has supported Akina Ties since then. Mary is a qualified case manager currently working in youth services and living in regional Western Australia with her husband and their two fur babies, Jimboy and China."
+              bio: "Mary moved to Kenya in 2010 to establish and run the first baby orphanage in the area. Ten years later Mary was Mum (literally) to 130 children ranging from newborn to sixteen years of age. Living and working in Kenya has given Mary first-hand knowledge and understanding of the poverty, human and social challenges so many families, especially women and children, face daily. While living in Kenya, Mary met Akina Ties’ founder and a great friendship formed which continues to date. Mary and Lilian worked together both in the orphanage and on community projects. A promise they made to a dying mother is now being fulfilled by Akina Ties that continues to care and bring hope and love to the children. For personal reasons Mary returned to Australia after ten years in Kenya and has supported Akina Ties since then. Mary is a qualified case manager currently working in youth services and living in Queensland Australia with her husband and their two fur babies, Jellybean and China."
             },
             {
               id: 2,
-              name: "Jenny Belford-Deering",
+              name: "Jenny Dearling",
               title: "Co-Founder & Director",
               img: Jenny,
-              bio: "Jenny visited Kenya in 2010 and her heart was touched by the many women and children that met who were suffering because of poverty and abuse. In 2011, Jenny (together with Mary and Lilian) started Heart4Change to empower local women. Akina Ties emerged from this initial group. Jenny has worked as a support worker in a women’s refuge for the last 20 years. She is a mother of two, remains in Queensland where she lights the light of her life and lives in West Queensland Australia."
+              bio: "Jenny visited Kenya in 2010 and her heart was touched by the many women and children she met who were suffering because of poverty and abuse. In 2011, Jenny (together with Mary and Lilian) started Heart4Change to empower local women. Akina Ties emerged from this initial organization. Jenny has worked as a support worker in a women’s refuge for the last 20 years. She is a mother of two, nana to four(who are the light of her life) and lives in West Queensland Australia."
             },
             {
               id: 3,
               name: "Julia Ramage",
               title: "Committee Member",
               img: Julia,
-              bio: "Julia joined the Akina Ties Warriors in 2019 to be involved in a variety of aspects of the Akina Ties Australia Inc. not for profit. Working at a children’s home in Tanzania in her early 20s ignited a passion to work on children’s protection by helping them catch up on their education. Julia is a mum of two gorgeous children and is trained responsible and managing people who work in new South Wales Australia."
+              bio: `Jules  joined the Akina Ties Warriors in 2019 and is involved in a variety of aspects of the Akina Ties Australia Inc. not for profit.
+ 
+Working at a children's home in Tanzania in her early 20s ignited a desire in Jules to continue to provide any help she can to the children of Africa. 
+ 
+Julia is a mum of two gorgeous children and is a trained corporate and human rights lawyer who lives in New South Wales Australia.`
             },
             {
               id: 4,
-              name: "Aburi Masero",
+              name: "Aburi Mosero",
               title: "Secretary of Akina Ties Australia Inc.",
               img: Aburi,
-              bio: "Aburi Masero or Wasilu, as commonly called, is a passionate lawyer with a keen eye on various fields of the law especially children, human rights and Gender. Wasilu Akina Ties has been honored to have her on board as one of our Akina Warriors. Being a woman who cares about the children and the rights of the children that are taken in Akina Ties, she is the guardian of the children and the legal guardian in respect of the children that are taken in Akina Ties. Aburi joined the Akina family in 2022 as a volunteer and over time has shown and continues to show her dedication in helping Akina Ties as a whole. Her passion is to see a future in which children and women can from from abuse, discrimination and poverty and are able to well represented to get justice when needed."
+              bio: "Aburi Mosero or Wakili, as we commonly call her, is a passionate lawyer with a keen eye on various fields of the law, especially children, human rights and Gender. We at Akina Ties Haven are honored to have her on board as one of our Akina Warriors. Being a rescue centre that often deals with legal issues in respect of the children that we take in, Aburi is always here to make the requisite follow-up in ensuring that the legal needs of our children are covered. Aburi joined the Akina family in 2022 as a volunteer and over time has shown and continues to show her dedication in helping Akina Ties as a whole. Her passion is to see a future in which children and women are free from abuse, discrimination and poverty and are able to well represented to get justice when needed."  
             },
             {
               id: 5,
               name: "Dennis Bergquist",
               title: "Board Member",
               img: Dennis,
-              bio: "A fourth generation Swedish American from a rural Midwest Minnesota Community of 850. Retired on a family farm, learned the value of hard work with an appreciation to help the less fortunate of the world. Traveled 50 countries on humanitarian volunteering tours and continues to travel as a Dream and Community Land Interculturality. A retired faculty member of Ridgewater College, Hutchinson Minnesota. The founder of Longspur and Minnesota Global and the Bergquist Foundation with the motto Walking a Different Path. The author of “Will to Believe”. A Rotarian from Twin Cities, Minnesota and President-elect of the Tucson Rotary Club. An Akina Ties board member serving to make a difference for young people who deserve respect and education, with a vision to make a difference in the lives of those less fortunate."
+              bio: "A fourth-generation Swedish America from a rural Midwest Minnesota Community of 950. Raised on a family farm, learned the value of work ethic with an appreciation to help the less fortunate of the world. Traveled 52 countries as a humanitarian volunteering to make a difference in the lives of those he met Domestically and Internationally. A retired faculty member of Ridgewater College, Hutchinson, Minnesota. The founder of Bergquist and Associates Global and the Bergquist Foundation with the motto “Making a Difference Globally. The author of “Milk to Missions” A Rotarian, four-time Paul Harris Fellow and Presidentelect of the Tucson Kino Rotary Club. An Akina Ties board member serving to make a difference for young people who deserve respect, an education, with a future to make a difference in the lives of others less fortunate."
             },
             {
               id: 6,
               name: "Noel and Kate Doyle",
               title: "",
               img: Noel,
-              bio: "Noel and Kate Doyle who are fondly know as “grandma and grandpa” have generously dedicated their support to Akina Ties over the past 10 years. Words cannot explain how amazing these 2 beautiful souls are, but their actions does have changed many lives for the better. Thank you grandma and grandpa for your loved dearly by your Akina Ties family."
+              bio: "Kate and Noel Doyle who are fondly know as 'grandma and grandpa', have generously dedicated their support to Akina Ties over the past 10 years. Words can not explain how amazing these 2 beautiful souls are, but their actions alone have changed many lives for the better. Thank you grandma and grandpa, know you are loved dearly by your Akina Ties family."
             },
             {
               id: 7,
-              name: "Sarah Teaborg",
+              name: "Sarah Roseborg",
               title: "",
               img: Sarah,
-              bio: "Sarah is always willing to offer advice and was an amazing help when Akina Ties Australia was set up. Her dedication to the children of Kenya is unquestionable and she is an inspiration. The world needs more Angels like Sarah. Thank you Sarah for always making yourself available when we needed."
+              bio: "Sarah is always willing to offer advice and was an amazing help when Akina Ties Australia Inc. was set up.  Her dedication to the children of Kenya is unquestionable and a true inspiration. The world needs more Angels like Sarah. Thank you Sarah for always making yourself available when we need advice."
             }
           ].map((warrior) => (
             <div key={warrior.id} className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">

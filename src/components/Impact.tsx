@@ -39,7 +39,7 @@ const Impact: React.FC = () => {
     '3,000+ women empowered through Boundaries workshops',
     '55+ students sponsored through education programs',
     '5,000+ people received medical health support',
-    '50 grannies supported with food and care',
+    '50 grannies supported with food and care each month',
     '3,600+ meals provided to families',
     '1,200 Christmas hampers distributed'
   ];

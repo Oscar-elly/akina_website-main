@@ -32,7 +32,7 @@ const Mission: React.FC = () => {
               <Target className="h-12 w-12 text-akina-brown mb-6" />
               <h3 className="text-2xl font-bold text-akina-purple mb-4">Our Mission</h3>
               <p className="text-akina-brown leading-relaxed mb-4">
-                Supporting and empowering Children, Women, and Youth to be the driving force of social change in their communities by:
+                Supporting and empowering Children, teens, and women to be the driving force of social change in their communities by:
               </p>
               <ul className="space-y-2 text-akina-brown">
                 <li className="flex items-start space-x-2">
@@ -45,7 +45,7 @@ const Mission: React.FC = () => {
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="h-2 w-2 bg-akina-brown rounded-full mt-2 flex-shrink-0"></span>
-                  <span>Promoting and protecting fundamental human rights of children, women, and youth</span>
+                  <span>Promoting and protecting fundamental human rights of children, teens, and women</span>
                 </li>
               </ul>
             </div>

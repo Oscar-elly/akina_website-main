@@ -45,7 +45,7 @@ const Donation: React.FC = () => {
     },
     {
       question: "Who can I contact for more information?",
-      answer: "For any inquiries about donations, email us at info@akina.org or use the contact form on our website."
+      answer: "For any inquiries about donations, email us at enquiry@akina.org or use the contact form on our website."
     }
   ];
 
@@ -89,14 +89,14 @@ const Donation: React.FC = () => {
               />
               <h3 className="text-xl font-semibold mb-2">Akina Ties Angels</h3>
               <p className="mb-4 text-sm text-gray-700">
-                To sponsor Akina Ties Haven, by funding day to day essentials
+                To sponsor Akina Ties Haven by funding day to day essentials or Sponsoring a child.
               </p>
               <button
                 type="button"
                 onClick={() => prefillAmount('$20')}
                 className="bg-purple-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-800 transition-colors duration-200"
               >
-                $20 a month
+                $50 a month
               </button>
             </div>
 
@@ -108,7 +108,7 @@ const Donation: React.FC = () => {
               />
               <h3 className="text-xl font-semibold mb-2">General Donation!</h3>
               <p className="mb-4 text-sm text-gray-700">
-                To donate to the Akina Ties project or cause which needs your support most at the time of donation.
+                You can donate to the Akina Ties project and your funds will be allocated to the area of the cause that requires the most critical support at the time of your contribution.
               </p>
               <button
                 type="button"
@@ -125,16 +125,16 @@ const Donation: React.FC = () => {
                 alt="Feel Good Fiver"
                 className="mx-auto mb-4 w-24 h-24 object-contain"
               />
-              <h3 className="text-xl font-semibold mb-2">Feel Good Fiver!</h3>
+              <h3 className="text-xl font-semibold mb-2">Feel Good Tenner!</h3>
               <p className="mb-4 text-sm text-gray-700">
                 To supply fun developmental toys and activities swimming to the Akina Ties Haven children
               </p>
               <button
                 type="button"
-                onClick={() => prefillAmount('$5')}
+                onClick={() => prefillAmount('$10')}
                 className="bg-purple-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-800 transition-colors duration-200"
               >
-                $5 Donation
+                $10 Donation
               </button>
             </div>
           </div>
