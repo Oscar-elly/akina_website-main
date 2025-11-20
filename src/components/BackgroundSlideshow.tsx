@@ -39,8 +39,11 @@ const BackgroundSlideshow: React.FC = () => {
   };
 
   return (
-    <div className="relative w-full h-screen bg-cover bg-center transition-all duration-1000" style={{ backgroundImage: `url(${slides[currentSlide].image})` }}>
-      <div className="absolute inset-0 bg-black/40"></div> {/* Faded overlay for text readability */}
+    <div
+      className="relative w-[95%] max-w-[1400px] h-screen bg-cover bg-center transition-all duration-1000 mx-auto"
+      style={{ backgroundImage: `url(${slides[currentSlide].image})`, backgroundSize: 'cover' }}
+    >
+      <div className="absolute inset-0 bg-black/60"></div> {/* Faded overlay for text readability */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-akina-white px-4">
         <div className="max-w-4xl">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
