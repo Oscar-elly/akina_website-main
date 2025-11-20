@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import backgroundImage1 from '../assets/background_image1.png';
-import backgroundImage2 from '../assets/background_image2.png';
-import backgroundImage3 from '../assets/background_image3.png';
-import backgroundImage4 from '../assets/background_image4.png';
+import backgroundImage1 from '../assets/background_image1.jpg';
+import backgroundImage2 from '../assets/background_image2.jpg';
+import backgroundImage3 from '../assets/background_image3.jpg';
+import backgroundImage4 from '../assets/background_image4.jpg';
 
 const BackgroundSlideshow: React.FC = () => {
   const slides = [

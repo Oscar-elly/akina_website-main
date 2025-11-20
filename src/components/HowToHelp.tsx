@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Heart , CheckCircle, ChevronDown, ChevronUp, HandHeart, Megaphone, Calendar, DollarSign, ArrowRight } from 'lucide-react';
 import generalDonation from '../assets/general-donation.png';
-import backgroundImage1 from '../assets/background_image1.png';
+import backgroundImage1 from '../assets/background_image1.jpg';
 import volunteering2 from '../assets/volunteering2.jpg';
 import legalrepresentation from '../assets/legal representaton.avif';
 import backgroundImage4 from '../assets/girlie camp2.jpg';
@@ -223,6 +223,10 @@ const HowToHelp: React.FC = () => {
                   <CheckCircle className="w-5 h-5 text-indigo-500" />
                   <span>Online and offline campaigns</span>
                 </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-indigo-500" />
+                  <span>Garage Sales</span> 
+                </div> 
               </div>
               <Link to="/contact">
                 <button className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">

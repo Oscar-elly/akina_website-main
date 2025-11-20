@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImage1 from '../assets/background_image1.png';
+import backgroundImage1 from '../assets/background_image1.jpg';
 
 const Hero: React.FC = () => {
   return (

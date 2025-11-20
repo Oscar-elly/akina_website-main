@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { MapPin, Users, Heart, History, Shield, Target, Droplets, Home, BookOpen, Briefcase } from 'lucide-react';
-import backgroundImage1 from '../assets/background_image1.png';
+import backgroundImage1 from '../assets/background_image1.jpg';
 import LilianMarwa from '../assets/Lilian Marwa.avif';
 import Mary from '../assets/Mary.avif';
 import Jenny from '../assets/Jenny.avif';
@@ -71,10 +71,10 @@ const About: React.FC = () => {
     <section id="about-full" className="py-20 bg-white space-y-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-4xl font-bold text-gray-900 mb-10 text-center">About Us</h2>
 
-      <div id="our-journey" className="max-w-4xl mx-auto text-center mb-16">
+      <div className="max-w-4xl mx-auto text-center mb-16">
         <div className="flex items-center justify-center mb-8">
           <History className="h-8 w-8 text-blue-800 mr-3" />
-          <h3 className="text-3xl font-bold text-gray-900">Our Journey</h3>
+          <h3 id="our-journey" tabIndex={-1} className="text-3xl font-bold text-gray-900">Our Journey</h3>
         </div>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">In 2010 Jenny Dearling visited a baby orphanage in Nakuru which was run by her sister Mary Summerscales. This is where she met Lilian.</p>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">Jenny and Lilian shared a desire to reach out to impoverished and disempowered single women and widows in the society. That passion led them to set up an organization called Heart4Change.</p>
@@ -87,10 +87,10 @@ const About: React.FC = () => {
         <p className="text-lg text-gray-700 leading-relaxed">In 2019 Akina Ties Australia Incorporated, which is an Australian not for profit (run purely by volunteers) was formed to help raise the much needed funds to run the haven. All donations made via this website are administered and sent to Kenya by Akina Ties Australia Inc.</p>
       </div>
 
-      <div id="akina-warriors" className="max-w-5xl mx-auto text-center mb-16">
+      <div className="max-w-5xl mx-auto text-center mb-16">
         <div className="flex items-center justify-center mb-8">
           <Shield className="h-8 w-8 text-blue-800 mr-3" />
-          <h3 className="text-3xl font-bold text-gray-900">Akina Warriors</h3>
+          <h3 id="akina-warriors" tabIndex={-1} className="text-3xl font-bold text-gray-900">Akina Warriors</h3>
         </div>
         <p className="text-lg text-gray-700 leading-relaxed mb-8">Meet the dedicated team behind Akina Ties, each bringing unique skills and passion to our mission of supporting vulnerable children and women in Kenya.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -105,14 +105,14 @@ Lilian is mother, counsellor, advocate and dedicated defender of the Akina Ties 
             },
             {
               id: 1,
-              name: "Mary Summescales",
+              name: "Mary Summerscales",
               title: "Co-Founder & Director of Akina Ties Australia Inc.",
               img: Mary,
               bio: "Mary moved to Kenya in 2010 to establish and run the first baby orphanage in the area. Ten years later Mary was Mum (literally) to 130 children ranging from newborn to sixteen years of age. Living and working in Kenya has given Mary first-hand knowledge and understanding of the poverty, human and social challenges so many families, especially women and children, face daily. While living in Kenya, Mary met Akina Ties’ founder and a great friendship formed which continues to date. Mary and Lilian worked together both in the orphanage and on community projects. A promise they made to a dying mother is now being fulfilled by Akina Ties that continues to care and bring hope and love to the children. For personal reasons Mary returned to Australia after ten years in Kenya and has supported Akina Ties since then. Mary is a qualified case manager currently working in youth services and living in Queensland Australia with her husband and their two fur babies, Jellybean and China."
             },
             {
               id: 2,
-              name: "Jenny Dearling",
+              name: "Durdica Jenny Dearling",
               title: "Co-Founder & Director",
               img: Jenny,
               bio: "Jenny visited Kenya in 2010 and her heart was touched by the many women and children she met who were suffering because of poverty and abuse. In 2011, Jenny (together with Mary and Lilian) started Heart4Change to empower local women. Akina Ties emerged from this initial organization. Jenny has worked as a support worker in a women’s refuge for the last 20 years. She is a mother of two, nana to four(who are the light of her life) and lives in West Queensland Australia."
@@ -183,10 +183,10 @@ Julia is a mum of two gorgeous children and is a trained corporate and human rig
         </div>
       </div>
 
-      <div id="our-future-goals" className="max-w-4xl mx-auto text-center mb-16">
+      <div className="max-w-4xl mx-auto text-center mb-16">
         <div className="flex items-center justify-center mb-8">
           <Target className="h-8 w-8 text-blue-800 mr-3" />
-          <h3 className="text-3xl font-bold text-gray-900">Our Future Goals</h3>
+          <h3 id="our-future-goals" tabIndex={-1} className="text-3xl font-bold text-gray-900">Our Future Goals</h3>
         </div>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">The day to day running of Akina Ties is costly.</p>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">However there are other vital efforts such as education and health needs both on Akina Ties women and in the local Kisii community which need addressing urgently. We have several important projects in the pipeline to meet these needs head on.</p>

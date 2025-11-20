@@ -1,6 +1,6 @@
 import React from 'react';
 import { Home, Scale, Shield } from 'lucide-react';
-import backgroundImage2 from '../assets/background_image2.png';
+import backgroundImage2 from '../assets/background_image2.jpg';
 
 const Services: React.FC = () => {
   const services = [

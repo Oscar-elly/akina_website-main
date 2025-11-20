@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { CreditCard, Building2, Mail, ChevronDown, ChevronUp } from 'lucide-react';
 import akinaAngels from '../assets/akina-angels.png';
 import generalDonation from '../assets/general-donation.png';
@@ -13,6 +13,41 @@ const Donation: React.FC = () => {
   });
 
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+
+  // Ref to scroll to the email request form
+  const formRef = useRef<HTMLDivElement | null>(null);
+
+  // Scroll to the form and optionally prefill an amount
+  const scrollToForm = (amount?: string) => {
+    if (amount) prefillAmount(amount);
+    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
+  // Interactive resources (logos + links) state
+  const [activeResource, setActiveResource] = useState<number | null>(null);
+  const resources = [
+    {
+      name: 'PayPal',
+      url: 'https://www.paypal.com/donate',
+      logo: 'https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png',
+      tagline: 'Secure donations and global coverage.',
+      details: 'PayPal offers encrypted payments and donor protections. Good for one-off or recurring donations.'
+    },
+    {
+      name: 'JustGiving',
+      url: 'https://www.justgiving.com',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/3/39/JustGiving_Logo.png',
+      tagline: 'Peer-to-peer fundraising and charity pages.',
+      details: 'JustGiving focuses on fundraising pages and campaigns — ideal for events and community fundraisers.'
+    },
+    {
+      name: 'GoFundMe',
+      url: 'https://www.gofundme.com',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/3/32/GoFundMe_logo.png',
+      tagline: 'Crowdfunding platform for personal and cause campaigns.',
+      details: 'GoFundMe is geared towards crowdfunding efforts and community-driven campaigns.'
+    }
+  ];
 
   const faqs = [
     {
@@ -93,7 +128,7 @@ const Donation: React.FC = () => {
               </p>
               <button
                 type="button"
-                onClick={() => prefillAmount('$20')}
+                onClick={() => scrollToForm('$50')}
                 className="bg-purple-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-800 transition-colors duration-200"
               >
                 $50 a month
@@ -112,7 +147,7 @@ const Donation: React.FC = () => {
               </p>
               <button
                 type="button"
-                onClick={() => prefillAmount('')}
+                onClick={() => scrollToForm('')}
                 className="bg-purple-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-800 transition-colors duration-200"
               >
                 Donate
@@ -131,14 +166,62 @@ const Donation: React.FC = () => {
               </p>
               <button
                 type="button"
-                onClick={() => prefillAmount('$10')}
+                onClick={() => scrollToForm('$10')}
                 className="bg-purple-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-800 transition-colors duration-200"
               >
                 $10 Donation
               </button>
             </div>
           </div>
+​
+          {/* Interactive Resources (logos + details) */}
+          <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {resources.map((r, i) => (
+              <div
+                key={r.name}
+                className={`bg-white rounded-lg p-5 shadow-sm hover:shadow-lg transition-transform transform hover:-translate-y-1`}
+              >
+                <button
+                  type="button"
+                  onClick={() => setActiveResource(activeResource === i ? null : i)}
+                  aria-expanded={activeResource === i}
+                  className="w-full text-left focus:outline-none"
+                >
+                  <div className="flex items-center gap-4">
+                    <img src={r.logo} alt={`${r.name} logo`} className="w-14 h-14 object-contain" />
+                    <div>
+                      <div className="text-lg font-semibold text-akina-purple">{r.name}</div>
+                      <div className="text-sm text-akina-brown">{r.tagline}</div>
+                    </div>
+                  </div>
+                </button>
 
+                {activeResource === i && (
+                  <div className="mt-4 text-sm text-akina-brown space-y-3">
+                    <p>{r.details}</p>
+                    <div className="flex gap-2">
+                      <a
+                        href={r.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-akina-purple text-white px-4 py-2 rounded-full font-medium hover:opacity-95 transition-colors"
+                      >
+                        Visit {r.name}
+                      </a>
+                      <button
+                        type="button"
+                        onClick={() => scrollToForm('')}
+                        className="inline-block border border-akina-purple text-akina-purple px-4 py-2 rounded-full font-medium hover:bg-akina-purple hover:text-white transition-colors"
+                      >
+                        Request Details
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+​
           <p className="text-xl text-akina-brown mb-12">
             Your generosity helps us continue our mission to support vulnerable children and women in our community.
           </p>
@@ -151,16 +234,15 @@ const Donation: React.FC = () => {
                 <h2 className="text-2xl font-bold">PayPal</h2>
               </div>
               <p className="mb-6">
-                Make a secure donation through PayPal. Your contribution will be processed instantly and safely.
+                Prefer to request payment details or discuss giving options? Fill the short form below and our team will share secure payment steps.
               </p>
-              <a
-                href="https://www.paypal.com/donate"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => scrollToForm('')}
                 className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200"
               >
-                Donate with PayPal
-              </a>
+                Request Payment Details
+              </button>
             </div>
 
             {/* Bank Transfer Option */}
