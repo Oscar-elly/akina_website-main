@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Mail, Phone, User, MessageSquare, Calendar } from 'lucide-react';
+import { X, Mail, Phone, User, MessageSquare } from 'lucide-react';
 
 interface EventsModalProps {
   isOpen: boolean;
