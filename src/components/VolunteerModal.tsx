@@ -17,32 +17,23 @@ const VolunteerModal: React.FC<VolunteerModalProps> = ({ isOpen, onClose }) => {
     motivation: ''
   });
 
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Create email content
     const subject = 'Volunteer Application - Akina Ties';
-    const body = `
-Name: ${formData.name}
+    const body = `Name: ${formData.name}
 Email: ${formData.email}
 Phone: ${formData.phone}
 Location: ${formData.location}
-
 Experience: ${formData.experience}
-
 Availability: ${formData.availability}
+Motivation: ${formData.motivation}`;
 
-Motivation: ${formData.motivation}
-
----
-This volunteer application was submitted through the Akina Ties website.
-    `.trim();
-
-    // Open email client
     const mailtoLink = `mailto:enquiry@akinaties.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink);
+    window.location.href = mailtoLink;
 
-    // Reset form and close modal
+    // Reset form after submission
     setFormData({
       name: '',
       email: '',
@@ -52,6 +43,7 @@ This volunteer application was submitted through the Akina Ties website.
       availability: '',
       motivation: ''
     });
+
     onClose();
   };
 

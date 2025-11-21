@@ -80,53 +80,52 @@ const Sponsorship: React.FC = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/participants/`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          address: formData.address,
-          city: formData.city,
-          state: formData.state,
-          zip_code: formData.zipCode,
-          participant_type: 'sponsor',
-          monthly_amount: parseFloat(formData.amount),
-          message: formData.message
-        }),
-      });
+    // Create email content
+    const subject = 'Child Sponsorship Application - Akina Ties';
+    const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Address: ${formData.address}
+City: ${formData.city}
+State: ${formData.state}
+Zip Code: ${formData.zipCode}
+Monthly Amount: $${formData.amount}
 
-      if (response.ok) {
-        setSubmitSuccess(true);
-        setTimeout(() => {
-          setShowForm(false);
-          setSubmitSuccess(false);
-          setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            address: '',
-            city: '',
-            state: '',
-            zipCode: '',
-            amount: '50',
-            message: ''
-          });
-        }, 2000);
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+Additional Message:
+${formData.message}
+
+---
+This sponsorship application was submitted through the Akina Ties website.
+    `.trim();
+
+    // Open email client
+    const mailtoLink = `mailto:enquiry@akinaties.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+
+    // Show success message
+    setSubmitSuccess(true);
+    setTimeout(() => {
+      setShowForm(false);
+      setSubmitSuccess(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        address: '',
+        city: '',
+        state: '',
+        zipCode: '',
+        amount: '50',
+        message: ''
+      });
+    }, 3000);
+
+    setIsSubmitting(false);
   };
 
   return (

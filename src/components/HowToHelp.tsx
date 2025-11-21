@@ -6,9 +6,15 @@ import backgroundImage1 from '../assets/background_image1.jpg';
 import volunteering2 from '../assets/volunteering2.jpg';
 import legalrepresentation from '../assets/legal representaton.avif';
 import backgroundImage4 from '../assets/girlie camp2.jpg';
+import VolunteerModal from './VolunteerModal';
+import PartnershipModal from './PartnershipModal';
+import EventsModal from './EventsModal';
 
 const HowToHelp: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
+  const [isPartnershipModalOpen, setIsPartnershipModalOpen] = useState(false);
+  const [isEventsModalOpen, setIsEventsModalOpen] = useState(false);
 
   const faqs = [
     {
@@ -148,11 +154,12 @@ const HowToHelp: React.FC = () => {
                   <span>Community outreach and awareness</span>
                 </div>
               </div>
-              <Link to="/contact">
-                <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                  Volunteer Now <ArrowRight className="inline w-5 h-5 ml-2" />
-                </button>
-              </Link>
+              <button
+                onClick={() => setIsVolunteerModalOpen(true)}
+                className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              >
+                Volunteer Now <ArrowRight className="inline w-5 h-5 ml-2" />
+              </button>
             </div>
             <div className="relative">
               <img src={volunteering2} alt="Volunteering" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
@@ -186,11 +193,12 @@ const HowToHelp: React.FC = () => {
                   <span>Partner with us for joint initiatives</span>
                 </div>
               </div>
-              <Link to="/contact">
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                  Partner With Us <ArrowRight className="inline w-5 h-5 ml-2" />
-                </button>
-              </Link>
+              <button
+                onClick={() => setIsPartnershipModalOpen(true)}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              >
+                Partner With Us <ArrowRight className="inline w-5 h-5 ml-2" />
+              </button>
             </div>
             <div className="order-1 md:order-2 relative">
               <img src={legalrepresentation} alt="Advocacy" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
@@ -228,11 +236,12 @@ const HowToHelp: React.FC = () => {
                   <span>Garage Sales</span> 
                 </div> 
               </div>
-              <Link to="/contact">
-                <button className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                  Get Involved <ArrowRight className="inline w-5 h-5 ml-2" />
-                </button>
-              </Link>
+              <button
+                onClick={() => setIsEventsModalOpen(true)}
+                className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              >
+                Get Involved <ArrowRight className="inline w-5 h-5 ml-2" />
+              </button>
             </div>
             <div className="relative">
               <img src={backgroundImage4} alt="Events" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
@@ -269,6 +278,10 @@ const HowToHelp: React.FC = () => {
         </div>
       </div>
 
+      {/* Modals */}
+      {isVolunteerModalOpen && <VolunteerModal isOpen={isVolunteerModalOpen} onClose={() => setIsVolunteerModalOpen(false)} />}
+      {isPartnershipModalOpen && <PartnershipModal isOpen={isPartnershipModalOpen} onClose={() => setIsPartnershipModalOpen(false)} />}
+      {isEventsModalOpen && <EventsModal isOpen={isEventsModalOpen} onClose={() => setIsEventsModalOpen(false)} />}
 
     </div>
   );

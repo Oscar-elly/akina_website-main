@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider } from './contexts/AuthContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import BackgroundSlideshow from './components/BackgroundSlideshow';
@@ -10,8 +9,6 @@ import Programs from './components/Programs';
 import Impact from './components/Impact';
 import Contact from './components/Contact';
 import Donation from './components/Donation';
-import AdminLogin from './components/AdminLogin';
-import AdminDashboard from './components/AdminDashboard';
 
 import Sponsorship from './components/Sponsorship';
 import News from './components/News';
@@ -50,24 +47,20 @@ function MainSite() {
 function App() {
   console.log('Rendering App component');
   return (
-    <AuthProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<MainSite />} />
-          <Route path="/about" element={<Layout><About /></Layout>} />
-          <Route path="/what-we-do" element={<Layout><WhatWeDo /></Layout>} />
-          <Route path="/how-to-help" element={<Layout><HowToHelp /></Layout>} />
-          <Route path="/our-stories" element={<Layout><OurStories /></Layout>} />
-          <Route path="/donate" element={<Layout><Donation /></Layout>} />
-          <Route path="/sponsorship" element={<Layout><Sponsorship /></Layout>} />
-          <Route path="/news" element={<Layout><News /></Layout>} />
-          <Route path="/faq" element={<Layout><FAQ /></Layout>} />
-          <Route path="/admin/login" element={<AdminLogin />} />
-          <Route path="/admin/dashboard" element={<AdminDashboard />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Router>
-    </AuthProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainSite />} />
+        <Route path="/about" element={<Layout><About /></Layout>} />
+        <Route path="/what-we-do" element={<Layout><WhatWeDo /></Layout>} />
+        <Route path="/how-to-help" element={<Layout><HowToHelp /></Layout>} />
+        <Route path="/our-stories" element={<Layout><OurStories /></Layout>} />
+        <Route path="/donate" element={<Layout><Donation /></Layout>} />
+        <Route path="/sponsorship" element={<Layout><Sponsorship /></Layout>} />
+        <Route path="/news" element={<Layout><News /></Layout>} />
+        <Route path="/faq" element={<Layout><FAQ /></Layout>} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
   );
 }
 

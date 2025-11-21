@@ -1,55 +1,57 @@
 import React, { useState } from 'react';
-import { X, Mail, Phone, Building, User, MessageSquare, Globe } from 'lucide-react';
+import { X, Mail, Phone, User, MessageSquare, Calendar } from 'lucide-react';
 
-interface PartnershipModalProps {
+interface EventsModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const PartnershipModal: React.FC<PartnershipModalProps> = ({ isOpen, onClose }) => {
+const EventsModal: React.FC<EventsModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
-    organizationName: '',
-    contactPerson: '',
+    name: '',
     email: '',
     phone: '',
-    website: '',
-    organizationType: '',
-    partnershipType: '',
-    description: '',
-    resources: ''
+    location: '',
+    eventInterest: '',
+    availability: '',
+    contribution: ''
   });
-
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const subject = 'Partnership Inquiry - Akina Ties';
-    const body = `Organization Name: ${formData.organizationName}
-Contact Person: ${formData.contactPerson}
+    // Create email content
+    const subject = 'Event Participation Application - Akina Ties';
+    const body = `
+Name: ${formData.name}
 Email: ${formData.email}
 Phone: ${formData.phone}
-Website: ${formData.website}
-Organization Type: ${formData.organizationType}
-Partnership Type: ${formData.partnershipType}
-Description: ${formData.description}
-Resources: ${formData.resources}`;
+Location: ${formData.location}
 
+Event Interest: ${formData.eventInterest}
+
+Availability: ${formData.availability}
+
+How would you like to contribute: ${formData.contribution}
+
+---
+This event participation application was submitted through the Akina Ties website.
+    `.trim();
+
+    // Open email client
     const mailtoLink = `mailto:enquiry@akinaties.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
+    window.open(mailtoLink);
 
-    // Reset form after submission
+    // Reset form and close modal
     setFormData({
-      organizationName: '',
-      contactPerson: '',
+      name: '',
       email: '',
       phone: '',
-      website: '',
-      organizationType: '',
-      partnershipType: '',
-      description: '',
-      resources: ''
+      location: '',
+      eventInterest: '',
+      availability: '',
+      contribution: ''
     });
-
     onClose();
   };
 
@@ -67,7 +69,7 @@ Resources: ${formData.resources}`;
       <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         <div className="p-6">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-akina-purple">Partnership Inquiry</h2>
+            <h2 className="text-2xl font-bold text-akina-purple">Event Participation Application</h2>
             <button
               onClick={onClose}
               className="text-gray-500 hover:text-gray-700"
@@ -78,16 +80,16 @@ Resources: ${formData.resources}`;
 
           <div className="mb-6">
             <p className="text-akina-brown mb-4">
-              Partner with Akina Ties to expand our reach and impact in supporting vulnerable children and women across Western Kenya.
+              Join our fundraising events and campaigns to support vulnerable children and women in Western Kenya.
             </p>
-            <div className="bg-akina-brown/10 p-4 rounded-lg">
-              <h3 className="font-semibold text-akina-purple mb-2">Partnership Opportunities:</h3>
+            <div className="bg-akina-orange/10 p-4 rounded-lg">
+              <h3 className="font-semibold text-akina-purple mb-2">Event Opportunities:</h3>
               <ul className="text-sm text-akina-brown space-y-1">
-                <li>• Joint program implementation and funding</li>
-                <li>• Resource sharing and capacity building</li>
-                <li>• Technical expertise and knowledge transfer</li>
-                <li>• Community development and outreach programs</li>
-                <li>• Research and evaluation partnerships</li>
+                <li>• Annual charity runs and walks</li>
+                <li>• Community fundraising dinners</li>
+                <li>• Online and offline campaigns</li>
+                <li>• Garage sales and bazaars</li>
+                <li>• Awareness and education events</li>
               </ul>
             </div>
           </div>
@@ -96,42 +98,22 @@ Resources: ${formData.resources}`;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-akina-brown mb-1">
-                  Organization Name *
-                </label>
-                <div className="relative">
-                  <Building className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
-                  <input
-                    type="text"
-                    name="organizationName"
-                    value={formData.organizationName}
-                    onChange={handleChange}
-                    required
-                    className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-akina-purple focus:border-transparent"
-                    placeholder="Your organization name"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-akina-brown mb-1">
-                  Contact Person *
+                  Full Name *
                 </label>
                 <div className="relative">
                   <User className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                   <input
                     type="text"
-                    name="contactPerson"
-                    value={formData.contactPerson}
+                    name="name"
+                    value={formData.name}
                     onChange={handleChange}
                     required
                     className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-akina-purple focus:border-transparent"
-                    placeholder="Full name"
+                    placeholder="Your full name"
                   />
                 </div>
               </div>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-akina-brown mb-1">
                   Email Address *
@@ -145,11 +127,13 @@ Resources: ${formData.resources}`;
                     onChange={handleChange}
                     required
                     className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-akina-purple focus:border-transparent"
-                    placeholder="contact@organization.com"
+                    placeholder="your.email@example.com"
                   />
                 </div>
               </div>
+            </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-akina-brown mb-1">
                   Phone Number *
@@ -167,99 +151,78 @@ Resources: ${formData.resources}`;
                   />
                 </div>
               </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-akina-brown mb-1">
-                  Website
-                </label>
-                <div className="relative">
-                  <Globe className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
-                  <input
-                    type="url"
-                    name="website"
-                    value={formData.website}
-                    onChange={handleChange}
-                    className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-akina-purple focus:border-transparent"
-                    placeholder="https://www.organization.com"
-                  />
-                </div>
-              </div>
 
               <div>
                 <label className="block text-sm font-medium text-akina-brown mb-1">
-                  Organization Type *
+                  Location *
                 </label>
-                <select
-                  name="organizationType"
-                  value={formData.organizationType}
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
                   onChange={handleChange}
                   required
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-akina-purple focus:border-transparent"
-                >
-                  <option value="">Select organization type</option>
-                  <option value="Non-Profit Organization">Non-Profit Organization</option>
-                  <option value="Corporation">Corporation</option>
-                  <option value="Educational Institution">Educational Institution</option>
-                  <option value="Healthcare Organization">Healthcare Organization</option>
-                  <option value="Government Agency">Government Agency</option>
-                  <option value="Foundation">Foundation</option>
-                  <option value="Other">Other</option>
-                </select>
+                  placeholder="City, Country"
+                />
               </div>
             </div>
 
             <div>
               <label className="block text-sm font-medium text-akina-brown mb-1">
-                Type of Partnership Interest *
+                Event Interest *
               </label>
               <select
-                name="partnershipType"
-                value={formData.partnershipType}
+                name="eventInterest"
+                value={formData.eventInterest}
                 onChange={handleChange}
                 required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-akina-purple focus:border-transparent"
               >
-                <option value="">Select partnership type</option>
-                <option value="Program Funding">Program Funding</option>
-                <option value="Joint Program Implementation">Joint Program Implementation</option>
-                <option value="Resource Sharing">Resource Sharing</option>
-                <option value="Technical Expertise">Technical Expertise</option>
-                <option value="Capacity Building">Capacity Building</option>
-                <option value="Research & Evaluation">Research & Evaluation</option>
-                <option value="Other">Other</option>
+                <option value="">Select event type</option>
+                <option value="Charity Runs/Walks">Charity Runs/Walks</option>
+                <option value="Fundraising Dinners">Fundraising Dinners</option>
+                <option value="Online Campaigns">Online Campaigns</option>
+                <option value="Garage Sales">Garage Sales</option>
+                <option value="Awareness Events">Awareness Events</option>
+                <option value="All Events">All Events</option>
               </select>
             </div>
 
             <div>
               <label className="block text-sm font-medium text-akina-brown mb-1">
-                Brief Description of Your Organization *
+                Availability *
               </label>
-              <textarea
-                name="description"
-                value={formData.description}
+              <select
+                name="availability"
+                value={formData.availability}
                 onChange={handleChange}
                 required
-                rows={3}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-akina-purple focus:border-transparent"
-                placeholder="Tell us about your organization's mission, focus areas, and current work..."
-              />
+              >
+                <option value="">Select your availability</option>
+                <option value="Weekdays">Weekdays</option>
+                <option value="Weekends">Weekends</option>
+                <option value="Evenings">Evenings</option>
+                <option value="Flexible">Flexible</option>
+                <option value="One-time Events">One-time Events</option>
+              </select>
             </div>
 
             <div>
               <label className="block text-sm font-medium text-akina-brown mb-1">
-                Resources or Expertise You Can Offer
+                How would you like to contribute? *
               </label>
               <div className="relative">
                 <MessageSquare className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                 <textarea
-                  name="resources"
-                  value={formData.resources}
+                  name="contribution"
+                  value={formData.contribution}
                   onChange={handleChange}
-                  rows={3}
+                  required
+                  rows={4}
                   className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-akina-purple focus:border-transparent"
-                  placeholder="Describe the resources, expertise, or support you can provide..."
+                  placeholder="Tell us how you'd like to help with events (e.g., organizing, volunteering, sponsoring, etc.)..."
                 />
               </div>
             </div>
@@ -276,7 +239,7 @@ Resources: ${formData.resources}`;
                 type="submit"
                 className="px-6 py-2 bg-akina-purple text-white rounded-md hover:bg-akina-purple/90 transition-colors duration-200"
               >
-                Submit Inquiry
+                Submit Application
               </button>
             </div>
           </form>
@@ -286,4 +249,4 @@ Resources: ${formData.resources}`;
   );
 };
 
-export default PartnershipModal;
+export default EventsModal;

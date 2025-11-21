@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import NewsletterSubscription from './NewsletterSubscription';
 import julie from '../assets/Julie.avif';
 import menstrualHygiene from '../assets/menstrual hiegene.jpg';
 import birthdays from '../assets/birthdays.png';
+import NewsletterSubscription from './NewsletterSubscription';
 
 const newsArticles = [
   {
