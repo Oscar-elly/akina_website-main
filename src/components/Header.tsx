@@ -3,10 +3,16 @@ import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/akina-logo.png';
 
+interface NavLink {
+  href?: string;
+  label: string;
+  submenu?: NavLink[];
+}
+
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { href: '/', label: 'Home' },
     {
       label: 'About Us',
@@ -19,8 +25,8 @@ const Header: React.FC = () => {
     { href: '/what-we-do', label: 'What We Do' },
     { href: '/how-to-help', label: 'How to Help' },
     { href: '/our-stories', label: 'Our Stories' },
+    { href: '/gallery', label: 'Gallery' },
     { href: '/sponsorship', label: 'Sponsorship' },
-    { href: '/#contact', label: 'Contact Us' }
   ];
 
   return (
@@ -37,17 +43,17 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex flex-1 justify-center space-x-8 whitespace-nowrap">
-            {navLinks.map((link) =>
+            {navLinks.map((link: NavLink) =>
               link.submenu ? (
                 <div key={link.label} className="relative group">
                   <button className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium">
                     {link.label}
                   </button>
                   <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50">
-                    {link.submenu.map((sublink) => (
+                    {link.submenu.map((sublink: NavLink) => (
                       <Link
                         key={sublink.href}
-                        to={sublink.href}
+                        to={sublink.href || '#'}
                         onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
                         className="block px-4 py-2 text-akina-brown hover:bg-akina-purple hover:text-white transition-colors duration-200"
                       >
@@ -59,7 +65,7 @@ const Header: React.FC = () => {
               ) : (
                 <Link
                   key={link.href}
-                  to={link.href}
+                  to={link.href || '#'}
                   onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
                   className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium"
                 >
@@ -89,14 +95,14 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-akina-brown">
             <nav className="flex flex-col space-y-3">
-              {navLinks.map((link) =>
+              {navLinks.map((link: NavLink) =>
                 link.submenu ? (
                   <div key={link.label} className="flex flex-col space-y-2">
                     <span className="text-akina-brown font-medium py-2">{link.label}</span>
-                    {link.submenu.map((sublink) => (
+                    {link.submenu.map((sublink: NavLink) => (
                       <Link
                         key={sublink.href}
-                        to={sublink.href}
+                        to={sublink.href || '#'}
                         onClick={() => { setIsMenuOpen(false); window.scrollTo({top: 0, behavior: 'smooth'}); }}
                         className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium py-1 pl-4"
                       >
@@ -107,7 +113,7 @@ const Header: React.FC = () => {
                 ) : (
                   <Link
                     key={link.href}
-                    to={link.href}
+                    to={link.href || '#'}
                     onClick={() => { setIsMenuOpen(false); window.scrollTo({top: 0, behavior: 'smooth'}); }}
                     className="text-akina-brown hover:text-akina-purple transition-colors duration-200 font-medium py-2"
                   >
@@ -131,3 +137,4 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+

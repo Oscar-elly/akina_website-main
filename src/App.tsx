@@ -13,6 +13,7 @@ import Donation from './components/Donation';
 import Sponsorship from './components/Sponsorship';
 import News from './components/News';
 import FAQ from './components/FAQ';
+import Gallery from './components/Gallery';
 
 // New pages to be created
 import WhatWeDo from './components/WhatWeDo';
@@ -54,6 +55,7 @@ function App() {
         <Route path="/what-we-do" element={<Layout><WhatWeDo /></Layout>} />
         <Route path="/how-to-help" element={<Layout><HowToHelp /></Layout>} />
         <Route path="/our-stories" element={<Layout><OurStories /></Layout>} />
+        <Route path="/gallery" element={<Layout><Gallery /></Layout>} />
         <Route path="/donate" element={<Layout><Donation /></Layout>} />
         <Route path="/sponsorship" element={<Layout><Sponsorship /></Layout>} />
         <Route path="/news" element={<Layout><News /></Layout>} />

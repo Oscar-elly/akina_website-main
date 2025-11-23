@@ -1,4 +1,3 @@
-- [ ] Move "Our Journey", "Akina Warriors", and "Our Future Goals" sections from About.tsx to the home page (MainSite in App.tsx)
-- [ ] Update Header.tsx navigation links to point to /#our-journey, /#akina-warriors, /#our-future-goals instead of /about#...
-- [ ] Remove the existingAboutContent from About.tsx since it will be on home page
-- [ ] Test navigation to ensure anchoring works precisely
+# TODO: Reduce Picture Sizes in Background Slideshow
+
+- [x] Update BackgroundSlideshow.tsx: Change height from h-screen to h-[80vh], backgroundSize from 'cover' to 'contain', and add backgroundPosition: 'center' for better responsiveness and appeal.
