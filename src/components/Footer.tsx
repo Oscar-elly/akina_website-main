@@ -43,9 +43,7 @@ const Footer: React.FC = () => {
               <Link to="/#contact" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="text-gray-300 hover:text-akina-orange transition-colors duration-200">
                 Contact Us
               </Link>
-              <Link to="/admin/login" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="text-gray-300 hover:text-akina-orange transition-colors duration-200">
-                Admin Login
-              </Link>
+              
             </div>
           </div>
 

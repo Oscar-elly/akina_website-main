@@ -7,7 +7,6 @@ const NewsletterSubscription: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the email to your backend
-    console.log('Subscribing email:', email);
     setIsSubscribed(true);
     setEmail('');
   };

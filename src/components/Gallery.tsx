@@ -29,8 +29,7 @@ const Gallery: React.FC = () => {
     const out: Record<string, string[]> = {};
     Object.entries(manifestSource).forEach(([name, images]) => {
       // Debug log album and images
-      console.log(`Gallery album: ${name} with ${images?.length ?? 0} images.`);
-      console.log('Sample images:', Array.isArray(images) ? images.slice(0, 3) : images);
+      
       out[name] = (images || [])
         .filter(Boolean)
         .map(i => (typeof i === 'string' ? i : String(i)));
