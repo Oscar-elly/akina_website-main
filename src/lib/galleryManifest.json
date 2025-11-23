@@ -1,82 +1,113 @@
 {
   "Birthdays": [
-    "/assets/Gallery/Birthdays/WhatsApp Image 2025-10-07 at 16.03.23_93ec983c.jpg",
-    "/assets/Gallery/Birthdays/WhatsApp Image 2025-10-16 at 09.41.19_d29a2d68.jpg",
-    "/assets/Gallery/Birthdays/WhatsApp Image 2025-11-20 at 20.11.17_0dbaed95.jpg",
-    "/assets/Gallery/Birthdays/WhatsApp Image 2025-11-20 at 20.11.17_44500028.jpg",
-    "/assets/Gallery/Birthdays/WhatsApp Image 2025-11-20 at 20.11.17_d07251ae.jpg"
+    "/src/assets/Gallery/Birthdays/WhatsApp Image 2025-10-07 at 16.03.23_93ec983c.jpg",
+    "/src/assets/Gallery/Birthdays/WhatsApp Image 2025-10-16 at 09.41.19_d29a2d68.jpg",
+    "/src/assets/Gallery/Birthdays/WhatsApp Image 2025-11-20 at 20.11.17_0dbaed95.jpg",
+    "/src/assets/Gallery/Birthdays/WhatsApp Image 2025-11-20 at 20.11.17_44500028.jpg",
+    "/src/assets/Gallery/Birthdays/WhatsApp Image 2025-11-20 at 20.11.17_d07251ae.jpg"
   ],
   "Boundaries": [
-    "/assets/Gallery/Boundaries/WhatsApp Image 2025-11-20 at 20.03.07_19107e38.jpg"
+    "/src/assets/Gallery/Boundaries/WhatsApp Image 2025-11-20 at 20.03.07_19107e38.jpg"
   ],
   "Christmass Hamper": [
-    "/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-20 at 19.55.04_f71586a7.jpg",
-    "/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.25.59_803a39da.jpg",
-    "/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.25.59_0023143c.jpg",
-    "/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.25.59_d840bb32.jpg",
-    "/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.25.59_f89e9fd6.jpg",
-    "/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.26.00_8fa19108.jpg",
-    "/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.26.00_239b99b3.jpg",
-    "/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.26.00_b3718f13.jpg",
-    "/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.26.00_c03e958e.jpg",
-    "/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.26.01_c9aa10ba.jpg",
-    "/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.26.01_fa4aa0af.jpg"
+    "/src/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-20 at 19.55.04_f71586a7.jpg",
+    "/src/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.25.59_803a39da.jpg",
+    "/src/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.25.59_0023143c.jpg",
+    "/src/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.25.59_d840bb32.jpg",
+    "/src/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.25.59_f89e9fd6.jpg",
+    "/src/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.26.00_8fa19108.jpg",
+    "/src/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.26.00_239b99b3.jpg",
+    "/src/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.26.00_b3718f13.jpg",
+    "/src/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.26.00_c03e958e.jpg",
+    "/src/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.26.01_c9aa10ba.jpg",
+    "/src/assets/Gallery/Christmass Hamper/WhatsApp Image 2025-11-21 at 15.26.01_fa4aa0af.jpg"
   ],
   "Education": [
-    "/assets/Gallery/Education/WhatsApp Image 2025-10-16 at 09.35.10_6c4f12ca.jpg",
-    "/assets/Gallery/Education/WhatsApp Image 2025-10-16 at 09.35.19_ee9a34a8.jpg",
-    "/assets/Gallery/Education/WhatsApp Image 2025-10-16 at 09.36.43_83908c6a.jpg"
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-10-16 at 09.35.10_6c4f12ca.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-10-16 at 09.35.19_ee9a34a8.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-10-16 at 09.36.43_83908c6a.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-10-16 at 09.37.45_26780bed.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.03.07_1bb500d1.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.03.07_05c4c6db.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.03.07_7e05bb9c.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.03.07_8df21dbf.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.03.07_12bfabf8.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.03.07_90e19c67.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.03.07_754bc5ef.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.03.07_1269cfd2.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.03.07_bcabfb42.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.03.07_cfc61127.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.03.07_fa685941.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.11.20_c2ac1749.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.11.21_994cce3f.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.11.22_6e3bb66f.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.11.22_d0e280cd.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.11.22_d5978af8.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.11.22_f942439d.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.11.23_bc1aeb21.jpg",
+    "/src/assets/Gallery/Education/WhatsApp Image 2025-11-20 at 20.11.24_870d03e1.jpg"
   ],
   "Feed a granny": [
-    "/assets/Gallery/Feed a granny/WhatsApp Image 2025-11-20 at 20.20.45_12345678.jpg",
-    "/assets/Gallery/Feed a granny/WhatsApp Image 2025-11-20 at 20.20.45_23456789.jpg"
+    "/src/assets/Gallery/Feed a granny/WhatsApp Image 2025-11-09 at 20.31.44_fff52405.jpg",
+    "/src/assets/Gallery/Feed a granny/WhatsApp Image 2025-11-09 at 20.32.47_e8236082.jpg",
+    "/src/assets/Gallery/Feed a granny/WhatsApp Image 2025-11-09 at 20.32.48_3c16b336.jpg",
+    "/src/assets/Gallery/Feed a granny/WhatsApp Image 2025-11-09 at 20.32.48_61df2916.jpg",
+    "/src/assets/Gallery/Feed a granny/WhatsApp Image 2025-11-09 at 20.32.48_a2a4eef8.jpg",
+    "/src/assets/Gallery/Feed a granny/WhatsApp Image 2025-11-09 at 20.33.18_ec649783.jpg",
+    "/src/assets/Gallery/Feed a granny/WhatsApp Image 2025-11-20 at 19.54.19_f7da3ed7.jpg"
   ],
   "Girlie Camps": [
-    "/assets/Gallery/Girlie Camps/WhatsApp Image 2025-10-18 at 17.22.53_4f9d13be.jpg"
+    "/src/assets/Gallery/Girlie Camps/WhatsApp Image 2025-10-18 at 17.22.53_4f9d13be.jpg",
+    "/src/assets/Gallery/Girlie Camps/WhatsApp Image 2025-10-18 at 17.22.53_caa14ac5.jpg",
+    "/src/assets/Gallery/Girlie Camps/WhatsApp Image 2025-10-18 at 17.22.53_da30af06.jpg",
+    "/src/assets/Gallery/Girlie Camps/WhatsApp Image 2025-10-18 at 17.22.53_e2675b83.jpg",
+    "/src/assets/Gallery/Girlie Camps/WhatsApp Image 2025-10-18 at 17.22.53_f5bc4bca.jpg",
+    "/src/assets/Gallery/Girlie Camps/WhatsApp Image 2025-10-18 at 17.22.54_3ad7bb3d.jpg",
+    "/src/assets/Gallery/Girlie Camps/WhatsApp Image 2025-10-18 at 17.22.54_bff4fa85.jpg"
   ],
-  "Outreach": [
-    "/assets/Gallery/Outreach/outreach1.jpg",
-    "/assets/Gallery/Outreach/outreach2.jpg",
-    "/assets/Gallery/Outreach/outreach3.jpg"
+  "Our Stories": [
+    "/src/assets/Gallery/Our Stories/Lilian With the boys.jpg",
+    "/src/assets/Gallery/Our Stories/the girls.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-10-16 at 09.33.35_9242ab3f.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-10-16 at 09.42.19_9d96949b.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-10-16 at 09.42.19_993c78f9.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-10-16 at 09.42.19_4637522a.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-10-16 at 09.42.19_64657219.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-10-16 at 09.42.19_e59a3c07.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 19.58.03_5681d830.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 19.59.13_2a578225.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.04_e967d129.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.06_211d580d.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.06_582961fc.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.06_ba6e0f0f.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.06_c32a297a.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.07_3db0ecae.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.07_6e439969.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.07_8f9a3280.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.07_8f72b7df.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.07_27ae524e.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.07_73d26d10.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.07_60999da9.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.07_b393d4d2.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.03.07_c484f2aa.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.11.09_bbcc5e3e.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.11.14_beb80af6.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.11.14_bede8e42.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.11.15_1eb4df3a.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.11.15_fd93fa71.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.11.21_d0e662a4.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.12.53_4f15fc66.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.13.16_0cfc7c7a.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.13.16_84ae3b76.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.13.16_956afda1.jpg",
+    "/src/assets/Gallery/Our Stories/WhatsApp Image 2025-11-20 at 20.13.16_b332d2d9.jpg"
+  ],
+  "The Haven": [
+    "/src/assets/Gallery/The Haven/WhatsApp Image 2025-11-20 at 20.03.07_e351c0a1.jpg",
+    "/src/assets/Gallery/The Haven/WhatsApp Image 2025-11-20 at 20.12.56_88cca886.jpg"
   ],
   "Volunteers": [
-    "/assets/Gallery/Volunteers/volunteer1.jpg",
-    "/assets/Gallery/Volunteers/volunteer2.jpg",
-    "/assets/Gallery/Volunteers/volunteer3.jpg"
-  ],
-  "Health": [
-    "/assets/Gallery/Health/health1.jpg",
-    "/assets/Gallery/Health/health2.jpg"
-  ],
-  "Playtime": [
-    "/assets/Gallery/Playtime/play1.jpg",
-    "/assets/Gallery/Playtime/play2.jpg",
-    "/assets/Gallery/Playtime/play3.jpg"
-  ],
-  "Community Events": [
-    "/assets/Gallery/Community Events/event1.jpg",
-    "/assets/Gallery/Community Events/event2.jpg",
-    "/assets/Gallery/Community Events/event3.jpg"
-  ],
-  "Graduations": [
-    "/assets/Gallery/Graduations/grad1.jpg",
-    "/assets/Gallery/Graduations/grad2.jpg"
-  ],
-  "Festivals": [
-    "/assets/Gallery/Festivals/festival1.jpg",
-    "/assets/Gallery/Festivals/festival2.jpg"
-  ],
-  "Workshops": [
-    "/assets/Gallery/Workshops/workshop1.jpg",
-    "/assets/Gallery/Workshops/workshop2.jpg"
-  ],
-  "Daily Life": [
-    "/assets/Gallery/Daily Life/daily1.jpg",
-    "/assets/Gallery/Daily Life/daily2.jpg",
-    "/assets/Gallery/Daily Life/daily3.jpg"
-  ],
-  "Sponsorship": [
-    "/assets/Gallery/Sponsorship/sponsor1.jpg",
-    "/assets/Gallery/Sponsorship/sponsor2.jpg"
+    "/src/assets/Gallery/Volunteers/WhatsApp Image 2025-10-16 at 09.39.01_4e56b445.jpg",
+    "/src/assets/Gallery/Volunteers/WhatsApp Image 2025-10-16 at 09.39.42_0f06a414.jpg"
   ]
 }

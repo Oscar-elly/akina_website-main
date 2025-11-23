@@ -1,0 +1,19 @@
+import galleryManifestJson from '../lib/galleryManifest.json';
+
+=======
+import manifestTs from '../lib/galleryManifest';
+import galleryManifestJson from '../lib/galleryManifest.json';
+import galleryManifestMergedAdditions from '../lib/galleryManifest.merged_additions';
+
+>>>>>>> REPLACE
+<<<<<<< SEARCH
+const mergedManifestSource: Record<string, string[]> = {
+  ...(galleryManifestJson as Record<string, string[]> || {}),
+  ...(manifestTs || {})
+};
+=======
+const mergedManifestSource: Record<string, string[]> = {
+  ...(galleryManifestJson as Record<string, string[]> || {}),
+  ...(galleryManifestMergedAdditions as Record<string, string[]> || {}),
+  ...(manifestTs || {})
+};

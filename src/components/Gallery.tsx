@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 // Prefer the bundled TS manifest (uses require(...) so images are included in the build).
 // Fallback to the JSON manifest (public URLs) if TS manifest isn't present or is empty.
-import manifestTs from '../lib/galleryManifest';
-import galleryManifestJson from '../lib/galleryManifest.json';
+import galleryManifestMergedAdditions from '../lib/galleryManifest.merged_additions';
+
+
+const mergedManifestSource: Record<string, string[]> = {
+  ...(galleryManifestMergedAdditions as Record<string, string[]> || {})
+};
+// Use only the TS manifests to avoid fallback to JSON manifest that has incorrect paths
 
 type Album = {
   name: string;
@@ -16,11 +21,25 @@ const mission = "Our mission is to rescue, protect and empower vulnerable childr
 const vision = "We envision communities where every child grows up free from harm, with access to education, health and opportunity.";
 
 const Gallery: React.FC = () => {
-  // Pick the first available manifest (TS manifest with bundled imports preferred).
-  const manifestSource: Record<string, string[]> = (manifestTs && Object.keys(manifestTs).length) ? manifestTs : (galleryManifestJson as Record<string, string[]>);
+  // Use merged manifest without fallback to JSON manifest
+  const manifestSource: Record<string, string[]> = mergedManifestSource;
 
-  // Build albums from the selected manifest
-  const staticAlbums: Album[] = Object.entries(manifestSource).map(([name, images]) => ({
+  // Normalize manifest: remove falsy entries and coerce values to strings.
+  const normalizedManifest = useMemo(() => {
+    const out: Record<string, string[]> = {};
+    Object.entries(manifestSource).forEach(([name, images]) => {
+      // Debug log album and images
+      console.log(`Gallery album: ${name} with ${images?.length ?? 0} images.`);
+      console.log('Sample images:', Array.isArray(images) ? images.slice(0, 3) : images);
+      out[name] = (images || [])
+        .filter(Boolean)
+        .map(i => (typeof i === 'string' ? i : String(i)));
+    });
+    return out;
+  }, [manifestSource]);
+
+  // Build albums from the normalized manifest
+  const staticAlbums: Album[] = Object.entries(normalizedManifest).map(([name, images]) => ({
     name,
     images,
     cover: images[0],

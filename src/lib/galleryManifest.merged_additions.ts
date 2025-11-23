@@ -94,7 +94,7 @@ import TheHaven_1 from '../assets/Gallery/The Haven/WhatsApp Image 2025-11-20 at
 import Volunteers_0 from '../assets/Gallery/Volunteers/WhatsApp Image 2025-10-16 at 09.39.01_4e56b445.jpg';
 import Volunteers_1 from '../assets/Gallery/Volunteers/WhatsApp Image 2025-10-16 at 09.39.42_0f06a414.jpg';
 
-const galleryManifest: Record<string, string[]> = {
+const galleryManifestMergedAdditions: Record<string, string[]> = {
   "Birthdays": [
     Birthdays_0,
     Birthdays_1,
@@ -202,4 +202,4 @@ const galleryManifest: Record<string, string[]> = {
   ],
 };
 
-export default galleryManifest;
+export default galleryManifestMergedAdditions;
