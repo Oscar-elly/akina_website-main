@@ -1,8 +1,7 @@
-import Birthdays_0 from '../assets/Gallery/Birthdays/WhatsApp Image 2025-10-07 at 16.03.23_93ec983c.jpg';
-import Birthdays_1 from '../assets/Gallery/Birthdays/WhatsApp Image 2025-10-16 at 09.41.19_d29a2d68.jpg';
-import Birthdays_2 from '../assets/Gallery/Birthdays/WhatsApp Image 2025-11-20 at 20.11.17_0dbaed95.jpg';
-import Birthdays_3 from '../assets/Gallery/Birthdays/WhatsApp Image 2025-11-20 at 20.11.17_44500028.jpg';
-import Birthdays_4 from '../assets/Gallery/Birthdays/WhatsApp Image 2025-11-20 at 20.11.17_d07251ae.jpg';
+import Birthdays_0 from '../assets/Gallery/Birthdays/WhatsApp Image 2025-10-16 at 09.41.19_d29a2d68.jpg';
+import Birthdays_1 from '../assets/Gallery/Birthdays/WhatsApp Image 2025-11-20 at 20.11.17_0dbaed95.jpg';
+import Birthdays_2 from '../assets/Gallery/Birthdays/WhatsApp Image 2025-11-20 at 20.11.17_44500028.jpg';
+import Birthdays_3 from '../assets/Gallery/Birthdays/WhatsApp Image 2025-11-20 at 20.11.17_d07251ae.jpg';
 
 import Boundaries_0 from '../assets/Gallery/Boundaries/WhatsApp Image 2025-11-20 at 20.03.07_19107e38.jpg';
 
@@ -100,7 +99,6 @@ const galleryManifestMergedAdditions: Record<string, string[]> = {
     Birthdays_1,
     Birthdays_2,
     Birthdays_3,
-    Birthdays_4,
   ],
   "Boundaries": [
     Boundaries_0,
