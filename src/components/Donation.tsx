@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { CreditCard, Building2, Mail, ChevronDown, ChevronUp } from 'lucide-react';
+import { Building2, Mail, ChevronDown, ChevronUp } from 'lucide-react';
 import akinaAngels from '../assets/akina-angels.png';
 import generalDonation from '../assets/general-donation.png';
 import feelGoodFiver from '../assets/feel-good-fiver.png';
@@ -14,40 +14,28 @@ const Donation: React.FC = () => {
 
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
-  // Ref to scroll to the email request form
-  const formRef = useRef<HTMLDivElement | null>(null);
+  // Modal state
+  const [showModal, setShowModal] = useState(false);
+  const [selectedAmount, setSelectedAmount] = useState('');
 
-  // Scroll to the form and optionally prefill an amount
-  const scrollToForm = (amount?: string) => {
-    if (amount) prefillAmount(amount);
-    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Success message state
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+  // Ref for email form
+  const emailFormRef = useRef<HTMLDivElement>(null);
+
+  // Function to parse amount from selectedAmount (e.g., '$50' -> '50')
+  const parseAmount = (amount: string) => {
+    const match = amount.match(/\$?(\d+)/);
+    return match ? match[1] : '0';
   };
 
-  // Interactive resources (logos + links) state
-  const [activeResource, setActiveResource] = useState<number | null>(null);
-  const resources = [
-    {
-      name: 'PayPal',
-      url: 'https://www.paypal.com/donate',
-      logo: 'https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png',
-      tagline: 'Secure donations and global coverage.',
-      details: 'PayPal offers encrypted payments and donor protections. Good for one-off or recurring donations.'
-    },
-    {
-      name: 'JustGiving',
-      url: 'https://www.justgiving.com',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/3/39/JustGiving_Logo.png',
-      tagline: 'Peer-to-peer fundraising and charity pages.',
-      details: 'JustGiving focuses on fundraising pages and campaigns — ideal for events and community fundraisers.'
-    },
-    {
-      name: 'GoFundMe',
-      url: 'https://www.gofundme.com',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/3/32/GoFundMe_logo.png',
-      tagline: 'Crowdfunding platform for personal and cause campaigns.',
-      details: 'GoFundMe is geared towards crowdfunding efforts and community-driven campaigns.'
+  // Function to scroll to email form
+  const scrollToEmailForm = () => {
+    if (emailFormRef.current) {
+      emailFormRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-  ];
+  };
 
   const faqs = [
     {
@@ -90,6 +78,7 @@ const Donation: React.FC = () => {
     const body = `Name: ${emailForm.name}\nEmail: ${emailForm.email}\nAmount: ${emailForm.amount}\nMessage: ${emailForm.message}`;
     const mailtoLink = `mailto:enquiry@akinaties.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
+    setShowSuccessMessage(true);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -99,15 +88,8 @@ const Donation: React.FC = () => {
     });
   };
 
-  const prefillAmount = (amount: string) => {
-    setEmailForm(prev => ({
-      ...prev,
-      amount: amount
-    }));
-  };
-
   return (
-    <div className="min-h-screen bg-akina-white pt-20">
+    <div id="top" className="min-h-screen bg-akina-white pt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Removed Back to Home button */}
@@ -128,7 +110,7 @@ const Donation: React.FC = () => {
               </p>
               <button
                 type="button"
-                onClick={() => scrollToForm('$50')}
+                onClick={() => { setSelectedAmount('$50'); setShowModal(true); }}
                 className="bg-purple-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-800 transition-colors duration-200"
               >
                 $50 a month
@@ -147,7 +129,7 @@ const Donation: React.FC = () => {
               </p>
               <button
                 type="button"
-                onClick={() => scrollToForm('')}
+                onClick={() => { setSelectedAmount(''); setShowModal(true); }}
                 className="bg-purple-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-800 transition-colors duration-200"
               >
                 Donate
@@ -166,93 +148,64 @@ const Donation: React.FC = () => {
               </p>
               <button
                 type="button"
-                onClick={() => scrollToForm('$10')}
+                onClick={() => { setSelectedAmount('$10'); setShowModal(true); }}
                 className="bg-purple-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-800 transition-colors duration-200"
               >
                 $10 Donation
               </button>
             </div>
           </div>
-​
-          {/* Interactive Resources (logos + details) */}
-          <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {resources.map((r, i) => (
-              <div
-                key={r.name}
-                className={`bg-white rounded-lg p-5 shadow-sm hover:shadow-lg transition-transform transform hover:-translate-y-1`}
-              >
-                <button
-                  type="button"
-                  onClick={() => setActiveResource(activeResource === i ? null : i)}
-                  aria-expanded={activeResource === i}
-                  className="w-full text-left focus:outline-none"
-                >
-                  <div className="flex items-center gap-4">
-                    <img src={r.logo} alt={`${r.name} logo`} className="w-14 h-14 object-contain" />
-                    <div>
-                      <div className="text-lg font-semibold text-akina-purple">{r.name}</div>
-                      <div className="text-sm text-akina-brown">{r.tagline}</div>
-                    </div>
-                  </div>
-                </button>
 
-                {activeResource === i && (
-                  <div className="mt-4 text-sm text-akina-brown space-y-3">
-                    <p>{r.details}</p>
-                    <div className="flex gap-2">
-                      <a
-                        href={r.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block bg-akina-purple text-white px-4 py-2 rounded-full font-medium hover:opacity-95 transition-colors"
-                      >
-                        Visit {r.name}
-                      </a>
-                      <button
-                        type="button"
-                        onClick={() => scrollToForm('')}
-                        className="inline-block border border-akina-purple text-akina-purple px-4 py-2 rounded-full font-medium hover:bg-akina-purple hover:text-white transition-colors"
-                      >
-                        Request Details
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-​
           <p className="text-xl text-akina-brown mb-12">
             Your generosity helps us continue our mission to support vulnerable children and women in our community.
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* PayPal Option */}
+          {/* Payment Options */}
+          <div className="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* PayPal AUD */}
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-8 text-white">
               <div className="flex items-center mb-6">
-                <CreditCard className="h-8 w-8 mr-3" />
-                <h2 className="text-2xl font-bold">PayPal</h2>
+                <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="PayPal" className="h-8 w-8 mr-3" />
+                <h2 className="text-2xl font-bold">PayPal AUD</h2>
               </div>
               <p className="mb-6">
-                Prefer to request payment details or discuss giving options? Fill the short form below and our team will share secure payment steps.
+                Donate in Australian Dollars via PayPal.
               </p>
               <button
                 type="button"
-                onClick={() => scrollToForm('')}
+                onClick={() => window.open('https://www.paypal.com/ncp/payment/KZAUR9KJHXGJJ', '_blank')}
                 className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200"
               >
-                Request Payment Details
+                Donate via PayPal AUD
               </button>
             </div>
 
-            {/* Bank Transfer Option */}
+            {/* PayPal GBP */}
+            <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-8 text-white">
+              <div className="flex items-center mb-6">
+                <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="PayPal" className="h-8 w-8 mr-3" />
+                <h2 className="text-2xl font-bold">PayPal GBP</h2>
+              </div>
+              <p className="mb-6">
+                Donate in British Pounds via PayPal.
+              </p>
+              <button
+                type="button"
+                onClick={() => window.open('https://www.paypal.com/ncp/payment/KZAUR9KJHXGJJ', '_blank')}
+                className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200"
+              >
+                Donate via PayPal GBP
+              </button>
+            </div>
+
+            {/* Bank Transfer */}
             <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-lg p-8 text-white">
               <div className="flex items-center mb-6">
                 <Building2 className="h-8 w-8 mr-3" />
                 <h2 className="text-2xl font-bold">Bank Transfer</h2>
               </div>
               <p className="mb-6">
-                Prefer to donate via bank transfer? Contact us for our banking details.
+                Donate via bank transfer. Contact us for details.
               </p>
               <button
                 onClick={() => window.location.href = 'mailto:enquiry@akinaties.org?subject=Bank Transfer Donation Request'}
@@ -263,8 +216,43 @@ const Donation: React.FC = () => {
             </div>
           </div>
 
+          {/* Modal */}
+          {showModal && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+              <div className="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+                <h2 className="text-2xl font-bold text-akina-purple mb-4">Choose Payment Method for Donation of {selectedAmount}</h2>
+                <div className="space-y-4">
+                  <button
+                    onClick={() => window.open(`https://www.paypal.com/ncp/payment/KZAUR9KJHXGJJ?amount=${parseAmount(selectedAmount)}`, '_blank')}
+                    className="w-full bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors"
+                  >
+                    PayPal AUD
+                  </button>
+                  <button
+                    onClick={() => window.open(`https://www.paypal.com/ncp/payment/KZAUR9KJHXGJJ?amount=${parseAmount(selectedAmount)}`, '_blank')}
+                    className="w-full bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors"
+                  >
+                    PayPal GBP
+                  </button>
+                  <button
+                    onClick={() => { setShowModal(false); scrollToEmailForm(); setEmailForm(prev => ({ ...prev, amount: selectedAmount })); }}
+                    className="w-full bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 transition-colors"
+                  >
+                    Bank Transfer
+                  </button>
+                </div>
+                <button
+                  onClick={() => setShowModal(false)}
+                  className="mt-4 w-full bg-gray-300 text-gray-700 px-4 py-2 rounded-full font-semibold hover:bg-gray-400 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
+
           {/* Email Request Form */}
-          <div className="mt-16 bg-akina-brown/10 rounded-lg p-8">
+          <div ref={emailFormRef} className="mt-16 bg-akina-brown/10 rounded-lg p-8">
             <div className="flex items-center mb-6">
               <Mail className="h-8 w-8 text-akina-purple mr-3" />
               <h2 className="text-2xl font-bold text-akina-purple">Request Payment Details</h2>
@@ -272,6 +260,12 @@ const Donation: React.FC = () => {
             <p className="text-akina-brown mb-8">
               Fill out the form below to request payment details or discuss donation options with our team.
             </p>
+
+            {showSuccessMessage && (
+              <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                Thank you for your interest! Your email has been sent. Please be patient as we respond within 24-48 hours.
+              </div>
+            )}
 
             <form onSubmit={handleEmailSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

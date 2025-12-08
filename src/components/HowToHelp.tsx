@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart , CheckCircle, ChevronDown, ChevronUp, HandHeart, Megaphone, Calendar, DollarSign, ArrowRight } from 'lucide-react';
+import { Heart, CheckCircle, ChevronDown, ChevronUp, HandHeart, Megaphone, Calendar, DollarSign, ArrowRight, Users, Target } from 'lucide-react';
 import generalDonation from '../assets/general-donation.png';
 import backgroundImage1 from '../assets/background_image1.jpg';
 import volunteering2 from '../assets/volunteering2.jpg';
@@ -15,6 +15,7 @@ const HowToHelp: React.FC = () => {
   const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
   const [isPartnershipModalOpen, setIsPartnershipModalOpen] = useState(false);
   const [isEventsModalOpen, setIsEventsModalOpen] = useState(false);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const faqs = [
     {
@@ -39,218 +40,223 @@ const HowToHelp: React.FC = () => {
     }
   ];
 
+  const helpOptions = [
+    {
+      id: 1,
+      title: "Make a Donation",
+      description: "Your generosity helps provide food, shelter, education, and healthcare for vulnerable children and women.",
+      icon: DollarSign,
+      iconColor: "text-akina-orange",
+      gradient: "from-akina-orange to-akina-orange",
+      buttonColor: "bg-gradient-to-r from-akina-orange to-akina-orange hover:from-akina-orange hover:to-akina-orange",
+      image: generalDonation,
+      link: "/donate",
+      features: [
+        "Secure online and offline payments",
+        "Tax-deductible contributions",
+        "Immediate impact on lives"
+      ]
+    },
+    {
+      id: 2,
+      title: "Sponsor a Child",
+      description: "Provide ongoing care and education for a child in need. Your monthly contribution ensures comprehensive support.",
+      icon: Users,
+      iconColor: "text-akina-purple",
+      gradient: "from-akina-purple to-akina-purple",
+      buttonColor: "bg-gradient-to-r from-akina-purple to-akina-purple hover:from-akina-purple hover:to-akina-purple",
+      image: backgroundImage1,
+      link: "/sponsorship",
+      features: [
+        "$50 monthly covers comprehensive care",
+        "Receive updates and photos",
+        "Make a long-term difference"
+      ]
+    },
+    {
+      id: 3,
+      title: "Volunteer",
+      description: "Join our dedicated team and make a difference through mentorship, support, and community outreach.",
+      icon: HandHeart,
+      iconColor: "text-akina-orange",
+      gradient: "from-akina-orange to-akina-orange",
+      buttonColor: "bg-gradient-to-r from-akina-orange to-akina-orange hover:from-akina-orange hover:to-akina-orange",
+      image: volunteering2,
+      action: () => setIsVolunteerModalOpen(true),
+      features: [
+        "Program facilitation",
+        "Administrative support",
+        "Community outreach"
+      ]
+    },
+    {
+      id: 4,
+      title: "Advocate",
+      description: "Amplify our message and help us reach more people through awareness campaigns and partnerships.",
+      icon: Megaphone,
+      iconColor: "text-akina-purple",
+      gradient: "from-akina-purple to-akina-purple",
+      buttonColor: "bg-gradient-to-r from-akina-purple to-akina-purple hover:from-akina-purple hover:to-akina-purple",
+      image: legalrepresentation,
+      action: () => setIsPartnershipModalOpen(true),
+      features: [
+        "Social media campaigns",
+        "Community partnerships",
+        "Awareness events"
+      ]
+    },
+    {
+      id: 5,
+      title: "Join Events",
+      description: "Participate in our fundraising events that bring communities together for a great cause.",
+      icon: Calendar,
+      iconColor: "text-akina-purple",
+      gradient: "from-akina-purple to-akina-purple",
+      buttonColor: "bg-gradient-to-r from-akina-purple to-akina-purple hover:from-akina-purple hover:to-akina-purple",
+      image: backgroundImage4,
+      action: () => setIsEventsModalOpen(true),
+      features: [
+        "Charity runs and walks",
+        "Community dinners",
+        "Online campaigns"
+      ]
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-teal-50 py-16">
+    <div className="min-h-screen bg-gradient-to-b from-akina-white via-akina-purple/10 to-akina-white">
       {/* Hero Section */}
-      <div className="text-center mb-20">
-        <div className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg mb-8">
-          <Heart className="w-5 h-5 text-red-500" />
-          <span className="text-sm font-medium text-gray-700">Make a Difference Today</span>
+      <div className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-akina-purple/5 via-transparent to-akina-orange/5"></div>
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+            <span className="bg-gradient-to-r from-akina-purple via-akina-orange to-akina-brown bg-clip-text text-transparent">
+              How You Can Help
+            </span>
+          </h1>
+
+          <p className="text-xl text-akina-brown max-w-2xl mx-auto mb-10 leading-relaxed">
+            Choose your way to make a meaningful impact. Every contribution matters in our mission to support vulnerable children and women.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            <div className="flex items-center gap-2 px-4 py-2 bg-akina-white rounded-full shadow-sm">
+              <Target className="w-4 h-4 text-akina-orange" />
+              <span className="text-sm font-medium">Direct Impact</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-akina-white rounded-full shadow-sm">
+              <Users className="w-4 h-4 text-akina-purple" />
+              <span className="text-sm font-medium">Community Driven</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-akina-white rounded-full shadow-sm">
+              <Heart className="w-4 h-4 text-akina-orange" />
+              <span className="text-sm font-medium">Heart-centered</span>
+            </div>
+          </div>
         </div>
-        <h1 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-blue-600 via-teal-600 to-green-600 bg-clip-text text-transparent mb-6 leading-tight">
-          How to Help
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-light">
-          Your support makes a difference. Here are some ways you can help us continue our mission to support vulnerable children and women.
-        </p>
       </div>
 
-      {/* Ways to Help Sections */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl space-y-20">
-        {/* Donation Section */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
-                <DollarSign className="w-8 h-8 text-white" />
-              </div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">Make a Donation</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Your generosity helps us continue our mission to support vulnerable children and women in our community. Every contribution, no matter the amount, makes a real impact.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span>Support food, shelter, education, and healthcare</span>
+      {/* Ways to Help Grid */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {helpOptions.map((option, index) => (
+            <div
+              key={option.id}
+              className={`group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 ${
+                hoveredCard === option.id ? 'ring-2 ring-akina-purple' : ''
+              }`}
+              onMouseEnter={() => setHoveredCard(option.id)}
+              onMouseLeave={() => setHoveredCard(null)}
+              style={{
+                animationDelay: `${index * 100}ms`
+              }}
+            >
+              {/* Image Container */}
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={option.image}
+                  alt={option.title}
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                
+                {/* Icon Badge */}
+                <div className="absolute top-4 left-4">
+                  <div className={`relative bg-white p-3 rounded-2xl shadow-lg transform group-hover:rotate-12 transition-transform duration-300`}>
+                    <div className={`absolute inset-0 bg-gradient-to-r ${option.gradient} opacity-10 rounded-2xl`}></div>
+                    <option.icon className={`w-6 h-6 ${option.iconColor}`} />
+                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span>Secure online and offline payment options</span>
-                </div>
               </div>
-              <Link to="/donate">
-                <button className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                  Donate Now <ArrowRight className="inline w-5 h-5 ml-2" />
-                </button>
-              </Link>
+
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-akina-brown mb-3">{option.title}</h3>
+                <p className="text-akina-brown mb-4 leading-relaxed">{option.description}</p>
+
+                {/* Features */}
+                <div className="space-y-2 mb-6">
+                  {option.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-akina-orange mt-1 flex-shrink-0" />
+                      <span className="text-sm text-akina-brown">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Action Button */}
+                {option.link ? (
+                  <Link to={option.link}>
+                    <button
+                      className={`w-full ${option.buttonColor} text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-lg`}
+                    >
+                      Get Started
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </Link>
+                ) : (
+                  <button
+                    onClick={option.action}
+                    className={`w-full ${option.buttonColor} text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-lg`}
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                )}
+              </div>
+
+              {/* Hover Effect Background */}
+              <div className={`absolute inset-0 bg-gradient-to-r ${option.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 -z-10`}></div>
             </div>
-            <div className="relative">
-              <img src={generalDonation} alt="Donation" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
+          ))}
+        </div>
+
+        {/* Impact Stats */}
+        <div className="mt-20 mb-16">
+          <div className="bg-gradient-to-r from-akina-purple/5 to-akina-orange/5 rounded-3xl p-8 shadow-inner">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-akina-purple mb-2">500+</div>
+                <div className="text-akina-brown">Children Helped</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-akina-orange mb-2">200+</div>
+                <div className="text-akina-brown">Volunteers</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-akina-purple mb-2">50+</div>
+                <div className="text-akina-brown">Events Hosted</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-akina-orange mb-2">$1M+</div>
+                <div className="text-akina-brown">Funds Raised</div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Sponsorship Section */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
-                <Heart className="w-8 h-8 text-white" />
-              </div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">Sponsor a Child</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Sponsorship provides ongoing care and education for children in need. Your monthly contribution ensures a child receives food, shelter, healthcare, and educational support.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-500" />
-                  <span>$50 monthly covers comprehensive care</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-500" />
-                  <span>Receive updates and photos of your sponsored child</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-500" />
-                  <span>Tax-deductible sponsorship</span>
-                </div>
-              </div>
-              <Link to="/sponsorship">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                  Start Sponsoring <ArrowRight className="inline w-5 h-5 ml-2" />
-                </button>
-              </Link>
-            </div>
-            <div className="order-1 md:order-2 relative">
-              <img src={backgroundImage1} alt="Sponsorship" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
-            </div>
-          </div>
-        </div>
-
-        {/* Volunteer Section */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6">
-                <HandHeart className="w-8 h-8 text-white" />
-              </div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">Volunteer Your Time</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Join our team of dedicated volunteers who make a difference every day. We welcome individuals with various skills and backgrounds to support our initiatives.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-orange-500" />
-                  <span>Program facilitation and mentorship</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-orange-500" />
-                  <span>Administrative and organizational support</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-orange-500" />
-                  <span>Community outreach and awareness</span>
-                </div>
-              </div>
-              <button
-                onClick={() => setIsVolunteerModalOpen(true)}
-                className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                Volunteer Now <ArrowRight className="inline w-5 h-5 ml-2" />
-              </button>
-            </div>
-            <div className="relative">
-              <img src={volunteering2} alt="Volunteering" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
-            </div>
-          </div>
-        </div>
-
-        {/* Advocate Section */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
-                <Megaphone className="w-8 h-8 text-white" />
-              </div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">Advocate for Our Cause</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Raise awareness and advocate for our cause in your community. Help us amplify our message and attract more support for vulnerable children and women.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-500" />
-                  <span>Share our mission on social media</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-500" />
-                  <span>Organize awareness campaigns</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-500" />
-                  <span>Partner with us for joint initiatives</span>
-                </div>
-              </div>
-              <button
-                onClick={() => setIsPartnershipModalOpen(true)}
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                Partner With Us <ArrowRight className="inline w-5 h-5 ml-2" />
-              </button>
-            </div>
-            <div className="order-1 md:order-2 relative">
-              <img src={legalrepresentation} alt="Advocacy" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
-            </div>
-          </div>
-        </div>
-
-        {/* Fundraising Events Section */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
-                <Calendar className="w-8 h-8 text-white" />
-              </div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">Participate in Events</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Join our fundraising events and campaigns throughout the year. These events bring our community together and raise essential funds for our programs.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-indigo-500" />
-                  <span>Annual charity runs and walks</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-indigo-500" />
-                  <span>Community fundraising dinners</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-indigo-500" />
-                  <span>Online and offline campaigns</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-indigo-500" />
-                  <span>Garage Sales</span> 
-                </div> 
-              </div>
-              <button
-                onClick={() => setIsEventsModalOpen(true)}
-                className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                Get Involved <ArrowRight className="inline w-5 h-5 ml-2" />
-              </button>
-            </div>
-            <div className="relative">
-              <img src={backgroundImage4} alt="Events" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
-            </div>
-          </div>
-        </div>
-
-        {/* FAQ Section */}
+        {/* FAQ Section (Unchanged per request) */}
         <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-12 shadow-2xl">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Frequently Asked Questions</h2>
           <div className="space-y-4">
@@ -278,11 +284,33 @@ const HowToHelp: React.FC = () => {
         </div>
       </div>
 
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-akina-purple to-akina-orange text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-4">Ready to Make a Difference?</h2>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            Join thousands of people who are already part of our community creating positive change.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/donate">
+              <button className="bg-akina-white text-akina-purple hover:bg-akina-white/90 font-bold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Donate Now
+              </button>
+            </Link>
+            <button
+              onClick={() => setIsVolunteerModalOpen(true)}
+              className="bg-transparent border-2 border-akina-white text-akina-white hover:bg-akina-white/10 font-bold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
+            >
+              Volunteer Today
+            </button>
+          </div>
+        </div>
+      </div>
+
       {/* Modals */}
       {isVolunteerModalOpen && <VolunteerModal isOpen={isVolunteerModalOpen} onClose={() => setIsVolunteerModalOpen(false)} />}
       {isPartnershipModalOpen && <PartnershipModal isOpen={isPartnershipModalOpen} onClose={() => setIsPartnershipModalOpen(false)} />}
       {isEventsModalOpen && <EventsModal isOpen={isEventsModalOpen} onClose={() => setIsEventsModalOpen(false)} />}
-
     </div>
   );
 };

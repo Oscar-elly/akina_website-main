@@ -31,7 +31,6 @@ function Layout({ children }: { children: React.ReactNode }) {
 }
 
 function MainSite() {
-  console.log('Rendering MainSite component');
   return (
     <Layout>
       <BackgroundSlideshow />
@@ -46,7 +45,6 @@ function MainSite() {
 }
 
 function App() {
-  console.log('Rendering App component');
   return (
     <Router>
       <Routes>

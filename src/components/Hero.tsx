@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <section className="relative text-white pt-20 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage1})` }}>
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-40 text-center bg-black bg-opacity-50 rounded-lg">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
-          We’re on a mission to change the brains of traumatised children.
+          Akina Ties: We’re on a mission to change the brains of traumatised children.
         </h1>
         <h2 className="text-xl md:text-2xl font-semibold mb-12">
           WE NEED YOUR HELP.
