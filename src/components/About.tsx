@@ -4,7 +4,6 @@ import { Shield, Target, Droplets, Home, BookOpen, Briefcase, Heart } from 'luci
 import LilianMarwa from '../assets/Lilian Marwa.avif';
 import Mary from '../assets/Mary.avif';
 import Jenny from '../assets/Jenny.avif';
-import Julia from '../assets/Julia.avif';
 import Aburi from '../assets/Aburi.avif';
 import Dennis from '../assets/Dennis.avif';
 import Noel from '../assets/Noel.avif';
@@ -337,17 +336,6 @@ Lilian is mother, counsellor, advocate and dedicated defender of the Akina Ties 
                   title: "Co-Founder & Director",
                   img: Jenny,
                   bio: "Jenny visited Kenya in 2010 and her heart was touched by the many women and children she met who were suffering because of poverty and abuse. In 2011, Jenny (together with Mary and Lilian) started Heart4Change to empower local women. Akina Ties emerged from this initial organization. Jenny has worked as a support worker in a women's refuge for the last 20 years. She is a mother of two, nana to four(who are the light of her life) and lives together with her husband Ken in West Queensland Australia."
-                },
-                {
-                  id: 3,
-                  name: "Julia Ramage",
-                  title: "Committee Member",
-                  img: Julia,
-                  bio: `Jules  joined the Akina Ties Warriors in 2019 and is involved in a variety of aspects of the Akina Ties Australia Inc. not for profit.
- 
-Working at a children's home in Tanzania in her early 20s ignited a desire in Jules to continue to provide any help she can to the children of Africa. 
- 
-Julia is a mum of two gorgeous children and is a trained corporate and human rights lawyer who lives in New South Wales Australia.`
                 },
                 {
                   id: 4,
