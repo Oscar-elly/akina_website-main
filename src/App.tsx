@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import BackgroundSlideshow from './components/BackgroundSlideshow';
-import About from './components/About';
+const About = lazy(() => import('./components/About'));
 import Mission from './components/Mission';
 import Services from './components/Services';
 import Programs from './components/Programs';
@@ -114,7 +115,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MainSite />} />
-        <Route path="/about" element={<Layout><About /></Layout>} />
+        <Route path="/about" element={<Layout><Suspense fallback={<div>Loading...</div>}><About /></Suspense></Layout>} />
         <Route path="/what-we-do" element={<Layout><WhatWeDo /></Layout>} />
         <Route path="/how-to-help" element={<Layout><HowToHelp /></Layout>} />
         <Route path="/our-stories" element={<Layout><OurStories /></Layout>} />

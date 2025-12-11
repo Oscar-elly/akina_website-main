@@ -61,7 +61,7 @@ const BackgroundSlideshow: React.FC = () => {
             index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
           }`}
         >
-          <img src={slide.image} alt="" className="w-full h-full object-cover" />
+          <img src={slide.image} alt="" className="w-full h-full object-cover object-[center_20%]" />
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80"></div>
         </div>
       ))}
