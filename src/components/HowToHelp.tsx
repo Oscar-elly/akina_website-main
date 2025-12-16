@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, CheckCircle, ChevronDown, ChevronUp, HandHeart, Megaphone, Calendar, DollarSign, ArrowRight, Users, Target } from 'lucide-react';
+import ImageWithWatermark from './ImageWithWatermark';
 import generalDonation from '../assets/general-donation.png';
 import backgroundImage1 from '../assets/background_image1.jpg';
 import volunteering2 from '../assets/volunteering2.jpg';
@@ -174,7 +175,7 @@ const HowToHelp: React.FC = () => {
             >
               {/* Image Container */}
               <div className="relative h-48 overflow-hidden">
-                <img
+                <ImageWithWatermark
                   src={option.image}
                   alt={option.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"

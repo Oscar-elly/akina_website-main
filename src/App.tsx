@@ -7,6 +7,8 @@ const About = lazy(() => import('./components/About'));
 import Mission from './components/Mission';
 import Services from './components/Services';
 import Programs from './components/Programs';
+
+
 import Impact from './components/Impact';
 import Contact from './components/Contact';
 import Donation from './components/Donation';
@@ -20,8 +22,10 @@ import Gallery from './components/Gallery';
 import WhatWeDo from './components/WhatWeDo';
 import HowToHelp from './components/HowToHelp';
 import OurStories from './components/OurStories';
+import ArticlePage from './components/ArticlePage';
 import { MapPin, Users, Heart } from 'lucide-react';
 import backgroundImage1 from './assets/background_image1.jpg';
+import ImageWithWatermark from './components/ImageWithWatermark';
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -50,7 +54,7 @@ function MainSite() {
           <div className="order-2 lg:order-1">
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-akina-purple to-akina-orange rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
-              <img
+              <ImageWithWatermark
                 src={backgroundImage1}
                 alt="Children in Kenya"
                 className="relative rounded-2xl shadow-2xl transform transition-transform duration-300 group-hover:scale-[1.02]"
@@ -124,6 +128,7 @@ function App() {
         <Route path="/sponsorship" element={<Layout><Sponsorship /></Layout>} />
         <Route path="/news" element={<Layout><News /></Layout>} />
         <Route path="/faq" element={<Layout><FAQ /></Layout>} />
+        <Route path="/article/:id" element={<Layout><ArticlePage /></Layout>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>

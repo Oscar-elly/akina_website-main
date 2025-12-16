@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Heart, GraduationCap, Users, Scale, Droplet, Baby, BookHeart, Gift, Home } from 'lucide-react';
+import ImageWithWatermark from './ImageWithWatermark';
 import girlieCampImg from '../assets/girlie camp.avif';
 import feedAGrannyImg from '../assets/feed a granny.avif';
 import teenMomImg from '../assets/teen mom.png';
@@ -41,11 +42,11 @@ const WhatWeDo: React.FC = () => {
       },
       {
         id: 'schooling',
-        title: 'Schooling Program',
+        title: 'Education & Scholarship Program',
         icon: GraduationCap,
         image: schoolingImg,
         description: 'Education is key to breaking the cycle of poverty and violence. Our Schooling Program ensures that children in our care receive quality education, school supplies, uniforms, and transportation. We partner with local schools and provide tutoring support to help children catch up and excel academically.',
-        additionalInfo: 'Since 2015, we\'ve supported over 500 children through their educational journey. A donation of $35 AUD covers school fees and supplies for one child for an entire year.',
+        additionalInfo: 'Since 2015, we\'ve supported over 500 children through their educational journey. A donation of $35 AUD covers school fees and supplies for one child in primary school for an entire year and $700 AUD for highscool per year.',
         donateText: 'Donate',
         color: 'purple'
       },
@@ -186,7 +187,7 @@ const WhatWeDo: React.FC = () => {
         {/* Akina Ties Haven Programs */}
         <div id="akina-ties-haven-programs" className="scroll-mt-24 mb-32">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Akina Ties Haven Programs</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Akina Ties Programs</h2>
             <div className="max-w-3xl mx-auto space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed">
                 We provide a safe and highly secure place where women and children can live completely free from violence and start the road to recovery. We offer rehabilitative and reintegration services. We are situated in Kisii in the western area of Kenya.
@@ -213,7 +214,7 @@ const WhatWeDo: React.FC = () => {
                   {/* Image Section */}
                   <div className="lg:w-2/5 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent z-10"></div>
-                    <img
+                    <ImageWithWatermark
                       src={program.image}
                       alt={program.title}
                       className="w-full h-64 lg:h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
@@ -284,7 +285,7 @@ const WhatWeDo: React.FC = () => {
                   {/* Image Section */}
                   <div className="lg:w-2/5 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent z-10"></div>
-                    <img
+                    <ImageWithWatermark
                       src={program.image}
                       alt={program.title}
                       className="w-full h-64 lg:h-full object-cover transform group-hover:scale-110 transition-transform duration-700"

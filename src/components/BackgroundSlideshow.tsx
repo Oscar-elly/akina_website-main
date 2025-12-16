@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import ImageWithWatermark from './ImageWithWatermark';
 import backgroundImage1 from '../assets/background_image1.jpg';
 import backgroundImage2 from '../assets/background_image2.jpg';
 import backgroundImage3 from '../assets/background_image3.jpg';
@@ -61,14 +62,14 @@ const BackgroundSlideshow: React.FC = () => {
             index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
           }`}
         >
-          <img src={slide.image} alt="" className="w-full h-full object-cover object-[center_20%]" />
+          <ImageWithWatermark src={slide.image} alt="" className="w-full h-full object-cover object-[center_20%]" />
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80"></div>
         </div>
       ))}
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-6 sm:px-8 lg:px-12 min-h-screen flex items-center">
-        <div className="max-w-4xl">
+      <div className="relative z-10 container mx-auto px-6 sm:px-8 lg:px-12 min-h-screen flex items-center justify-center">
+        <div className="max-w-4xl text-center">
 
           {/* Heading */}
           <div
@@ -76,7 +77,7 @@ const BackgroundSlideshow: React.FC = () => {
               isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
             }`}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-akina-orange mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-akina-orange mb-6 leading-tight">
               {slides[currentSlide].text}
             </h1>
           </div>
@@ -87,8 +88,8 @@ const BackgroundSlideshow: React.FC = () => {
               isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
             }`}
           >
-            <div className="inline-block mb-10">
-              <p className="text-xl sm:text-2xl font-light text-brown-800 tracking-widest border-l-4 border-akina-orange pl-6">
+            <div className="mb-10">
+              <p className="text-lg sm:text-xl font-light text-white tracking-widest">
                 LOVE · PROTECT · EMPOWER
               </p>
             </div>
@@ -96,7 +97,7 @@ const BackgroundSlideshow: React.FC = () => {
 
           {/* CTA Buttons */}
           <div
-            className={`flex flex-col sm:flex-row gap-4 mb-16 transition-all duration-700 delay-200 ${
+            className={`flex flex-col sm:flex-row gap-4 mb-16 justify-center transition-all duration-700 delay-200 ${
               isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
             }`}
           >
@@ -126,7 +127,7 @@ const BackgroundSlideshow: React.FC = () => {
           </div>
 
           {/* Navigation Dots */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3">
             {slides.map((_, index) => (
               <button
                 key={index}

@@ -3,6 +3,7 @@ import { Building2, Mail, ChevronDown, ChevronUp } from 'lucide-react';
 import akinaAngels from '../assets/akina-angels.png';
 import generalDonation from '../assets/general-donation.png';
 import feelGoodFiver from '../assets/feel-good-fiver.png';
+import ImageWithWatermark from './ImageWithWatermark';
 
 const Donation: React.FC = () => {
   const [emailForm, setEmailForm] = useState({
@@ -25,10 +26,6 @@ const Donation: React.FC = () => {
   const emailFormRef = useRef<HTMLDivElement>(null);
 
   // Function to parse amount from selectedAmount (e.g., '$50' -> '50')
-  const parseAmount = (amount: string) => {
-    const match = amount.match(/\$?(\d+)/);
-    return match ? match[1] : '0';
-  };
 
   // Function to scroll to email form
   const scrollToEmailForm = () => {
@@ -40,7 +37,7 @@ const Donation: React.FC = () => {
   const faqs = [
     {
       question: "How can I make a donation?",
-      answer: "Donations can be made online through our secure payment system, via PayPal, or by bank transfer. Visit our Donations page for details."
+      answer: "Donations can be made by bank transfer. Visit our Donations page for details."
     },
     {
       question: "Can I make a one-time or recurring donation?",
@@ -99,7 +96,7 @@ const Donation: React.FC = () => {
           {/* New Donation Options Section */}
           <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="border rounded-lg p-6 shadow-md">
-              <img
+              <ImageWithWatermark
                 src={akinaAngels}
                 alt="Akina Ties Angels"
                 className="mx-auto mb-4 w-24 h-24 object-contain"
@@ -118,7 +115,7 @@ const Donation: React.FC = () => {
             </div>
 
             <div className="border rounded-lg p-6 shadow-md">
-              <img
+              <ImageWithWatermark
                 src={generalDonation}
                 alt="General Donation"
                 className="mx-auto mb-4 w-24 h-24 object-contain"
@@ -137,7 +134,7 @@ const Donation: React.FC = () => {
             </div>
 
             <div className="border rounded-lg p-6 shadow-md">
-              <img
+              <ImageWithWatermark
                 src={feelGoodFiver}
                 alt="Feel Good Fiver"
                 className="mx-auto mb-4 w-24 h-24 object-contain"
@@ -161,43 +158,7 @@ const Donation: React.FC = () => {
           </p>
 
           {/* Payment Options */}
-          <div className="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* PayPal AUD */}
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-8 text-white">
-              <div className="flex items-center mb-6">
-                <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="PayPal" className="h-8 w-8 mr-3" />
-                <h2 className="text-2xl font-bold">PayPal AUD</h2>
-              </div>
-              <p className="mb-6">
-                Donate in Australian Dollars via PayPal.
-              </p>
-              <button
-                type="button"
-                onClick={() => window.open('https://www.paypal.com/ncp/payment/KZAUR9KJHXGJJ', '_blank')}
-                className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200"
-              >
-                Donate via PayPal AUD
-              </button>
-            </div>
-
-            {/* PayPal GBP */}
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-8 text-white">
-              <div className="flex items-center mb-6">
-                <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="PayPal" className="h-8 w-8 mr-3" />
-                <h2 className="text-2xl font-bold">PayPal GBP</h2>
-              </div>
-              <p className="mb-6">
-                Donate in British Pounds via PayPal.
-              </p>
-              <button
-                type="button"
-                onClick={() => window.open('https://www.paypal.com/ncp/payment/KZAUR9KJHXGJJ', '_blank')}
-                className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200"
-              >
-                Donate via PayPal GBP
-              </button>
-            </div>
-
+          <div className="mb-12 grid grid-cols-1 lg:grid-cols-1 gap-8">
             {/* Bank Transfer */}
             <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-lg p-8 text-white">
               <div className="flex items-center mb-6">
@@ -208,7 +169,7 @@ const Donation: React.FC = () => {
                 Donate via bank transfer. Contact us for details.
               </p>
               <button
-                onClick={() => window.location.href = 'mailto:enquiry@akinaties.org?subject=Bank Transfer Donation Request'}
+                onClick={scrollToEmailForm}
                 className="inline-block bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200"
               >
                 Request Bank Details
@@ -222,18 +183,6 @@ const Donation: React.FC = () => {
               <div className="bg-white rounded-lg p-8 max-w-md w-full mx-4">
                 <h2 className="text-2xl font-bold text-akina-purple mb-4">Choose Payment Method for Donation of {selectedAmount}</h2>
                 <div className="space-y-4">
-                  <button
-                    onClick={() => window.open(`https://www.paypal.com/ncp/payment/KZAUR9KJHXGJJ?amount=${parseAmount(selectedAmount)}`, '_blank')}
-                    className="w-full bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors"
-                  >
-                    PayPal AUD
-                  </button>
-                  <button
-                    onClick={() => window.open(`https://www.paypal.com/ncp/payment/KZAUR9KJHXGJJ?amount=${parseAmount(selectedAmount)}`, '_blank')}
-                    className="w-full bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors"
-                  >
-                    PayPal GBP
-                  </button>
                   <button
                     onClick={() => { setShowModal(false); scrollToEmailForm(); setEmailForm(prev => ({ ...prev, amount: selectedAmount })); }}
                     className="w-full bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 transition-colors"

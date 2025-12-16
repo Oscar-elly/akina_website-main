@@ -21,7 +21,7 @@ const Impact: React.FC = () => {
     },
     {
       icon: TrendingUp,
-      number: '85%',
+      number: '100%',
       label: 'Secondary Transition',
       description: 'Up from 30% in our community',
       color: 'text-akina-brown'
