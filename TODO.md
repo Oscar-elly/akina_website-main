@@ -1,10 +1,11 @@
-# Homepage Slideshow Update Task
+# Image Watermarking Implementation
 
 ## Completed Tasks
-- [x] Analyzed BackgroundSlideshow component and identified image cropping issue
-- [x] Planned adjustment to image positioning using object-position
-- [x] Applied object-[center_20%] to shift images downward
-- [x] Verified change maintains layout and design integrity
+- [x] Created ImageWithWatermark component with watermark overlay
+- [x] Updated Gallery component to use ImageWithWatermark for all images (album covers, grid images, lightbox)
+- [x] Updated OurStories component to use ImageWithWatermark for story images
+- [x] Added necessary imports for ImageWithWatermark in affected components
+- [x] Verified all <img> tags in TSX files have been replaced
 
 ## Summary
-Updated the slideshow images to use `object-[center_20%]` positioning, shifting the focus downward to prevent faces from being cropped by the fixed header while preserving the original design and responsive behavior.
+All images in the Gallery and OurStories components now display with the Akina watermark overlay, ensuring consistent branding across the website.

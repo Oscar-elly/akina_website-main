@@ -8,6 +8,7 @@ import Aburi from '../assets/Aburi.avif';
 import Dennis from '../assets/Dennis.avif';
 import Noel from '../assets/Noel.avif';
 import Sarah from '../assets/Sarah.avif';
+import ImageWithWatermark from './ImageWithWatermark';
 
 const About: React.FC = () => {
   const location = useLocation();
@@ -28,19 +29,16 @@ const About: React.FC = () => {
   const existingAboutContent = (
     <section id="about-full" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
-        <h2 className="text-5xl font-bold text-gray-900 mb-16 text-center bg-gradient-to-r from-akina-purple to-akina-orange bg-clip-text text-transparent">
-          About Us
-        </h2>
-
-        {/* Our Journey Section - Animated Timeline */}
+      
+        {/* Our Journey Section - Updated with Progressive History */}
         <div id="our-journey" className="scroll-mt-24 relative">
           {/* Hero Header */}
           <div className="text-center mb-12">
             <h3 className="text-6xl font-bold bg-gradient-to-r from-akina-purple to-akina-orange bg-clip-text text-transparent mb-4 animate-fade-in">
-              Our Journey
+              The Heart and Soul of Akina Ties
             </h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A story of compassion, courage, and transformative change
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              A Journey of Empowerment and Sanctuary - The story of Jenny, Mary, and Lilian's mission to empower vulnerable women and children in Kenya
             </p>
           </div>
 
@@ -51,7 +49,7 @@ const About: React.FC = () => {
 
             {/* Timeline Items */}
             <div className="space-y-12">
-              {/* 2010 - The Beginning */}
+              {/* 2010 - Jenny's Visit to Kenya */}
               <div className="relative flex items-center lg:justify-start">
                 <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
@@ -60,8 +58,8 @@ const About: React.FC = () => {
                         2010
                       </div>
                       <div className="ml-4">
-                        <h4 className="text-2xl font-bold text-gray-900">The Beginning</h4>
-                        <p className="text-sm text-akina-purple font-medium">Where It All Started</p>
+                        <h4 className="text-2xl font-bold text-gray-900">Jenny's Visit to Kenya</h4>
+                        <p className="text-sm text-akina-purple font-medium">A Spark of Compassion</p>
                       </div>
                     </div>
                     <div className="flex items-center justify-center mb-6">
@@ -70,14 +68,14 @@ const About: React.FC = () => {
                       </div>
                     </div>
                     <p className="text-gray-700 leading-relaxed">
-                      Mary moved to Kenya in 2010 to establish and run the first baby orphanage in the area. Ten years later Mary was Mum (literally) to 130 children ranging from newborn to sixteen years of age. Living and working in Kenya has given Mary first-hand knowledge and understanding of the poverty, human and social challenges so many families, especially women and children, face daily. While living in Kenya, Mary met Akina Ties' founder and a great friendship formed which continues to date. Mary and Lilian worked together both in the orphanage and on community projects. A promise they made to a dying mother is now being fulfilled by Akina Ties that continues to care and bring hope and love to the children. For personal reasons Mary returned to Australia after ten years in Kenya and has supported Akina Ties since then. Mary is a qualified case manager currently working in youth services and living in Queensland Australia with her husband and their two fur babies, Jellybean and China.
+                      Her heart was touched by the suffering of women and children due to poverty and abuse, sparking the initial idea for action. Meanwhile, Mary established the area's first baby orphanage, laying the foundation for years of dedicated service to vulnerable children.
                     </p>
                   </div>
                 </div>
                 <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-purple-600 border-4 border-white shadow-lg z-10"></div>
               </div>
 
-              {/* 2011 - Heart4Change */}
+              {/* 2011 - Founding of Heart4Change */}
               <div className="relative flex items-center lg:justify-end">
                 <div className="lg:w-1/2 lg:pl-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
@@ -87,7 +85,7 @@ const About: React.FC = () => {
                       </div>
                       <div className="ml-4">
                         <h4 className="text-2xl font-bold text-gray-900">Heart4Change</h4>
-                        <p className="text-sm text-akina-purple font-medium">A Movement Begins</p>
+                        <p className="text-sm text-akina-purple font-medium">The Beginning of Change</p>
                       </div>
                     </div>
                     <div className="flex items-center justify-center mb-6">
@@ -98,58 +96,110 @@ const About: React.FC = () => {
                       </div>
                     </div>
                     <p className="text-gray-700 leading-relaxed">
-                      Jenny visited Kenya in 2010 and her heart was touched by the many women and children she met who were suffering because of poverty and abuse. In 2011, Jenny (together with Mary and Lilian) started Heart4Change to empower local women. Akina Ties emerged from this initial organization. Jenny has worked as a support worker in a women's refuge for the last 20 years. She is a mother of two, nana to four(who are the light of her life) and lives together with her husband Ken in West Queensland Australia.
+                      Jenny, together with Mary (who established the area's first baby orphanage in 2010) and Lilian, started the organization to empower local women. This marked the beginning of a transformative journey that would grow into Akina Ties.
                     </p>
                   </div>
                 </div>
                 <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-600 border-4 border-white shadow-lg z-10"></div>
               </div>
 
-              {/* 2012 - Boundaries Program */}
+              {/* Early Days - Akina Ties Established */}
               <div className="relative flex items-center lg:justify-start">
                 <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        2012
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                        Early Days
                       </div>
                       <div className="ml-4">
-                        <h4 className="text-2xl font-bold text-gray-900">Boundaries Program</h4>
-                        <p className="text-sm text-akina-purple font-medium">Empowering 3,000+ Women</p>
+                        <h4 className="text-2xl font-bold text-gray-900">Akina Ties Established</h4>
+                        <p className="text-sm text-akina-purple font-medium">A Sanctuary is Born</p>
                       </div>
                     </div>
-                    <div className="flex items-center justify-center mb-6 space-x-2">
-                      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-akina-purple/10 to-akina-orange/10 flex items-center justify-center transform hover:rotate-12 transition-transform">
-                        <Shield className="h-8 w-8 text-akina-purple" />
+                    <div className="flex items-center justify-center mb-6">
+                      <div className="relative w-24 h-24">
+                        <div className="absolute inset-0 bg-gradient-to-br from-akina-purple/20 to-akina-orange/20 rounded-2xl animate-pulse"></div>
+                        <div className="absolute inset-2 bg-white rounded-xl flex items-center justify-center">
+                          <Home className="h-10 w-10 text-akina-purple" />
+                        </div>
                       </div>
-                      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-akina-purple/10 to-akina-orange/10 flex items-center justify-center transform hover:rotate-12 transition-transform">
-                        <BookOpen className="h-8 w-8 text-akina-purple" />
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Established to provide sanctuary for children and women affected by gender-based violence. Lilian moved to Kisii and began living with the rescued children, dedicating her life to their care and protection.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-akina-purple border-4 border-white shadow-lg z-10"></div>
+              </div>
+
+              {/* 2014-Present - MHH Program */}
+              <div className="relative flex items-center lg:justify-end">
+                <div className="lg:w-1/2 lg:pl-12 w-full">
+                  <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
+                    <div className="flex items-center mb-6">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        2014
                       </div>
-                      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-akina-purple/10 to-akina-orange/10 flex items-center justify-center transform hover:rotate-12 transition-transform">
-                        <Heart className="h-8 w-8 text-akina-purple" />
+                      <div className="ml-4">
+                        <h4 className="text-2xl font-bold text-gray-900">Menstrual Health Program</h4>
+                        <p className="text-sm text-akina-purple font-medium">Dignity and Education</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center mb-6">
+                      <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-akina-purple/10 to-akina-orange/10 flex items-center justify-center">
+                        <Heart className="h-10 w-10 text-akina-purple" />
                       </div>
                     </div>
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      Boundaries are the limits or the line we set with others to show what we find acceptable and unacceptable. Our boundaries reflect our values and priorities. Many women avoid boundaries because they think it will keep them from getting closer to others or it will mean they have to give up being generous care taker they like to be. In our boundaries session which we conduct each year, we train women how to preserve their values and priorities, conserve their energy and time and avoid burn out and enhance their well being. Conferences and workshops launched through the "Boundaries" program, starting at Nakuru women's prison and expanding to churches across Kisii and Mombasa.
+                      10,000+ boys and girls across Kisii and Nyamira counties benefit from sensitization and the provision of essential hygiene packs (sanitary towels, panties, boxers/vests, painkillers).
                     </p>
                     <div className="bg-gradient-to-r from-akina-purple/10 to-akina-orange/10 rounded-xl p-4">
-                      <p className="text-center font-bold text-akina-purple">3,000+ women empowered</p>
+                      <p className="text-center font-bold text-akina-purple">10,000+ youth supported</p>
                     </div>
                   </div>
                 </div>
                 <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-indigo-600 border-4 border-white shadow-lg z-10"></div>
               </div>
 
-              {/* Girlie Camp Program */}
+              {/* 2015-Present - Schooling Program */}
+              <div className="relative flex items-center lg:justify-start">
+                <div className="lg:w-1/2 lg:pr-12 w-full">
+                  <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
+                    <div className="flex items-center mb-6">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        2015
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="text-2xl font-bold text-gray-900">The Schooling Program</h4>
+                        <p className="text-sm text-akina-purple font-medium">Breaking the Cycle</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center mb-6">
+                      <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-akina-purple/10 to-akina-orange/10 flex items-center justify-center">
+                        <BookOpen className="h-10 w-10 text-akina-purple" />
+                      </div>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Over 500 children supported through their educational journey, ensuring access to quality education, school supplies, uniforms, and tutoring to break the cycle of poverty.
+                    </p>
+                    <div className="bg-gradient-to-r from-akina-purple/10 to-akina-orange/10 rounded-xl p-4">
+                      <p className="text-center font-bold text-akina-purple">500+ children educated</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-600 border-4 border-white shadow-lg z-10"></div>
+              </div>
+
+              {/* Past 9 Years - Girlie Camps */}
               <div className="relative flex items-center lg:justify-end">
                 <div className="lg:w-1/2 lg:pl-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold shadow-lg">
                         <Target className="h-10 w-10" />
                       </div>
                       <div className="ml-4">
-                        <h4 className="text-2xl font-bold text-gray-900">Girlie Camp</h4>
+                        <h4 className="text-2xl font-bold text-gray-900">Girlie Camps</h4>
                         <p className="text-sm text-akina-purple font-medium">Alternative Rite of Passage</p>
                       </div>
                     </div>
@@ -163,56 +213,82 @@ const About: React.FC = () => {
                       </div>
                     </div>
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      (Alternative Right of Passage) program. Akina Ties has run Girlie Camps in the past 9 years reaching over 2000 girls between the ages of 11-15 years old in Kisii, Nyamira and Migori Counties. This program is held every school holiday and is aimed at ending Female Genital Mutilation/c (FGM) where it's a catalyst for early marriages, teen pregnancy, and dropping out of school. Mentorship and Leadership programs combat FGM, child marriage, and school dropout rates in Abagusii and Kuria communities. Girls receive empowerment, hygiene packs, and Christmas hampers.
+                      Reaching over 2,000 girls (ages 11-15) in Kisii, Nyamira, and Migori Counties, held every school holiday to combat Female Genital Mutilation (FGM), child marriage, teen pregnancy, and school dropout rates.
                     </p>
                     <div className="bg-gradient-to-r from-akina-purple/10 to-akina-orange/10 rounded-xl p-4">
-                      <p className="text-center font-bold text-akina-purple">1,500+ girls empowered</p>
+                      <p className="text-center font-bold text-akina-purple">2,000+ girls empowered</p>
                     </div>
                   </div>
                 </div>
                 <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-akina-purple border-4 border-white shadow-lg z-10"></div>
               </div>
 
-              {/* 2014 - Akina Ties Founded */}
+              {/* Ongoing - Boundaries Program */}
               <div className="relative flex items-center lg:justify-start">
                 <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        2014
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold shadow-lg">
+                        <Shield className="h-10 w-10" />
                       </div>
                       <div className="ml-4">
-                        <h4 className="text-2xl font-bold text-gray-900">Akina Ties Born</h4>
-                        <p className="text-sm text-akina-purple font-medium">A Safe Haven Created</p>
+                        <h4 className="text-2xl font-bold text-gray-900">The "Boundaries" Program</h4>
+                        <p className="text-sm text-akina-purple font-medium">Setting Healthy Limits</p>
                       </div>
                     </div>
-                    <div className="flex items-center justify-center mb-6">
-                      <div className="relative w-24 h-24">
-                        <div className="absolute inset-0 bg-gradient-to-br from-akina-purple/20 to-akina-orange/20 rounded-2xl animate-pulse"></div>
-                        <div className="absolute inset-2 bg-white rounded-xl flex items-center justify-center">
-                          <Home className="h-10 w-10 text-akina-purple" />
-                        </div>
+                    <div className="flex items-center justify-center mb-6 space-x-2">
+                      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-akina-purple/10 to-akina-orange/10 flex items-center justify-center transform hover:rotate-12 transition-transform">
+                        <Shield className="h-8 w-8 text-akina-purple" />
+                      </div>
+                      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-akina-purple/10 to-akina-orange/10 flex items-center justify-center transform hover:rotate-12 transition-transform">
+                        <Heart className="h-8 w-8 text-akina-purple" />
                       </div>
                     </div>
                     <p className="text-gray-700 leading-relaxed">
-                      Akina Ties (then Akina Place) was established to provide sanctuary for children and women affected by gender-based violence. Lilian moved to Kisii and began living with the rescued children. Lilian is the living heart and soul of Akina Ties, who is selflessly dedicated to the Akina Ties children and her community. Lilian is a trained administrator and has a passion for social work. Between 2015 and 2022, she worked as a Personal Assistant and project coordinator to the spouses of Kisii and Nyamira County governors. Prior to that, she was employed with the Directorate of Industrial Training(now NITA) as an industrial attachment officer and later on worked as a social worker and a community point person at Mission in Action, Nakuru Baby Orphanage. She is currently pursuing a Bachelors Degree in Theology at the University of Eastern Africa Baraton, a passion to be a bible worker since when she was 19 years old is being fulfilled at 43 years old, a testimony that when God has called you He has and will never stop until you yield. Lilian is mother, counsellor, advocate and dedicated defender of the Akina Ties children and women.
+                      Training women on setting limits to preserve their values, conserve energy/time, and avoid burnout. Expanded from Nakuru women's prison to churches in Kisii and Mombasa.
                     </p>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-akina-purple border-4 border-white shadow-lg z-10"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-indigo-600 border-4 border-white shadow-lg z-10"></div>
               </div>
 
-              {/* 2018 - The Haven */}
+              {/* Ongoing - Mentorship and Leadership */}
               <div className="relative flex items-center lg:justify-end">
                 <div className="lg:w-1/2 lg:pl-12 w-full">
-                  <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-green-200 border-2 border-green-100">
+                  <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        2018
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold shadow-lg">
+                        <Target className="h-10 w-10" />
                       </div>
                       <div className="ml-4">
-                        <h4 className="text-2xl font-bold text-gray-900">Akina Ties Haven</h4>
-                        <p className="text-sm text-green-600 font-medium">Permanent Home Established</p>
+                        <h4 className="text-2xl font-bold text-gray-900">Mentorship Programs</h4>
+                        <p className="text-sm text-akina-purple font-medium">Building Future Leaders</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center mb-6">
+                      <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-akina-purple/10 to-akina-orange/10 flex items-center justify-center">
+                        <Heart className="h-10 w-10 text-akina-purple" />
+                      </div>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Combating FGM, child marriage, and school dropout rates in Abagusii and Kuria communities; provides empowerment, hygiene packs, and Christmas hampers.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-600 border-4 border-white shadow-lg z-10"></div>
+              </div>
+
+              {/* Recent - The Safe Haven */}
+              <div className="relative flex items-center lg:justify-start">
+                <div className="lg:w-1/2 lg:pr-12 w-full">
+                  <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-green-200 border-2 border-green-100">
+                    <div className="flex items-center mb-6">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold shadow-lg">
+                        <Home className="h-10 w-10" />
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="text-2xl font-bold text-gray-900">The Safe Haven</h4>
+                        <p className="text-sm text-green-600 font-medium">Permanent Sanctuary</p>
                       </div>
                     </div>
                     <div className="flex items-center justify-center mb-6">
@@ -223,40 +299,95 @@ const About: React.FC = () => {
                       </div>
                     </div>
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      Thanks to Kate and Noel Doyle OAM ("Grandma and Pa"), Lilian built a permanent sanctuary - a customized home that provides safety and love to vulnerable children and women. Our Safe Haven provides immediate refuge and protection for women and children escaping domestic violence and abuse. We offer 24/7 security, counseling, and a nurturing environment where survivors can begin their healing journey. The program includes trauma-informed care and support to rebuild lives free from fear. Each resident receives comprehensive support including medical care, psychological counseling, and legal assistance. We offer legal aid support to the sexually abused minors and women who come to us for shelter and protection. So far we have successfully got justice for 80% of girls in our care. Even though we are supposed to seek for pro bono services, they are not easy to find and even if we do find them they are not totally free. A substantial amount is needed to have our clients represented in court by lawyers. Some of these girls are abandoned by their own mothers and relatives because they testified against their perpetrator. They will stay longer with us with a donation of $30 you will help us support this program. Providing sanitary towels, panties, painkillers for girls, and a boxer and vest for boys as we sensitize the girls and boys on Menstrual Health and Hygiene - these have seen 10,000 boys and girls benefit across Kisii and Nyamira counties since 2014. This costs $25AUD per year on an individual. We offer support for pregnant and parenting teens to learn how to be the person and the parent they want to be. We help them finish their high school and also get to college, providing childcare, counseling, and educational support to break the cycle of teen pregnancy. Our comprehensive program includes prenatal care, parenting classes, and career counseling to ensure young mothers have the tools they need for a bright future. Education is key to breaking the cycle of poverty and violence. Our Schooling Program ensures that children in our care receive quality education, school supplies, uniforms, and transportation. We partner with local schools and provide tutoring support to help children catch up and excel academically. Since 2015, we've supported over 500 children through their educational journey. A donation of $35 AUD covers school fees and supplies for one child for an entire year. We offer emotional support and integration services into safe communities and homes. We maintain contact with the children to ensure that they are safe, they are provided for and continue going to school. Our program helps families rebuild their lives with dignity and security.
+                      Built with the support of Kate and Noel Doyle OAM ("Grandma and Pa"), providing 24/7 security, immediate refuge, and a customized home for women and children escaping domestic violence and abuse.
                     </p>
                     <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-4">
-                      <p className="text-center font-bold text-green-600">100+ lives transformed</p>
+                      <p className="text-center font-bold text-green-600">A beacon of hope and safety</p>
                     </div>
                   </div>
                 </div>
                 <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-green-600 border-4 border-white shadow-lg z-10"></div>
               </div>
 
-              {/* 2019 - Australia Inc */}
-              <div className="relative flex items-center lg:justify-start">
-                <div className="lg:w-1/2 lg:pr-12 w-full">
-                  <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-blue-200 border-2 border-blue-100">
+              {/* Ongoing - Comprehensive Support */}
+              <div className="relative flex items-center lg:justify-end">
+                <div className="lg:w-1/2 lg:pl-12 w-full">
+                  <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        2019
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold shadow-lg">
+                        <Heart className="h-10 w-10" />
                       </div>
                       <div className="ml-4">
-                        <h4 className="text-2xl font-bold text-gray-900">Global Partnership</h4>
-                        <p className="text-sm text-blue-600 font-medium">Akina Ties Australia Inc.</p>
+                        <h4 className="text-2xl font-bold text-gray-900">Resident Support</h4>
+                        <p className="text-sm text-akina-purple font-medium">Holistic Care</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center mb-6">
+                      <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-akina-purple/10 to-akina-orange/10 flex items-center justify-center">
+                        <Shield className="h-10 w-10 text-akina-purple" />
+                      </div>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Includes medical care, psychological counseling, and legal assistance. The organization has successfully secured justice for 80% of the sexually abused girls in its care.
+                    </p>
+                    <div className="bg-gradient-to-r from-akina-purple/10 to-akina-orange/10 rounded-xl p-4">
+                      <p className="text-center font-bold text-akina-purple">80% justice success rate</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-akina-purple border-4 border-white shadow-lg z-10"></div>
+              </div>
+
+              {/* Ongoing - Teen Support */}
+              <div className="relative flex items-center lg:justify-start">
+                <div className="lg:w-1/2 lg:pr-12 w-full">
+                  <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
+                    <div className="flex items-center mb-6">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold shadow-lg">
+                        <Heart className="h-10 w-10" />
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="text-2xl font-bold text-gray-900">Teen Parent Support</h4>
+                        <p className="text-sm text-akina-purple font-medium">Breaking the Cycle</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center mb-6">
+                      <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-akina-purple/10 to-akina-orange/10 flex items-center justify-center">
+                        <BookOpen className="h-10 w-10 text-akina-purple" />
+                      </div>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      A comprehensive program providing prenatal care, parenting classes, childcare, and educational support to help young mothers finish high school and college, breaking the cycle of teen pregnancy.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-600 border-4 border-white shadow-lg z-10"></div>
+              </div>
+
+              {/* Ongoing - Akina Ties Australia */}
+              <div className="relative flex items-center lg:justify-end">
+                <div className="lg:w-1/2 lg:pl-12 w-full">
+                  <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-blue-200 border-2 border-blue-100">
+                    <div className="flex items-center mb-6">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold shadow-lg">
+                        <Briefcase className="h-10 w-10" />
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="text-2xl font-bold text-gray-900">Akina Ties Australia</h4>
+                        <p className="text-sm text-blue-600 font-medium">Global Support Network</p>
                       </div>
                     </div>
                     <div className="flex items-center justify-center mb-6">
                       <div className="relative">
                         <div className="w-24 h-24 rounded-full border-4 border-blue-300 flex items-center justify-center animate-spin-slow">
                           <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                            <Briefcase className="h-8 w-8 text-white" />
+                            <Heart className="h-8 w-8 text-white" />
                           </div>
                         </div>
                       </div>
                     </div>
                     <p className="text-gray-700 leading-relaxed">
-                      Akina Ties Australia Incorporated formed as a volunteer-run nonprofit to raise vital funds. All donations through this website are administered by dedicated volunteers and sent directly to Kenya.
+                      Formed as a volunteer-run nonprofit to raise vital funds, with all donations administered by volunteers and sent directly to Kenya.
                     </p>
                   </div>
                 </div>
@@ -268,24 +399,24 @@ const About: React.FC = () => {
                 <div className="w-full max-w-2xl">
                   <div className="bg-gradient-to-r from-akina-purple via-blue-500 to-akina-orange rounded-3xl shadow-2xl p-12 text-center text-white transform hover:scale-105 transition-all duration-500">
                     <div className="mb-6">
-                      <div className="inline-block w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4">
+                      <div className="inline-flex w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm items-center justify-center mb-4">
                         <Heart className="h-12 w-12 text-white animate-pulse" />
                       </div>
-                      <h4 className="text-4xl font-bold mb-2">Today</h4>
-                      <p className="text-xl opacity-90">Continuing Our Mission</p>
+                      <h4 className="text-4xl font-bold mb-2">Today & Beyond</h4>
+                      <p className="text-xl opacity-90">Transforming Lives Daily</p>
                     </div>
                     <p className="text-lg leading-relaxed mb-6">
-                      Akina Ties continues to provide shelter, support, and hope to vulnerable women and children across Kenya. Every day, we work towards a future where all children can grow up safe, loved, and empowered.
+                      Akina Ties continues to transform lives, offering shelter, support, and hope for a future where all children can grow up safe, loved, and empowered.
                     </p>
                     <div className="flex items-center justify-center space-x-8">
                       <div>
-                        <p className="text-3xl font-bold">100+</p>
-                        <p className="text-sm opacity-90">Lives Supported</p>
+                        <p className="text-3xl font-bold">10,000+</p>
+                        <p className="text-sm opacity-90">Youth Supported</p>
                       </div>
                       <div className="h-12 w-px bg-white/30"></div>
                       <div>
-                        <p className="text-3xl font-bold">4,500+</p>
-                        <p className="text-sm opacity-90">Women Empowered</p>
+                        <p className="text-3xl font-bold">500+</p>
+                        <p className="text-sm opacity-90">Children Educated</p>
                       </div>
                       <div className="h-12 w-px bg-white/30"></div>
                       <div>
@@ -318,15 +449,14 @@ const About: React.FC = () => {
                 {
                   id: 0,
                   name: "Lilian Marwa",
-                  title: "Co-Founder & Director of Akina Ties Australia Inc.",
+                  title: "Co-Founder & Director",
                   img: LilianMarwa,
-                  bio: `Lilian is the living heart and soul of Akina Ties, who is selflessly dedicated to the Akina Ties children and her community. Lilian is a trained administrator and has a passion for social work. Between 2015 and 2022, she worked as a Personal Assistant and project coordinator to the spouses of Kisii and Nyamira County governors. Prior to that, she was employed with the Directorate of Industrial Training(now NITA) as an industrial attachment officer and later on worked as a social worker  and a community point person at Mission in Action, Nakuru Baby Orphanage. She is currently pursuing a Bachelors Degree in Theology at the University of Eastern Africa Baraton, a passion to be a bible worker since when she was 19 years old is being fulfiled at 43 years old, a testimony that when God has called you He has and will never stop until you yield
-Lilian is mother, counsellor, advocate and dedicated defender of the Akina Ties children and women `
+                  bio: `Lilian is the living heart and soul of Akina Ties, who is selflessly dedicated to the Akina Ties children and her community. Lilian is a trained administrator and has a passion for social work. Between 2015 and 2022, she worked as a Personal Assistant and project coordinator to the spouses of Kisii and Nyamira County governors. Prior to that, she was employed with the Directorate of Industrial Training(now NITA) as an industrial attachment officer and later on worked as a social worker  and a community point person at Mission in Action, Nakuru Baby Orphanage. She is currently pursuing a Bachelors Degree in Theology at the University of Eastern Africa Baraton, a passion to be a bible worker since when she was 19 years old is being fulfiled at 43 years old, a testimony that when God has called you He has and will never stop until you yield. Lilian is mother, counsellor, advocate and dedicated defender of the Akina Ties children and women `
                 },
                 {
                   id: 1,
                   name: "Mary Summerscales",
-                  title: "Co-Founder & Director of Akina Ties Australia Inc.",
+                  title: "Co-Founder & Director.",
                   img: Mary,
                   bio: "Mary moved to Kenya in 2010 to establish and run the first baby orphanage in the area. Ten years later Mary was Mum (literally) to 130 children ranging from newborn to sixteen years of age. Living and working in Kenya has given Mary first-hand knowledge and understanding of the poverty, human and social challenges so many families, especially women and children, face daily. While living in Kenya, Mary met Akina Ties' founder and a great friendship formed which continues to date. Mary and Lilian worked together both in the orphanage and on community projects. A promise they made to a dying mother is now being fulfilled by Akina Ties that continues to care and bring hope and love to the children. For personal reasons Mary returned to Australia after ten years in Kenya and has supported Akina Ties since then. Mary is a qualified case manager currently working in youth services and living in Queensland Australia with her husband and their two fur babies, Jellybean and China."
                 },
@@ -340,9 +470,9 @@ Lilian is mother, counsellor, advocate and dedicated defender of the Akina Ties 
                 {
                   id: 4,
                   name: "Aburi Mosero",
-                  title: "Secretary of Akina Ties Australia Inc.",
+                  title: "Secretary.",
                   img: Aburi,
-                  bio: "Aburi Mosero or Wakili, as we commonly call her, is a passionate lawyer with a keen eye on various fields of the law, especially children, human rights and Gender. We at Akina Ties Haven are honored to have her on board as one of our Akina Warriors. Being a rescue centre that often deals with legal issues in respect of the children that we take in, Aburi is always here to make the requisite follow-up in ensuring that the legal needs of our children are covered. Aburi joined the Akina family in 2022 as a volunteer and over time has shown and continues to show her dedication in helping Akina Ties as a whole. Her passion is to see a future in which children and women are free from abuse, discrimination and poverty and are able to well represented to get justice when needed."  
+                  bio: "Aburi Mosero or Wakili, as we commonly call her, is a passionate lawyer with a keen eye on various fields of the law, especially children, human rights and Gender. We at Akina Ties are honored to have her on board as one of our Akina Warriors. Being a rescue centre that often deals with legal issues in respect of the children that we take in, Aburi is always here to make the requisite follow-up in ensuring that the legal needs of our children are covered. Aburi joined the Akina family in 2022 as a volunteer and over time has shown and continues to show her dedication in helping Akina Ties as a whole. Her passion is to see a future in which children and women are free from abuse, discrimination and poverty and are able to well represented to get justice when needed."  
                 },
                 {
                   id: 5,
@@ -370,10 +500,10 @@ Lilian is mother, counsellor, advocate and dedicated defender of the Akina Ties 
                   <div className="p-6 text-center">
                     <div className="relative inline-block mb-4">
                       <div className="absolute inset-0 bg-gradient-to-r from-akina-purple to-akina-orange rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-                      <img 
-                        src={warrior.img} 
-                        alt={warrior.name} 
-                        className="relative w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md" 
+                      <ImageWithWatermark
+                        src={warrior.img}
+                        alt={warrior.name}
+                        className="relative w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md"
                       />
                     </div>
                     <h4 className="font-bold text-gray-900 mb-1 text-lg">{warrior.name}</h4>

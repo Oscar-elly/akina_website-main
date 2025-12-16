@@ -4,6 +4,7 @@ import {
   User, MapPin, DollarSign, ChevronDown, ChevronUp,
   Gift, Calendar, Shield, Smile, Star, Award, Send
 } from 'lucide-react';
+import ImageWithWatermark from './ImageWithWatermark';
 import child1 from '../assets/child1.jpg';
 import child2 from '../assets/child2.jpg';
 import child3 from '../assets/child3.jpg';
@@ -68,7 +69,7 @@ const Sponsorship: React.FC = () => {
     },
     {
       question: "Is my sponsorship tax-deductible?",
-      answer: "Yes, all sponsorship contributions are tax-deductible. You will receive an annual statement for your records."
+      answer: "No, we are currently working on taxt deductable donations. You will be notified once this is done."
     },
     {
       question: "How do I change my payment method?",
@@ -170,8 +171,8 @@ This sponsorship application was submitted through the Akina Ties website.
               {[child1, child2, child3].map((child, index) => (
                 <div key={index} className="relative group cursor-pointer">
                   <div className="relative">
-                    <img 
-                      src={child} 
+                    <ImageWithWatermark
+                      src={child}
                       alt={`Child ${index + 1}`}
                       className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-2xl group-hover:scale-110 transition-transform duration-300"
                     />
@@ -202,7 +203,7 @@ This sponsorship application was submitted through the Akina Ties website.
 
       {/* Impact Stats */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { icon: <Smile className="w-8 h-8" />, value: "500+", label: "Children Sponsored" },
             { icon: <BookOpen className="w-8 h-8" />, value: "98%", label: "School Attendance" },
@@ -341,7 +342,7 @@ This sponsorship application was submitted through the Akina Ties website.
               { src: childrenPlaying, alt: "Happy children playing" }
             ].map((image, index) => (
               <div key={index} className="relative overflow-hidden rounded-2xl aspect-square group cursor-pointer">
-                <img
+                <ImageWithWatermark
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

@@ -4,14 +4,11 @@ import julie from '../assets/Julie.avif';
 import menstrualHygiene from '../assets/menstrual hiegene.jpg';
 import birthdays from '../assets/birthdays.png';
 import NewsletterSubscription from './NewsletterSubscription';
+import ImageWithWatermark from './ImageWithWatermark';
+import { articles } from '../data/articles';
 import { Calendar, Heart, Users, ArrowRight } from 'lucide-react';
 
-interface NewsArticle {
-  title: string;
-  date: string;
-  summary: string;
-  link: string;
-}
+
 
 interface Story {
   id: number;
@@ -61,44 +58,7 @@ const OurStories: React.FC = () => {
     }
   ];
 
-  const newsArticles: NewsArticle[] = [
-    {
-      title: 'Akina Ties Launches New Health & Hygiene Program',
-      date: 'August 15, 2024',
-      summary: 'We are excited to announce the launch of our new Health & Hygiene program aimed at providing medical care, cancer screening, and health support to vulnerable communities in Kisii and Nyamira counties.',
-      link: '#'
-    },
-    {
-      title: 'Successful Completion of Girlie Camp 2024',
-      date: 'July 10, 2024',
-      summary: 'Over 2000 girls participated in the 2024 Girlie Camp, an alternative rite of passage program that educates and empowers young girls to end Female Genital Mutilation in Kisii, Nyamira, and Migori counties.',
-      link: '#'
-    },
-    {
-      title: 'Feed a Granny Program Provides 3600+ Meals',
-      date: 'June 5, 2024',
-      summary: 'Our Feed a Granny program has provided over 3600 meals and 1200 Christmas hampers to abandoned elderly women, ensuring they receive food, medical care, and housing support.',
-      link: '#'
-    },
-    {
-      title: 'Community Education Initiative Launched',
-      date: 'May 20, 2024',
-      summary: 'New educational programs launched in partnership with local schools to provide life skills and vocational training for teenagers.',
-      link: '#'
-    },
-    {
-      title: 'Annual Health Camp Success',
-      date: 'April 12, 2024',
-      summary: 'Our annual health camp served over 500 community members with free medical checkups and essential medications.',
-      link: '#'
-    },
-    {
-      title: 'Clean Water Project Completion',
-      date: 'March 5, 2024',
-      summary: 'Completed installation of clean water systems in three remote villages, impacting over 2000 residents.',
-      link: '#'
-    }
-  ];
+  const newsArticles = articles;
 
   const handleStoryToggle = (id: number) => {
     setExpandedStory(expandedStory === id ? null : id);
@@ -113,7 +73,7 @@ const OurStories: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
             Stories of Hope & Transformation
           </h1>
           <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
@@ -133,7 +93,7 @@ const OurStories: React.FC = () => {
             >
               {/* Image Container */}
               <div className="relative h-48 overflow-hidden">
-                <img
+                <ImageWithWatermark
                   src={story.image}
                   alt={story.alt}
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
@@ -217,13 +177,13 @@ const OurStories: React.FC = () => {
                       {article.summary}
                     </p>
                     
-                    <a 
-                      href={article.link}
+                    <Link
+                      to={`/article/${article.id}`}
                       className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium transition-colors"
                     >
                       Read full article
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </article>

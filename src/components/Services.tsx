@@ -1,6 +1,7 @@
 import React from 'react';
-import { Home, Scale, Shield } from 'lucide-react';
-import backgroundImage2 from '../assets/background_image2.jpg';
+import { Home, Shield } from 'lucide-react';
+import ImageWithWatermark from './ImageWithWatermark';
+import backgroundImage2 from '../assets/haven.jpg';
 
 const Services: React.FC = () => {
   const services = [
@@ -18,18 +19,6 @@ const Services: React.FC = () => {
         '50% children with psychotic parents, neglected children due to their HIV/AIDS status, teenage mothers',
         '50% minors who have been defiled/raped'
       ]
-    },
-    {
-      icon: Scale,
-      title: 'Legal Support',
-      description: 'Comprehensive legal services under the Best Interest of the Child, The Sexual Offences Act, and the Children Act.',
-      features: [
-        'Community sensitization on child protection laws',
-        'Legal representation for vulnerable children',
-        'Justice advocacy for sexual abuse cases',
-        'Rights protection and enforcement'
-      ],
-      stats: []
     }
   ];
 
@@ -69,7 +58,7 @@ const Services: React.FC = () => {
                     </ul>
                   </div>
                   <div>
-                    <img
+                    <ImageWithWatermark
                       src={index === 0 ? backgroundImage2 : "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800"}
                       alt={service.title}
                       className="rounded-lg shadow-lg w-full"

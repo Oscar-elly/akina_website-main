@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { ArrowLeft, X, ChevronLeft, ChevronRight, Image as ImageIcon, Maximize2 } from 'lucide-react';
 import galleryManifestMergedAdditions from '../lib/galleryManifest.merged_additions';
+import ImageWithWatermark from './ImageWithWatermark';
 
 const mergedManifestSource: Record<string, string[]> = {
   ...(galleryManifestMergedAdditions as Record<string, string[]> || {})
@@ -202,7 +203,7 @@ const Gallery: React.FC = () => {
                     aria-label={`Open album ${album.name}`}
                   >
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
-                    <img
+                    <ImageWithWatermark
                       src={album.cover}
                       alt={`${album.name} cover`}
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
@@ -294,10 +295,10 @@ const Gallery: React.FC = () => {
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 z-10 flex items-center justify-center">
                           <Maximize2 className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300" />
                         </div>
-                        <img 
-                          src={src} 
-                          alt={`${albums[openAlbumIndex].name} ${idx + 1}`} 
-                          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" 
+                        <ImageWithWatermark
+                          src={src}
+                          alt={`${albums[openAlbumIndex].name} ${idx + 1}`}
+                          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                         />
                       </button>
                     </div>
