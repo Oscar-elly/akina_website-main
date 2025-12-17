@@ -8,7 +8,7 @@ import Aburi from '../assets/Aburi.avif';
 import Dennis from '../assets/Dennis.avif';
 import Noel from '../assets/Noel.avif';
 import Sarah from '../assets/Sarah.avif';
-import ImageWithWatermark from './ImageWithWatermark';
+
 
 const About: React.FC = () => {
   const location = useLocation();
@@ -54,7 +54,7 @@ const About: React.FC = () => {
                 <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
                         2010
                       </div>
                       <div className="ml-4">
@@ -80,7 +80,7 @@ const About: React.FC = () => {
                 <div className="lg:w-1/2 lg:pl-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
                         2011
                       </div>
                       <div className="ml-4">
@@ -108,7 +108,7 @@ const About: React.FC = () => {
                 <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
                         Early Days
                       </div>
                       <div className="ml-4">
@@ -137,7 +137,7 @@ const About: React.FC = () => {
                 <div className="lg:w-1/2 lg:pl-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
                         2014
                       </div>
                       <div className="ml-4">
@@ -166,7 +166,7 @@ const About: React.FC = () => {
                 <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
                         2015
                       </div>
                       <div className="ml-4">
@@ -195,8 +195,8 @@ const About: React.FC = () => {
                 <div className="lg:w-1/2 lg:pl-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold shadow-lg">
-                        <Target className="h-10 w-10" />
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                        Ongoing
                       </div>
                       <div className="ml-4">
                         <h4 className="text-2xl font-bold text-gray-900">Girlie Camps</h4>
@@ -213,7 +213,7 @@ const About: React.FC = () => {
                       </div>
                     </div>
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      Reaching over 2,000 girls (ages 11-15) in Kisii, Nyamira, and Migori Counties, held every school holiday to combat Female Genital Mutilation (FGM), child marriage, teen pregnancy, and school dropout rates.
+                      This program started in 2014 reaching over 2,000 girls (ages 11-15) in Kisii, Nyamira, and Migori Counties, held every school holiday to combat Female Genital Mutilation (FGM), child marriage, teen pregnancy, and school dropout rates.
                     </p>
                     <div className="bg-gradient-to-r from-akina-purple/10 to-akina-orange/10 rounded-xl p-4">
                       <p className="text-center font-bold text-akina-purple">2,000+ girls empowered</p>
@@ -228,12 +228,12 @@ const About: React.FC = () => {
                 <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold shadow-lg">
-                        <Shield className="h-10 w-10" />
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                        Ongoing
                       </div>
                       <div className="ml-4">
                         <h4 className="text-2xl font-bold text-gray-900">The "Boundaries" Program</h4>
-                        <p className="text-sm text-akina-purple font-medium">Setting Healthy Limits</p>
+                        <p className="text-sm text-akina-purple font-medium">Setting Healthy Limits since 2012</p>
                       </div>
                     </div>
                     <div className="flex items-center justify-center mb-6 space-x-2">
@@ -257,12 +257,12 @@ const About: React.FC = () => {
                 <div className="lg:w-1/2 lg:pl-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold shadow-lg">
-                        <Target className="h-10 w-10" />
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                        Ongoing
                       </div>
                       <div className="ml-4">
                         <h4 className="text-2xl font-bold text-gray-900">Mentorship Programs</h4>
-                        <p className="text-sm text-akina-purple font-medium">Building Future Leaders</p>
+                        <p className="text-sm text-akina-purple font-medium">Building Future Leaders since 2015</p>
                       </div>
                     </div>
                     <div className="flex items-center justify-center mb-6">
@@ -283,8 +283,8 @@ const About: React.FC = () => {
                 <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-green-200 border-2 border-green-100">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold shadow-lg">
-                        <Home className="h-10 w-10" />
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                        Recent
                       </div>
                       <div className="ml-4">
                         <h4 className="text-2xl font-bold text-gray-900">The Safe Haven</h4>
@@ -302,7 +302,7 @@ const About: React.FC = () => {
                       Built with the support of Kate and Noel Doyle OAM ("Grandma and Pa"), providing 24/7 security, immediate refuge, and a customized home for women and children escaping domestic violence and abuse.
                     </p>
                     <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-4">
-                      <p className="text-center font-bold text-green-600">A beacon of hope and safety</p>
+                      <p className="text-center font-bold text-green-600">A beacon of hope and safety since 2018</p>
                     </div>
                   </div>
                 </div>
@@ -314,8 +314,8 @@ const About: React.FC = () => {
                 <div className="lg:w-1/2 lg:pl-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold shadow-lg">
-                        <Heart className="h-10 w-10" />
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                        Ongoing
                       </div>
                       <div className="ml-4">
                         <h4 className="text-2xl font-bold text-gray-900">Resident Support</h4>
@@ -343,8 +343,8 @@ const About: React.FC = () => {
                 <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold shadow-lg">
-                        <Heart className="h-10 w-10" />
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                        Ongoing
                       </div>
                       <div className="ml-4">
                         <h4 className="text-2xl font-bold text-gray-900">Teen Parent Support</h4>
@@ -374,7 +374,7 @@ const About: React.FC = () => {
                       </div>
                       <div className="ml-4">
                         <h4 className="text-2xl font-bold text-gray-900">Akina Ties Australia</h4>
-                        <p className="text-sm text-blue-600 font-medium">Global Support Network</p>
+                        <p className="text-sm text-blue-600 font-medium">Global Support Network(2019-2025)</p>
                       </div>
                     </div>
                     <div className="flex items-center justify-center mb-6">
@@ -444,7 +444,7 @@ const About: React.FC = () => {
             <p className="text-xl text-gray-700 leading-relaxed mb-12 text-center max-w-3xl mx-auto">
               Meet the dedicated team behind Akina Ties, each bringing unique skills and passion to our mission of supporting vulnerable children and women in Kenya.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {[
                 {
                   id: 0,
@@ -472,7 +472,7 @@ const About: React.FC = () => {
                   name: "Aburi Mosero",
                   title: "Secretary.",
                   img: Aburi,
-                  bio: "Aburi Mosero or Wakili, as we commonly call her, is a passionate lawyer with a keen eye on various fields of the law, especially children, human rights and Gender. We at Akina Ties are honored to have her on board as one of our Akina Warriors. Being a rescue centre that often deals with legal issues in respect of the children that we take in, Aburi is always here to make the requisite follow-up in ensuring that the legal needs of our children are covered. Aburi joined the Akina family in 2022 as a volunteer and over time has shown and continues to show her dedication in helping Akina Ties as a whole. Her passion is to see a future in which children and women are free from abuse, discrimination and poverty and are able to well represented to get justice when needed."  
+                  bio: "Aburi Mosero or Wakili, as we commonly call her, is a passionate lawyer with a keen eye on various fields of the law, especially children, human rights and Gender. We at Akina Ties are honored to have her on board as one of our Akina Warriors. Being a rescue centre that often deals with legal issues in respect of the children that we take in, Aburi is always here to make the requisite follow-up in ensuring that the legal needs of our children are covered. Aburi joined the Akina family in 2022 as a volunteer and over time has shown and continues to show her dedication in helping Akina Ties as a whole. Her passion is to see a future in which children and women are free from abuse, discrimination and poverty and are able to well represented to get justice when needed."
                 },
                 {
                   id: 5,
@@ -497,17 +497,17 @@ const About: React.FC = () => {
                 }
               ].map((warrior) => (
                 <div key={warrior.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group transform hover:-translate-y-1">
-                  <div className="p-6 text-center">
+                  <div className="p-4 sm:p-6 text-center">
                     <div className="relative inline-block mb-4">
                       <div className="absolute inset-0 bg-gradient-to-r from-akina-purple to-akina-orange rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-                      <ImageWithWatermark
+                      <img
                         src={warrior.img}
                         alt={warrior.name}
-                        className="relative w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md"
+                        className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md"
                       />
                     </div>
-                    <h4 className="font-bold text-gray-900 mb-1 text-lg">{warrior.name}</h4>
-                    {warrior.title && <p className="text-sm text-akina-purple mb-4 font-medium">{warrior.title}</p>}
+                    <h4 className="font-bold text-gray-900 mb-1 text-base sm:text-lg">{warrior.name}</h4>
+                    {warrior.title && <p className="text-xs sm:text-sm text-akina-purple mb-4 font-medium">{warrior.title}</p>}
                     <button
                       onClick={() => {
                         const newExpanded = new Set(expandedProfiles);
@@ -518,7 +518,7 @@ const About: React.FC = () => {
                         }
                         setExpandedProfiles(newExpanded);
                       }}
-                      className="bg-gradient-to-r from-akina-purple to-akina-purple/90 text-white px-6 py-2.5 rounded-full hover:from-akina-orange hover:to-akina-orange/90 transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:scale-105"
+                      className="bg-gradient-to-r from-akina-purple to-akina-purple/90 text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full hover:from-akina-orange hover:to-akina-orange/90 transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:scale-105 text-sm sm:text-base"
                     >
                       {expandedProfiles.has(warrior.id) ? 'Hide Profile' : 'Read Profile'}
                     </button>
@@ -558,7 +558,7 @@ const About: React.FC = () => {
                 {
                   icon: Droplets,
                   title: "Clean Water",
-                  description: "Akina Ties haven does not have fresh water on tap. All water is either carried from the water source or (if no rain in three days) purchased at great expense to the organization. We desperately need to sink our own boreholes so that the children and local community can have access to a source of safe, clean drinking water.",
+                  description: "Akina Ties haven does not have fresh water on tap. All water is either carried from the water source or (if no rain in three days) purchased at great expense to the organization. We desperately need to sink our own boreholes so that the children and local community can have access to a source of safe, clean drinking water. We would neee 3 Million kenyan shillings to sink the borehole.",
                   color: "blue"
                 },
                 {
@@ -600,7 +600,11 @@ const About: React.FC = () => {
     </section>
   );
 
-  return existingAboutContent;
+  return (
+    <div className="overflow-x-hidden">
+      {existingAboutContent}
+    </div>
+  );
 };
 
 export default About;

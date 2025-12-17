@@ -56,11 +56,11 @@ const Mission: React.FC = () => {
               <Star className="h-12 w-12 text-akina-white" />
             </div>
             <h3 className="text-2xl font-bold text-center mb-6">Our Core Values</h3>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
               {values.map((value, index) => (
                 <div key={index} className="text-center">
-                  <div className="bg-akina-white/20 backdrop-blur-sm rounded-lg p-4 hover:bg-akina-white/30 transition-colors duration-200">
-                    <span className="font-semibold text-lg">{value}</span>
+                  <div className="bg-akina-white/20 backdrop-blur-sm rounded-lg p-4 hover:bg-akina-white/30 transition-colors duration-200 min-h-[60px] flex items-center justify-center">
+                    <span className="font-semibold text-base sm:text-lg break-words">{value}</span>
                   </div>
                 </div>
               ))}
