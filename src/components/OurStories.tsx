@@ -69,10 +69,11 @@ const OurStories: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative text-white pt-20 pb-16 md:py-24" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#7c3aed' }}>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-full relative z-10">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
             Stories of Hope & Transformation
           </h1>

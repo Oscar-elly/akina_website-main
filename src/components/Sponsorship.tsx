@@ -147,12 +147,13 @@ This sponsorship application was submitted through the Akina Ties website.
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-x-hidden">
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 text-white">
+      <div className="relative overflow-hidden text-white" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#7c3aed' }}>
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(${svgUrl})` }}></div>
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-0 py-20 relative z-10 max-w-full">
           <div className="max-w-4xl mx-auto text-center">
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -167,20 +168,20 @@ This sponsorship application was submitted through the Akina Ties website.
             </p>
 
             {/* Child Avatars */}
-            <div className="flex justify-center gap-6 mb-12">
+            <div className="flex justify-center gap-4 sm:gap-6 mb-12">
               {[child1, child2, child3].map((child, index) => (
                 <div key={index} className="relative group cursor-pointer">
                   <div className="relative">
-                    <ImageWithWatermark
+                    <img
                       src={child}
                       alt={`Child ${index + 1}`}
-                      className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-2xl group-hover:scale-110 transition-transform duration-300"
+                      className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-4 border-white shadow-2xl group-hover:scale-110 transition-transform duration-300"
                     />
-                    <div className="absolute -bottom-2 -right-2 bg-green-500 rounded-full p-2 shadow-lg">
-                      <CheckCircle className="w-5 h-5 text-white" />
+                    <div className="absolute -bottom-2 -right-2 bg-green-500 rounded-full p-1.5 sm:p-2 shadow-lg">
+                      <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </div>
                   </div>
-                  <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 bg-white text-purple-700 px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+                  <div className="absolute -bottom-8 sm:-bottom-10 left-1/2 transform -translate-x-1/2 bg-white text-purple-700 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
                     Needs Sponsor
                   </div>
                 </div>
@@ -202,7 +203,7 @@ This sponsorship application was submitted through the Akina Ties website.
       </div>
 
       {/* Impact Stats */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-0 -mt-10 relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { icon: <Smile className="w-8 h-8" />, value: "500+", label: "Children Sponsored" },
@@ -227,7 +228,7 @@ This sponsorship application was submitted through the Akina Ties website.
 
       {/* Sponsorship Journey */}
       <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-0">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Your Sponsorship Journey</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -262,7 +263,7 @@ This sponsorship application was submitted through the Akina Ties website.
 
       {/* What You Provide */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-0">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">What Your Sponsorship Provides</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -304,7 +305,7 @@ This sponsorship application was submitted through the Akina Ties website.
               },
               { 
                 icon: <Calendar className="w-8 h-8" />, 
-                title: "Monthly Updates", 
+                title: "Quaterly Updates", 
                 description: "Regular progress reports, photos, and letters",
                 color: "from-indigo-500 to-purple-500"
               }
@@ -327,7 +328,7 @@ This sponsorship application was submitted through the Akina Ties website.
 
       {/* Gallery */}
       <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-0">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Smiles We've Created</h2>
             <p className="text-xl text-gray-600">Witness the joy your sponsorship brings</p>
@@ -361,7 +362,7 @@ This sponsorship application was submitted through the Akina Ties website.
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-0">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Common Questions</h2>
             <p className="text-xl text-gray-600">Everything you need to know about sponsoring</p>
