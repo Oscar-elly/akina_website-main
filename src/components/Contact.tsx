@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="font-semibold text-akina-purple">Social Media</h4>
                   <a
-                    href="https://www.facebook.com/AkinaTiesAustraliaInc"
+                    href="https://www.facebook.com/AkinaTiesH4C"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-akina-brown hover:text-akina-purple flex items-center space-x-1"

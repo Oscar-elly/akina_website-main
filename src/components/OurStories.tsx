@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import julie from '../assets/Julie.avif';
 import menstrualHygiene from '../assets/menstrual hiegene.jpg';
 import birthdays from '../assets/birthdays.png';
 import NewsletterSubscription from './NewsletterSubscription';
@@ -26,16 +25,6 @@ const OurStories: React.FC = () => {
   const [newsDisplayCount, setNewsDisplayCount] = useState(3);
 
   const stories: Story[] = [
-    {
-      id: 1,
-      title: "Supporting 'Julie' Through Her Medical Journey",
-      image: julie,
-      alt: "Julie receiving medical care",
-      brief: "'Julie' came to us more than a decade ago. Lilian had been approached by her own brother to help a young child who lived on her psychotic mothers back borrowing money on the streets for her medication.",
-      full: "As soon as Lilian met the young girl, she was touched with her plight and immediately contacted her then boss the late Lyle Burgoyne, the founder of Kenya Health who immediately sought for help to have this baby taken to Kijabe Hospital for medical attention where Julie's medical Journey started. with the help and support of grandma and pa Kate and Noel Doyle OAM. Julie underwent her first major head construction surgery at Kijabe Hospital. She underwent a hernia surgery then later on a double cleft surgery. This enabled her to start experiencing a normal childhood and attend normal formal education which she was not able to attend before. Her medical Journey still goes on as she is on lifetime consultative medication which costs Akina $2700 a year ($225Aud per month) to purchase. She attends quarter medical review clinic to regulate her medication and also check on her wellness. This cannot be possible without your generous support.",
-      icon: <Heart className="w-6 h-6" />,
-      color: "bg-pink-50 text-pink-600"
-    },
     {
       id: 2,
       title: "Empowering Girls Through Menstrual Hygiene",

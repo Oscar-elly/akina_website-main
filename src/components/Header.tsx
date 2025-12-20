@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import ImageWithWatermark from './ImageWithWatermark';
 import logo from '../assets/akina-logo.png';
 
 interface NavLink {
@@ -87,7 +86,7 @@ const Header: React.FC = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center space-x-3 flex-shrink-0 transition-transform hover:scale-105 duration-200"
           >
-            <ImageWithWatermark src={logo} alt="Akina Ties Logo" className="h-16 w-auto" />
+            <img src={logo} alt="Akina Ties Logo" className="h-16 w-auto" />
             <div className="flex flex-col justify-center">
               <span className="text-xl font-bold text-akina-purple leading-tight">Akina Ties</span>
               {/* <span className="text-sm font-medium text-akina-purple/80 leading-tight">Australia Inc</span> */}

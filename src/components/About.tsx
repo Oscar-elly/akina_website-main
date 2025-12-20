@@ -68,44 +68,16 @@ const About: React.FC = () => {
                       </div>
                     </div>
                     <p className="text-gray-700 leading-relaxed">
-                      Her heart was touched by the suffering of women and children due to poverty and abuse, sparking the initial idea for action. Meanwhile, Mary established the area's first baby orphanage, laying the foundation for years of dedicated service to vulnerable children.
+                      The journey begun with a single visit to Kenya witnessing firsthand the profound suffering of women and children, trapped in cycles of poverty and abuse. Jenny felt a deep calling to act. This was not just a moment of sympathy. It was a catalyst for Change through a partnership driven by a shared vision. She joined with Lily and Mary together they committed turning their concern into a concrete mission leading to the birth of heart for Change.  Hesrt for Change was born out of the belief that every woman deserves safety and every child deserves the future.
                     </p>
                   </div>
                 </div>
                 <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-purple-600 border-4 border-white shadow-lg z-10"></div>
               </div>
 
-              {/* 2011 - Founding of Heart4Change */}
+              {/* Early Days - Akina Ties Established */}
               <div className="relative flex items-center lg:justify-end">
                 <div className="lg:w-1/2 lg:pl-12 w-full">
-                  <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
-                    <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
-                        2011
-                      </div>
-                      <div className="ml-4">
-                        <h4 className="text-2xl font-bold text-gray-900">Heart4Change</h4>
-                        <p className="text-sm text-akina-purple font-medium">The Beginning of Change</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-center mb-6">
-                      <div className="grid grid-cols-3 gap-2">
-                        {[...Array(9)].map((_, i) => (
-                          <div key={i} className="w-8 h-8 rounded-lg bg-gradient-to-br from-akina-purple/20 to-akina-orange/20 animate-pulse" style={{ animationDelay: `${i * 0.1}s` }}></div>
-                        ))}
-                      </div>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      Jenny, together with Mary (who established the area's first baby orphanage in 2010) and Lilian, started the organization to empower local women. This marked the beginning of a transformative journey that would grow into Akina Ties.
-                    </p>
-                  </div>
-                </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-600 border-4 border-white shadow-lg z-10"></div>
-              </div>
-
-              {/* Early Days - Akina Ties Established */}
-              <div className="relative flex items-center lg:justify-start">
-                <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
                       <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
@@ -133,8 +105,8 @@ const About: React.FC = () => {
               </div>
 
               {/* 2014-Present - MHH Program */}
-              <div className="relative flex items-center lg:justify-end">
-                <div className="lg:w-1/2 lg:pl-12 w-full">
+              <div className="relative flex items-center lg:justify-start">
+                <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
                       <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
@@ -162,8 +134,8 @@ const About: React.FC = () => {
               </div>
 
               {/* 2015-Present - Schooling Program */}
-              <div className="relative flex items-center lg:justify-start">
-                <div className="lg:w-1/2 lg:pr-12 w-full">
+              <div className="relative flex items-center lg:justify-end">
+                <div className="lg:w-1/2 lg:pl-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
                       <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
@@ -180,7 +152,7 @@ const About: React.FC = () => {
                       </div>
                     </div>
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      Over 500 children supported through their educational journey, ensuring access to quality education, school supplies, uniforms, and tutoring to break the cycle of poverty.
+                    Our mission is to break the cycle of poverty and abuse by empowering children through education. By providing essential scholarships and school supplies, we give every child the opportunity to build a better life. We believe that with the right support, every young person can become a force for social change and create a bright, safe future for their community.
                     </p>
                     <div className="bg-gradient-to-r from-akina-purple/10 to-akina-orange/10 rounded-xl p-4">
                       <p className="text-center font-bold text-akina-purple">500+ children educated</p>
@@ -191,8 +163,8 @@ const About: React.FC = () => {
               </div>
 
               {/* Past 9 Years - Girlie Camps */}
-              <div className="relative flex items-center lg:justify-end">
-                <div className="lg:w-1/2 lg:pl-12 w-full">
+              <div className="relative flex items-center lg:justify-start">
+                <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
                       <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
@@ -224,8 +196,8 @@ const About: React.FC = () => {
               </div>
 
               {/* Ongoing - Boundaries Program */}
-              <div className="relative flex items-center lg:justify-start">
-                <div className="lg:w-1/2 lg:pr-12 w-full">
+              <div className="relative flex items-center lg:justify-end">
+                <div className="lg:w-1/2 lg:pl-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
                       <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
@@ -253,8 +225,8 @@ const About: React.FC = () => {
               </div>
 
               {/* Ongoing - Mentorship and Leadership */}
-              <div className="relative flex items-center lg:justify-end">
-                <div className="lg:w-1/2 lg:pl-12 w-full">
+              <div className="relative flex items-center lg:justify-start">
+                <div className="lg:w-1/2 lg:pr-12 w-full">
                   <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-akina-purple/20 border-2 border-akina-purple/20">
                     <div className="flex items-center mb-6">
                       <div className="w-20 h-20 rounded-full bg-gradient-to-br from-akina-purple to-akina-orange flex items-center justify-center text-white font-bold text-sm shadow-lg">
@@ -262,7 +234,7 @@ const About: React.FC = () => {
                       </div>
                       <div className="ml-4">
                         <h4 className="text-2xl font-bold text-gray-900">Mentorship Programs</h4>
-                        <p className="text-sm text-akina-purple font-medium">Building Future Leaders since 2015</p>
+                        <p className="text-sm text-akina-purple font-medium">Our "Walk With Her" Mentorship Program since 2015</p>
                       </div>
                     </div>
                     <div className="flex items-center justify-center mb-6">
@@ -271,42 +243,11 @@ const About: React.FC = () => {
                       </div>
                     </div>
                     <p className="text-gray-700 leading-relaxed">
-                      Combating FGM, child marriage, and school dropout rates in Abagusii and Kuria communities; provides empowerment, hygiene packs, and Christmas hampers.
+                      We don’t just send our girls to school; we guide them into their future. Our mentorship program links graduates of our Girlie Camps with established professional women. These mentors serve as 'career sisters,' providing the guidance, networking, and emotional support needed to navigate the journey from the classroom to a fulfilling career."
                     </p>
                   </div>
                 </div>
                 <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-600 border-4 border-white shadow-lg z-10"></div>
-              </div>
-
-              {/* Recent - The Safe Haven */}
-              <div className="relative flex items-center lg:justify-start">
-                <div className="lg:w-1/2 lg:pr-12 w-full">
-                  <div className="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-green-200 border-2 border-green-100">
-                    <div className="flex items-center mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-sm shadow-lg">
-                        Recent
-                      </div>
-                      <div className="ml-4">
-                        <h4 className="text-2xl font-bold text-gray-900">The Safe Haven</h4>
-                        <p className="text-sm text-green-600 font-medium">Permanent Sanctuary</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-center mb-6">
-                      <div className="flex space-x-3">
-                        <div className="w-16 h-20 bg-gradient-to-b from-green-300 to-green-400 rounded-t-lg animate-bounce"></div>
-                        <div className="w-20 h-24 bg-gradient-to-b from-green-400 to-green-500 rounded-t-lg animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                        <div className="w-16 h-20 bg-gradient-to-b from-green-300 to-green-400 rounded-t-lg animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                      </div>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed mb-4">
-                      Built with the support of Kate and Noel Doyle OAM ("Grandma and Pa"), providing 24/7 security, immediate refuge, and a customized home for women and children escaping domestic violence and abuse.
-                    </p>
-                    <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-4">
-                      <p className="text-center font-bold text-green-600">A beacon of hope and safety since 2018</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-green-600 border-4 border-white shadow-lg z-10"></div>
               </div>
 
               {/* Ongoing - Comprehensive Support */}
@@ -493,7 +434,7 @@ const About: React.FC = () => {
                   name: "Sarah Roseborg",
                   title: "",
                   img: Sarah,
-                  bio: "Sarah is always willing to offer advice and was an amazing help when Akina Ties Australia Inc. was set up.  Her dedication to the children of Kenya is unquestionable and a true inspiration. The world needs more Angels like Sarah. Thank you Sarah for always making yourself available when we need advice."
+                  bio: "Sarah is always willing to offer advice and was an amazing help when Akina Ties. was set up.  Her dedication to the children of Kenya is unquestionable and a true inspiration. The world needs more Angels like Sarah. Thank you Sarah for always making yourself available when we need advice."
                 }
               ].map((warrior) => (
                 <div key={warrior.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group transform hover:-translate-y-1">

@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
               <h4 className="text-sm font-semibold mb-3">Follow Us</h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://www.facebook.com/AkinaTiesAustraliaInc"
+                  href="https://www.facebook.com/AkinaTiesH4C"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-akina-orange transition-colors duration-200"
@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2025 Akina Ties Inc. All rights reserved.
+              © 2025 Akina Ties. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm">
               ABN: 16 425 204 607
